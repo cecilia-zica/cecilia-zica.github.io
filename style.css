@@ -1,99 +1,101 @@
-/* Constants */
+/* --- Minhas Cores e Reset Básico --- */
 :root {
-    --primary-color: #000; 
-    --secondary-color: #fff; 
-    --accent-color: #FFD700; 
+    /* Defino aqui minhas cores principais pra poder usar no site todo */
+    --primary-color: #2c3e50;
+    --secondary-color: #ffffff; 
+    --accent-color: #f1c40f; 
     --text-color: #333; 
     --light-gray: #f4f4f4; 
-    --vinho: #7a2727; 
 }
 
 * {
+    /* Um "reset" básico pra tirar margens e paddings que os navegadores colocam sozinhos */
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+    /* Isso aqui é um truque pra que o padding e a borda não 'estiquem' minhas caixas */
+    box-sizing: border-box; 
 }
 
+/* --- Onde a Mágica do Layout Acontece (com Grid) --- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: grid;
+    /* Aqui eu desenho o "mapa" da minha página */
     grid-template-areas: 
-        "h h h"
-        "a m m"
-        "f f f";
-    grid-template-columns: minmax(250px, 300px) 1fr 1fr; /* Largura da aside ajustada */
-    grid-template-rows: auto 1fr auto;
+        "h h"   /* Header ocupa o topo inteiro */
+        "a m"   /* Aside (lateral) e Main (conteúdo) um ao lado do outro */
+        "f f";  /* Footer ocupa a base inteira */
+    /* Defino o tamanho das colunas: a primeira tem um mínimo e máximo, a segunda pega o resto */
+    grid-template-columns: minmax(250px, 300px) 1fr;
+    grid-template-rows: auto 1fr auto; /* A linha do meio (main) estica pra preencher a tela */
     min-height: 100vh;
-    background-color: var(--light-gray); /* Fundo claro */
+    background-color: var(--light-gray);
     color: var(--text-color);
 }
 
-/* Header (Navegação superior) */
+/* --- Estilos do Cabeçalho (Menu de Navegação) --- */
 header {
     background-color: var(--primary-color);
-    grid-area: h;
+    grid-area: h; /* "h" vem lá do meu mapa do grid */
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombreado leve pra dar um relevo */
 }
 
-header nav menu {
-    list-style-type: none;
+header nav ul {
+    list-style-type: none; /* Tira as bolinhas da lista */
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%; /* Ajustado para melhor espaçamento */
-    height: 100%;
+    gap: 20px; /* Um espacinho simpático entre os links do menu */
 }
 
-menu a {
-    text-decoration: none;
+header a {
+    text-decoration: none; /* Tira o sublinhado dos links */
     color: var(--secondary-color);
-    font-weight: 600; /* Um pouco mais encorpado */
+    font-weight: 600;
     padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efeito suave quando passo o mouse */
+    border-radius: 5px;
 }
 
-menu a:hover {
+header a:hover {
+    /* O que acontece quando o mouse passa por cima */
     background-color: var(--accent-color);
     color: var(--primary-color);
 }
 
-/* Aside (Barra lateral) */
+/* --- Barra Lateral (Aside) --- */
 aside {
+    grid-area: a; /* "a" do mapa do grid */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organiza os itens um embaixo do outro */
     align-items: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    grid-area: a;
     padding: 30px 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 aside h1 {
     font-size: 2.2em;
     margin-bottom: 15px;
-    color: var(--accent-color); /* Nome em amarelo */
+    color: var(--accent-color);
 }
 
 .profile-photo-container {
-    width: 180px; /* Aumenta um pouco o tamanho da imagem */
+    width: 180px;
     height: 180px;
-    border-radius: 50%; /* Torna a foto redonda */
-    overflow: hidden;
+    border-radius: 50%; /* Deixa a foto redondinha */
+    overflow: hidden; /* Garante que a imagem não 'vaze' do círculo */
     margin-bottom: 20px;
-    border: 3px solid var(--accent-color); /* Borda amarela */
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); /* Efeito de brilho amarelo */
+    border: 3px solid var(--accent-color);
 }
 
 .profile-photo-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
 }
 
 aside .role {
@@ -105,52 +107,34 @@ aside .role {
 
 aside .bio {
     font-size: 0.95em;
-    line-height: 1.5;
-    text-indent: 0; /* Remove indentação para blocos de texto na aside */
+    line-height: 1.5; /* Espaçamento entre as linhas do texto */
 }
 
-/* Main Content */
+/* --- Conteúdo Principal (Main) --- */
 main {
-    grid-area: m;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espaço entre as seções (cards) */
+    grid-area: m; /* "m" do mapa */
     padding: 20px;
-    overflow-y: auto; /* Scroll apenas no conteúdo principal */
+    overflow-y: auto; /* Se o conteúdo for muito grande, a barra de rolagem aparece só aqui */
 }
 
-main::-webkit-scrollbar {
-    width: 8px;
-}
-
-main::-webkit-scrollbar-track {
-    background: var(--light-gray);
-}
-
-main::-webkit-scrollbar-thumb {
-    background-color: var(--accent-color);
-    border-radius: 4px;
-    border: 2px solid var(--light-gray);
-}
-
-/* Estilo para os "cards" das seções */
+/* O estilo "card" que eu uso em todas as seções */
 .card {
     background-color: var(--secondary-color);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra mais pronunciada */
-    transition: transform 0.2s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra bem sutil */
+    margin-bottom: 20px; /* Espaço entre um card e outro */
 }
 
-.card:hover {
-    transform: translateY(-5px); /* Pequeno efeito ao passar o mouse */
+.card:last-child {
+    margin-bottom: 0; /* O último card não precisa de margem embaixo */
 }
 
 main h1 {
     font-size: 1.8em;
     margin-bottom: 20px;
     color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color); /* Linha amarela abaixo do título */
+    border-bottom: 2px solid var(--accent-color); /* Aquela linha amarela embaixo do título */
     padding-bottom: 10px;
 }
 
@@ -164,124 +148,88 @@ main h2 {
 p {
     margin-bottom: 15px;
     line-height: 1.6;
-    text-indent: 25px; /* Indentação para parágrafos */
 }
 
 ul {
-    list-style-type: disc;
-    margin-left: 30px;
-    margin-bottom: 15px;
-    line-height: 1.5;
+    list-style-position: inside;
+    padding-left: 0;
 }
 
-ul li b {
-    color: var(--accent-color); /* Destacar códigos de disciplina em amarelo */
-}
-
+/* Estilo específico para a foto da seção "Quem sou eu?" */
 #photo-whoami {
-    width: 200px; /* Tamanho da imagem no whoami */
-    float: right;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.photo-section {
-    display: flex;
-    align-items: flex-start; /* Alinha o conteúdo e a imagem no topo */
-    gap: 30px; /* Espaço entre texto e imagem */
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
-}
-
-.photo-section img {
+    width: 180px;
+    float: right; /* Faz a imagem "flutuar" pra direita, e o texto contorna ela */
+    margin: 0 0 15px 20px; /* Margens pra foto não ficar colada no texto */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%; /* Garante responsividade */
+}
+
+.dev-me-photo {
+    width: 250px; 
+    max-width: 100%; 
     height: auto;
+    border-radius: 12px; /* Mais arredondado */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Uma sombra mais marcante */
+    /* Isso aqui é importante para centralizar a imagem quando ela está sozinha (em coluna) */
+    display: block; 
+    margin: 20px auto; /* Adiciona margem em cima/embaixo e centraliza automaticamente */
 }
 
-address p {
-    margin: 5px 0;
-    text-indent: 0;
+/* Container pra alinhar a foto e o texto na seção "Sobre mim" */
+.photo-section {
+    display: flex; /* Alinha os itens lado a lado */
+    align-items: flex-start;
+    gap: 30px;
 }
 
-/* Footer */
+address {
+    font-style: normal; /* O 'address' vem com itálico por padrão, aqui eu tiro isso */
+}
+
+/* --- Rodapé (Footer) --- */
 footer {
-    grid-area: f;
+    grid-area: f; /* "f" do mapa */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Um item pra cada canto */
     align-items: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 15px 20px;
+    padding: 20px;
     font-size: 0.9em;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-footer .news {
-    font-style: italic;
-    color: var(--light-gray);
-}
+/* --- Design Responsivo --- */
+/* A partir daqui, as regras mudam conforme o tamanho da tela */
 
-/* Responsividade */
-@media screen and (max-width: 900px) { /* Tablet e telas menores */
+/* Primeira parada: telas de até 768px (tipo tablets) */
+@media screen and (max-width: 768px) {
     body {
-        grid-template-areas: 
-            "h h h"
-            "a m m"
-            "f f f";
-        grid-template-columns: minmax(180px, 250px) 1fr 1fr;
-    }
-
-    aside h1 {
-        font-size: 1.8em;
-    }
-
-    .profile-photo-container {
-        width: 150px;
-        height: 150px;
-    }
-
-    main h1 {
-        font-size: 1.6em;
-    }
-}
-
-@media screen and (max-width: 600px) { /* Celular */
-    body {
+        /* O layout de 2 colunas vira um de 1 coluna só */
         grid-template-areas: 
             "h"
+            "a"
             "m"
             "f";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr; /* Agora só tem uma coluna */
     }
 
-    aside {
-        display: none
+    #photo-whoami {
+        float: none; /* Em telas pequenas, o float não fica bom. Então eu tiro... */
+        display: block;
+        margin: 0 auto 20px; /* ...e centralizo a foto */
+    }
 
-2025 - 1
+    .photo-section {
+        flex-direction: column; /* Coloca imagem abaixo do texto */
+        align-items: center; /* <<<<< ESTE É O NOVO AJUSTE! Centraliza os itens quando estão em coluna */
+    }
+}
 
-CAD5103-02238 (20251) - Administração I
-
-EGC5036-02238 (20251) - Marketing Pessoal e Empreendedorismo
-
-INE5605-02238B (20251) - Desenvolvimento de Sistemas Orientados a Objetos I
-
-INE5606-02238 (20251) - Probabilidade e Estatística
-
-INE5607-02238A/B (20251) - Organização e Arquitetura de Computadores
-
-2024 - 2
-
-CAD5240-01238 (20242) - Aspectos Comportamentais do Empreendedor
-
-EGC5015-01238A/B (20242) - Teoria Geral de Sistemas
-
-INE5402-01208C/INE5603-01238A (20242) - Programação Orientada a Objetos I
-
-INE5601-01238A (20242) - Fundamentos Matemáticos da Informática
-
-INE5602-01238A (20242) - Introdução à Informática
+/* Segunda parada: telas de até 600px (celulares) */
+@media screen and (max-width: 600px) {
+    header nav ul {
+        flex-direction: column; /* O menu que era horizontal vira vertical */
+        align-items: center;
+        padding: 10px 0;
+    }
+}
 
