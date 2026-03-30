@@ -1,148 +1,407 @@
-/* --- Minhas Cores e Reset Básico --- */
+/* === MINHAS CORES E RESET BÁSICO === */
 :root {
-    /* Defino aqui minhas cores principais pra poder usar no site todo */
-    --primary-color: #2c3e50;
-    --secondary-color: #ffffff; 
-    --accent-color: #f1c40f; 
-    --text-color: #333; 
-    --light-gray: #f4f4f4; 
+    --primary-color: #6f2846;
+    --secondary-color: #fff7ef;
+    --accent-color: #f2c66d;
+    --accent-secondary: #f7dfad;
+    --text-color: #f8eee3;
+    --light-gray: #2a1020;
+    --card-bg: #3a1528;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --hover-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
-    /* Um "reset" básico pra tirar margens e paddings que os navegadores colocam sozinhos */
     margin: 0;
     padding: 0;
-    /* Isso aqui é um truque pra que o padding e a borda não 'estiquem' minhas caixas */
     box-sizing: border-box; 
 }
 
-/* --- Onde a Mágica do Layout Acontece (com Grid) --- */
+/* === LAYOUT PRINCIPAL === */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     display: grid;
-    /* Aqui eu desenho o "mapa" da minha página */
-    grid-template-areas: 
-        "h h"   /* Header ocupa o topo inteiro */
-        "a m"   /* Aside (lateral) e Main (conteúdo) um ao lado do outro */
-        "f f";  /* Footer ocupa a base inteira */
-    /* Defino o tamanho das colunas: a primeira tem um mínimo e máximo, a segunda pega o resto */
-    grid-template-columns: minmax(250px, 300px) 1fr;
-    grid-template-rows: auto 1fr auto; /* A linha do meio (main) estica pra preencher a tela */
+    grid-template-areas:
+        "h"
+        "a"
+        "m"
+        "f";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
     min-height: 100vh;
-    background-color: var(--light-gray);
+    background: radial-gradient(circle at top right, #7b2d53 0%, var(--light-gray) 38%, #1e0b16 100%);
     color: var(--text-color);
 }
 
-/* --- Estilos do Cabeçalho (Menu de Navegação) --- */
+/* === HEADER === */
 header {
-    background-color: var(--primary-color);
-    grid-area: h; /* "h" vem lá do meu mapa do grid */
+    background: linear-gradient(135deg, #5f1f3e 0%, #341224 100%);
+    grid-area: h;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombreado leve pra dar um relevo */
+    padding: 15px 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: padding 0.3s ease;
+}
+
+.header-actions {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+#language-toggle,
+#theme-toggle {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(242, 198, 109, 0.16);
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: var(--hover-transition);
+}
+
+#language-toggle:hover,
+#theme-toggle:hover {
+    background: rgba(242, 198, 109, 0.34);
+    transform: translateY(-1px);
 }
 
 header nav ul {
-    list-style-type: none; /* Tira as bolinhas da lista */
+    list-style-type: none;
     display: flex;
-    gap: 20px; /* Um espacinho simpático entre os links do menu */
+    gap: 2px;
 }
 
 header a {
-    text-decoration: none; /* Tira o sublinhado dos links */
+    text-decoration: none;
     color: var(--secondary-color);
     font-weight: 600;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Efeito suave quando passo o mouse */
-    border-radius: 5px;
+    padding: 7px 11px 6px;
+    transition: var(--hover-transition);
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+    transition: width 0.3s ease;
+}
+
+header a:hover::after {
+    width: 70%;
 }
 
 header a:hover {
-    /* O que acontece quando o mouse passa por cima */
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    background-color: rgba(242, 198, 109, 0.14);
 }
 
-/* --- Barra Lateral (Aside) --- */
-aside {
-    grid-area: a; /* "a" do mapa do grid */
-    display: flex;
-    flex-direction: column; /* Organiza os itens um embaixo do outro */
+header a i.bi {
+    font-size: 1.15rem;
+    margin-right: 0;
+    opacity: 0.9;
+    line-height: 1;
+}
+
+.nav-text {
+    font-size: 0.62rem;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+    opacity: 0.88;
+}
+
+/* === HEADER SCROLLED (compact) === */
+header.header-scrolled {
+    padding: 5px 0;
+    transition: padding 0.3s ease;
+}
+
+header.header-scrolled nav a {
+    padding: 5px 9px 4px;
+}
+
+header.header-scrolled .nav-text {
+    display: none;
+}
+
+/* === HAMBURGER BUTTON === */
+#nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: rgba(242, 198, 109, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+#nav-toggle:hover {
+    background: rgba(242, 198, 109, 0.28);
+}
+
+#nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+    transition: all 0.25s ease;
+}
+
+#nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#nav-toggle.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+#nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* === ASIDE (BARRA LATERAL) === */
+aside {
+    grid-area: a;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
     color: var(--secondary-color);
-    padding: 30px 20px;
-    text-align: center;
+    padding: 30px;
+    text-align: left;
 }
 
 aside h1 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-    color: var(--accent-color);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
 }
 
 .profile-photo-container {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%; /* Deixa a foto redondinha */
-    overflow: hidden; /* Garante que a imagem não 'vaze' do círculo */
-    margin-bottom: 20px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 25px;
     border: 3px solid var(--accent-color);
+    box-shadow: 0 0 24px rgba(242, 198, 109, 0.4);
+    transition: var(--hover-transition);
+}
+
+.profile-photo-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 42px rgba(242, 198, 109, 0.54);
 }
 
 .profile-photo-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    object-fit: cover;
 }
 
 aside .role {
     font-size: 1.1em;
-    font-weight: 500;
-    margin-bottom: 10px;
-    color: var(--light-gray);
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    letter-spacing: 0.5px;
 }
 
 aside .bio {
-    font-size: 0.95em;
-    line-height: 1.5; /* Espaçamento entre as linhas do texto */
+    font-size: 0.92em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-/* --- Conteúdo Principal (Main) --- */
+/* === MAIN (CONTEÚDO PRINCIPAL) === */
 main {
-    grid-area: m; /* "m" do mapa */
-    padding: 20px;
-    overflow-y: auto; /* Se o conteúdo for muito grande, a barra de rolagem aparece só aqui */
+    grid-area: m;
+    padding: 10px 30px 30px;
 }
 
-/* O estilo "card" que eu uso em todas as seções */
+main section {
+    scroll-margin-top: 110px;
+}
+
+.hero-section {
+    min-height: calc(100vh - 220px);
+    border-radius: 18px;
+    margin-bottom: 25px;
+    padding: 56px 48px;
+    border: 1px solid rgba(242, 198, 109, 0.35);
+    background:
+        radial-gradient(circle at 10% 20%, rgba(242, 198, 109, 0.16), transparent 40%),
+        radial-gradient(circle at 90% 30%, rgba(111, 40, 70, 0.42), transparent 42%),
+        linear-gradient(140deg, #4a1b34 0%, #341224 55%, #2b0f1e 100%);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-photo-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-photo {
+    width: min(100%, 320px);
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid rgba(242, 198, 109, 0.55);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), 0 0 30px rgba(242, 198, 109, 0.2);
+}
+
+.hero-eyebrow {
+    margin: 0;
+    color: var(--accent-color);
+    letter-spacing: 0.12em;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-section h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.12;
+    color: #fff7ef;
+}
+
+.hero-description {
+    max-width: 760px;
+    margin: 0;
+    font-size: 1.06rem;
+    color: rgba(248, 238, 227, 0.94);
+}
+
+.hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero-highlights span {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(242, 198, 109, 0.4);
+    background: rgba(242, 198, 109, 0.12);
+    color: #fff3df;
+    font-size: 0.88rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.hero-btn {
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 11px 18px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    transition: var(--hover-transition);
+}
+
+.hero-btn.primary {
+    background: var(--accent-color);
+    color: #4a1f35;
+}
+
+.hero-btn.secondary {
+    border: 1px solid rgba(242, 198, 109, 0.55);
+    background: transparent;
+    color: #ffeecb;
+}
+
+.hero-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.02);
+}
+
 .card {
-    background-color: var(--secondary-color);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra bem sutil */
-    margin-bottom: 20px; /* Espaço entre um card e outro */
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 25px;
+    border-left: 4px solid var(--accent-color);
+    transition: var(--hover-transition);
+}
+
+.card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
 
 .card:last-child {
-    margin-bottom: 0; /* O último card não precisa de margem embaixo */
+    margin-bottom: 0;
 }
 
 main h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     margin-bottom: 20px;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color); /* Aquela linha amarela embaixo do título */
-    padding-bottom: 10px;
+    color: var(--accent-secondary);
+    background: none;
+    -webkit-text-fill-color: initial;
+    font-weight: 700;
 }
 
 main h2 {
     font-size: 1.3em;
     margin-top: 25px;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--accent-secondary);
+    font-weight: 600;
 }
 
 p {
@@ -152,84 +411,735 @@ p {
 
 ul {
     list-style-position: inside;
-    padding-left: 0;
+    padding-left: 10px;
 }
 
-/* Estilo específico para a foto da seção "Quem sou eu?" */
+ul li {
+    margin-bottom: 10px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+ul li strong {
+    color: var(--accent-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+}
+
+.skill-item {
+    background: #4b1c34;
+    border: 1px solid #78405b;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.skill-item h3 {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: var(--accent-secondary);
+}
+
+.skill-item p {
+    margin-bottom: 0;
+    font-size: 0.92rem;
+}
+
+.skill-item.soft {
+    background: #3e1228;
+    border-color: #a05068;
+}
+
+.skill-item.soft h3 {
+    color: #f0b8c0;
+}
+
+.skills-section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: var(--accent-color);
+    margin: 28px 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(242, 198, 109, 0.2);
+}
+
+.skills-section-header:first-of-type {
+    margin-top: 4px;
+}
+
+.skills-section-header i {
+    font-size: 0.95rem;
+}
+
+/* === PAGE NAV SIDEBAR === */
+#page-nav {
+    position: fixed;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 12px 6px;
+    background: rgba(20, 5, 15, 0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid rgba(242, 198, 109, 0.12);
+}
+
+.page-nav-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(242, 198, 109, 0.2);
+    border: 1.5px solid rgba(242, 198, 109, 0.35);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.page-nav-dot::before {
+    content: attr(data-label);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(26, 8, 18, 0.92);
+    color: var(--accent-color);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    border: 1px solid rgba(242, 198, 109, 0.28);
+}
+
+.page-nav-dot:hover::before {
+    opacity: 1;
+}
+
+.page-nav-dot:hover {
+    background: rgba(242, 198, 109, 0.45);
+    border-color: rgba(242, 198, 109, 0.7);
+    box-shadow: 0 0 8px 3px rgba(242, 198, 109, 0.35);
+}
+
+.page-nav-dot.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px 4px rgba(242, 198, 109, 0.65), 0 0 22px 8px rgba(242, 198, 109, 0.22);
+    animation: nav-dot-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes nav-dot-pulse {
+    0%, 100% { box-shadow: 0 0 8px 3px rgba(242, 198, 109, 0.6), 0 0 18px 7px rgba(242, 198, 109, 0.2); }
+    50% { box-shadow: 0 0 14px 6px rgba(242, 198, 109, 0.95), 0 0 30px 12px rgba(242, 198, 109, 0.38); }
+}
+
+@media (max-width: 850px) {
+    #page-nav { display: none; }
+}
+
+.projects-carousel {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 14px;
+    align-items: center;
+}
+
+.projects-track {
+    position: relative;
+    min-height: 200px;
+}
+
+.project-slide {
+    display: none;
+}
+
+.project-slide.active {
+    display: block;
+}
+
+.carousel-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #f2c66d;
+    background: #55223d;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--hover-transition);
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background: #6b2a4b;
+    transform: scale(1.06);
+}
+
+/* === PROJECT GALLERY === */
+.project-gallery {
+    margin-bottom: 18px;
+}
+
+.gallery-viewport {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1a0812;
+}
+
+.gallery-images {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.gallery-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.gallery-img.active {
+    opacity: 1;
+}
+
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(15, 4, 10, 0.6);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(242, 198, 109, 0.55);
+    color: var(--accent-color);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.gallery-arrow:hover {
+    background: rgba(40, 10, 25, 0.85);
+    border-color: var(--accent-color);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.gallery-prev { left: 10px; }
+.gallery-next { right: 10px; }
+
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(242, 198, 109, 0.25);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s ease;
+}
+
+.dot:hover {
+    background: rgba(242, 198, 109, 0.55);
+}
+
+.dot.active {
+    background: var(--accent-color);
+    transform: scale(1.25);
+}
+
+.awards-list {
+    display: grid;
+    gap: 14px;
+}
+
+.award-item {
+    background: #4b1c34;
+    border: 1px solid #78405b;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.award-item h2 {
+    margin-top: 0;
+}
+
 #photo-whoami {
     width: 180px;
-    float: right; /* Faz a imagem "flutuar" pra direita, e o texto contorna ela */
-    margin: 0 0 15px 20px; /* Margens pra foto não ficar colada no texto */
+    float: right;
+    margin: 0 0 15px 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .dev-me-photo {
     width: 250px; 
     max-width: 100%; 
     height: auto;
-    border-radius: 12px; /* Mais arredondado */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Uma sombra mais marcante */
-    /* Isso aqui é importante para centralizar a imagem quando ela está sozinha (em coluna) */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     display: block; 
-    margin: 20px auto; /* Adiciona margem em cima/embaixo e centraliza automaticamente */
+    margin: 20px auto;
 }
 
-/* Container pra alinhar a foto e o texto na seção "Sobre mim" */
 .photo-section {
-    display: flex; /* Alinha os itens lado a lado */
+    display: flex;
     align-items: flex-start;
     gap: 30px;
 }
 
 address {
-    font-style: normal; /* O 'address' vem com itálico por padrão, aqui eu tiro isso */
+    font-style: normal;
 }
 
-/* --- Rodapé (Footer) --- */
+/* === CUSTOM CURSOR === */
+*, *::before, *::after {
+    cursor: none !important;
+}
+
+#cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease, width 0.2s ease, height 0.2s ease, background 0.2s ease;
+    box-shadow: 0 0 10px 3px rgba(242, 198, 109, 0.7), 0 0 20px 6px rgba(242, 198, 109, 0.3);
+}
+
+#cursor-ring {
+    display: none;
+}
+
+.cursor-trail {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99997;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(242, 198, 109, 0.5) 0%, transparent 70%);
+    box-shadow: 0 0 6px 2px rgba(242, 198, 109, 0.25);
+    animation: trail-fade 0.6s ease forwards;
+}
+
+@keyframes trail-fade {
+    0% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(0.2); }
+}
+
+/* Cursor hover state applied via JS class on #cursor-dot / #cursor-ring */
+#cursor-dot.hovering {
+    width: 14px;
+    height: 14px;
+    background: #fff3b0;
+    box-shadow: 0 0 16px 6px rgba(242, 198, 109, 0.9), 0 0 32px 12px rgba(242, 198, 109, 0.4);
+}
+
+#cursor-ring.hovering {
+    width: 44px;
+    height: 44px;
+    border-color: rgba(242, 198, 109, 0.9);
+}
+
+/* === FOOTER === */
 footer {
-    grid-area: f; /* "f" do mapa */
+    grid-area: f;
     display: flex;
-    justify-content: space-between; /* Um item pra cada canto */
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, #5f1f3e 0%, #341224 100%);
     color: var(--secondary-color);
-    padding: 20px;
+    padding: 25px 30px;
     font-size: 0.9em;
+    border-top: 1px solid rgba(242, 198, 109, 0.35);
 }
 
-/* --- Design Responsivo --- */
-/* A partir daqui, as regras mudam conforme o tamanho da tela */
+.chart-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
 
-/* Primeira parada: telas de até 768px (tipo tablets) */
+.kpi-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.kpi-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 14px;
+    padding: 14px;
+    border: 1px solid;
+}
+
+.kpi-franq {
+    border-color: rgba(242, 198, 109, 0.38);
+    background: rgba(242, 198, 109, 0.04);
+}
+
+.kpi-cnpq {
+    border-color: rgba(224, 123, 154, 0.38);
+    background: rgba(224, 123, 154, 0.05);
+}
+
+.kpi-group-label {
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding-bottom: 8px;
+    border-bottom: 1px solid;
+    margin-bottom: 2px;
+}
+
+.kpi-franq .kpi-group-label {
+    color: var(--accent-color);
+    border-color: rgba(242, 198, 109, 0.22);
+}
+
+.kpi-cnpq .kpi-group-label {
+    color: #e07b9a;
+    border-color: rgba(224, 123, 154, 0.22);
+}
+
+.kpi-facts article {
+    background: rgba(75, 28, 52, 0.72);
+    border: 1px solid #8b5a72;
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.kpi-facts strong {
+    display: block;
+    color: var(--accent-color);
+    font-size: 1.05rem;
+    line-height: 1.2;
+}
+
+.kpi-facts span {
+    display: block;
+    color: var(--text-color);
+    line-height: 1.45;
+    font-size: 0.92rem;
+}
+
+.chart-controls label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    color: var(--accent-secondary);
+}
+
+.chart-controls select {
+    border: 1px solid #8b5a72;
+    background: #4b1c34;
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+.chart-wrapper {
+    height: 340px;
+    border: 1px solid #8b5a72;
+    border-radius: 12px;
+    background: #42192f;
+    padding: 14px;
+}
+
+body:not(.dark-mode) {
+    --primary-color: #8e345d;
+    --secondary-color: #fff7ef;
+    --accent-color: #d7a84a;
+    --accent-secondary: #e7bf72;
+    --text-color: #4a1f35;
+    --light-gray: #fff3e8;
+    --card-bg: #fef0d6;
+    --card-shadow: 0 8px 26px rgba(15, 23, 42, 0.1);
+    background: radial-gradient(circle at top right, #f2d8b0 0%, #fff7ef 38%, #fce9d4 100%);
+    color: #4a1f35;
+}
+
+body:not(.dark-mode) .hero-section {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(215, 168, 74, 0.16), transparent 40%),
+        radial-gradient(circle at 90% 30%, rgba(142, 52, 93, 0.16), transparent 42%),
+        linear-gradient(140deg, #fff7ef 0%, #fff1e2 55%, #fce6d2 100%);
+    border-color: rgba(142, 52, 93, 0.26);
+}
+
+body:not(.dark-mode) .hero-section h1,
+body:not(.dark-mode) .hero-description {
+    color: #5a233f;
+}
+
+body:not(.dark-mode) .hero-highlights span {
+    background: rgba(215, 168, 74, 0.12);
+    color: #6a2c48;
+    border-color: rgba(142, 52, 93, 0.22);
+}
+
+body:not(.dark-mode) .hero-btn.secondary {
+    color: #6a2c48;
+    border-color: rgba(142, 52, 93, 0.36);
+}
+
+body:not(.dark-mode) .hero-photo {
+    border-color: rgba(142, 52, 93, 0.35);
+    box-shadow: 0 14px 28px rgba(90, 35, 63, 0.18), 0 0 22px rgba(215, 168, 74, 0.22);
+}
+
+body:not(.dark-mode) .skill-item,
+body:not(.dark-mode) .award-item {
+    background: #fde8bf;
+    border: 1px solid #e8c88a;
+}
+
+body:not(.dark-mode) .skill-item.soft {
+    background: #fde8c8;
+    border-color: #d4956a;
+}
+
+body:not(.dark-mode) .skill-item.soft h3 {
+    color: #7a2e40;
+}
+
+body:not(.dark-mode) .chart-wrapper,
+body:not(.dark-mode) .chart-controls select {
+    background: #fffaf4;
+    border-color: #e7cfb8;
+}
+
+body:not(.dark-mode) .kpi-facts article {
+    background: #fff6ee;
+    border-color: #efdbc9;
+}
+
+body:not(.dark-mode) .kpi-franq {
+    border-color: rgba(215, 168, 74, 0.4);
+    background: rgba(215, 168, 74, 0.06);
+}
+
+body:not(.dark-mode) .kpi-cnpq {
+    border-color: rgba(180, 70, 110, 0.3);
+    background: rgba(180, 70, 110, 0.04);
+}
+
+body:not(.dark-mode) .kpi-cnpq .kpi-group-label {
+    color: #b44070;
+    border-color: rgba(180, 70, 110, 0.2);
+}
+
+body:not(.dark-mode) header {
+    background: linear-gradient(135deg, #c8875a 0%, #a0522d 100%);
+    box-shadow: 0 8px 32px rgba(100, 50, 10, 0.18);
+}
+
+body:not(.dark-mode) header nav ul {
+    background: linear-gradient(135deg, #c8875a 0%, #a0522d 100%);
+}
+
+body:not(.dark-mode) footer {
+    background: linear-gradient(135deg, #c8875a 0%, #a0522d 100%);
+    border-top-color: rgba(215, 168, 74, 0.35);
+}
+
+body:not(.dark-mode) .gallery-viewport {
+    background: #f7e8d0;
+}
+
+body:not(.dark-mode) aside {
+    color: #4a1f35;
+}
+
+body:not(.dark-mode) aside .bio {
+    color: rgba(74, 31, 53, 0.88);
+}
+
+@media screen and (max-width: 850px) {
+    #nav-toggle {
+        display: flex;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        gap: 12px;
+    }
+
+    .header-actions {
+        position: static;
+        align-self: auto;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #5f1f3e 0%, #341224 100%);
+        padding: 10px 16px 16px;
+        gap: 2px;
+        border-top: 1px solid rgba(242, 198, 109, 0.22);
+        box-shadow: 0 14px 36px rgba(0, 0, 0, 0.38);
+        z-index: 200;
+    }
+
+    header nav ul.nav-open {
+        display: flex;
+    }
+
+    header a {
+        display: flex;
+        align-items: center;
+        padding: 10px 14px;
+        font-size: 0.92rem;
+    }
+}
+
+footer .news {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* === MEDIA QUERIES === */
 @media screen and (max-width: 768px) {
     body {
-        /* O layout de 2 colunas vira um de 1 coluna só */
-        grid-template-areas: 
+        grid-template-areas:
             "h"
             "a"
             "m"
             "f";
-        grid-template-columns: 1fr; /* Agora só tem uma coluna */
+    }
+
+    aside {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .hero-section {
+        min-height: 0;
+        padding: 32px 24px;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-photo {
+        width: min(100%, 280px);
     }
 
     #photo-whoami {
-        float: none; /* Em telas pequenas, o float não fica bom. Então eu tiro... */
+        float: none;
         display: block;
-        margin: 0 auto 20px; /* ...e centralizo a foto */
+        margin: 0 auto 20px;
     }
 
     .photo-section {
-        flex-direction: column; /* Coloca imagem abaixo do texto */
-        align-items: center; /* <<<<< ESTE É O NOVO AJUSTE! Centraliza os itens quando estão em coluna */
+        flex-direction: column;
+        align-items: center;
     }
 }
 
-/* Segunda parada: telas de até 600px (celulares) */
 @media screen and (max-width: 600px) {
-    header nav ul {
-        flex-direction: column; /* O menu que era horizontal vira vertical */
-        align-items: center;
-        padding: 10px 0;
+    main h1 {
+        font-size: 1.6em;
+    }
+
+    main h2 {
+        font-size: 1.1em;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .hero-section {
+        padding: 26px 18px;
+    }
+
+    .hero-highlights {
+        gap: 8px;
+    }
+
+    .hero-highlights span {
+        width: 100%;
+    }
+
+    .projects-carousel {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-track {
+        min-height: 0;
+    }
+
+    .kpi-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .kpi-group {
+        padding: 12px;
+    }
+
+    .chart-wrapper {
+        height: 280px;
+        padding: 10px;
     }
 }
 
