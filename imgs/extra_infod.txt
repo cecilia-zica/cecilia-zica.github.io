@@ -1,0 +1,154 @@
+Currently pursuing a Bachelor’s degree in Information Systems at Universidade Federal de Santa Catarina, while working as a Data Intern at Franq Open Banking. My daily routine involves exploring and implementing solutions in Python, SQL, n8n, dbt, and Data Visualization, focusing on process automation and generating business intelligence. I am in a stage of constant learning, discovering the diverse possibilities within the data field.
+
+In parallel, I am a PIBIC/CNPq Researcher, using R for statistical data analysis in the AgroTech sector. My professional foundation includes a background as a Consultant at i9 Consultoria, where I developed a strategic vision of management and business processes.
+
+With international experience in Berlin and France, I bring strong adaptability and intercultural communication skills, always seeking to bridge the technical side of Data Science with solutions that create real impact.
+
+-----
+ExperienceExperience
+
+Franq logo
+Data Intern
+Data Intern
+Franq · InternshipFranq · Internship
+Feb 2026 - Present · 2 mosFeb 2026 to Present · 2 mos
+Florianópolis, Santa Catarina, Brazil · On-siteFlorianópolis, Santa Catarina, Brazil · On-site
+ helped me get this job
+LinkedIn helped me get this job
+Universidade Federal de Santa Catarina logo
+Data Science Researcher | Scientific Initiation Scholar (CNPq)
+Data Science Researcher | Scientific Initiation Scholar (CNPq)
+Universidade Federal de Santa Catarina · Part-timeUniversidade Federal de Santa Catarina · Part-time
+Aug 2025 - Present · 8 mosAug 2025 to Present · 8 mos
+Florianópolis, Santa Catarina, Brazil · HybridFlorianópolis, Santa Catarina, Brazil · Hybrid
+Contributing to a data-driven research project (PIBIC/CNPq) at the intersection of AgroTech and Data Science. My work focuses on developing a methodology for the optimal placement of temperature sensors inside broiler houses to improve animal welfare and energy efficiency. I apply advanced statistical analysis and data optimization techniques (using R and Python) to analyze sensor BigData. Contributing to a data-driven research project (PIBIC/CNPq) at the intersection of AgroTech and Data Science. My work focuses on developing a methodology for the optimal placement of temperature sensors inside broiler houses to improve animal welfare and energy efficiency. I apply advanced statistical analysis and data optimization techniques (using R and Python) to analyze sensor BigData. …see more
+Time Series Analysis, Big Data and +8 skills
+i9 Consultoria logo
+i9 Consulting
+i9 Consulting
+Part-time · 7 mosPart-time · 7 mos
+On-siteOn-site
+Business Automation Consultant
+Business Automation Consultant
+Jan 2026 - Mar 2026 · 3 mosJan 2026 to Mar 2026 · 3 mos
+Florianópolis, Santa Catarina, BrazilFlorianópolis, Santa Catarina, Brazil
+Key Performance Indicators
+Trainee Consultant
+Trainee Consultant
+Nov 2025 - Feb 2026 · 4 mosNov 2025 to Feb 2026 · 4 mos
+REST APIs, Process Automation and +2 skills
+Trainee
+Trainee
+Sep 2025 - Nov 2025 · 3 mosSep 2025 to Nov 2025 · 3 mos
+Florianópolis, SCFlorianópolis, SC
+Complete immersion in business management through cross-functional training across all areas (Strategy, Finance, HR, Logistics, and Sales). Individually developed a neurofunctional rehabilitation product (from conception to sales strategy) and conducted business diagnostics and critical analyses in a team.Complete immersion in business management through cross-functional training across all areas (Strategy, Finance, HR, Logistics, and Sales). Individually developed a neurofunctional rehabilitation product (from conception to sales strategy) and conducted business diagnostics and critical analyses in a team.…see more
+Business Analysis
+Federação Catarinense de Voleibol logo
+Volleyball athlete
+Volleyball athlete
+Federação Catarinense de Voleibol · Part-timeFederação Catarinense de Voleibol · Part-time
+Feb 2018 - Dec 2021 · 3 yrs 11 mosFeb 2018 to Dec 2021 · 3 yrs 11 mos
+Florianópolis, Santa Catarina, Brazil · On-siteFlorianópolis, Santa Catarina, Brazil · On-site
+EducationEducation
+Universidade Federal de Santa Catarina logo
+Universidade Federal de Santa Catarina
+Universidade Federal de Santa Catarina
+Bachelor's degree in Information Systems (IS)Bachelor's degree in Information Systems (IS)
+Jun 2024 - 2028Jun 2024 - 2028
+Python (Programming Language), R (Programming Language) and +5 skills
+Kurt Schwitters Oberschule
+Kurt Schwitters Oberschule
+Kurt Schwitters Oberschule
+High School Exchange Program, German Language and CultureHigh School Exchange Program, German Language and Culture
+Dec 2019 - Dec 2020Dec 2019 - Dec 2020
+One-year international study experience in Berlin, Germany. 
+Attended Kurt Schwitters Oberschule as part of a high school exchange program. 
+Immersed in German culture and language while maintaining academic studies. 
+Developed adaptability, global perspective, and communication skills.One-year international study experience in Berlin, Germany. Attended Kurt Schwitters Oberschule as part of a high school exchange program. Immersed in German culture and language while maintaining academic studies. Developed adaptability, global perspective, and communication skills.…see more
+Adaptability, English and +3 skills
+Show all 5 educations
+Licenses & certificationsLicenses & certifications
+Goethe-Institut São Paulo logo
+German Intensive Course: Level B1
+German Intensive Course: Level B1
+Goethe-Institut São PauloGoethe-Institut São Paulo
+Issued Mar 2024Issued Mar 2024
+German
+
+Certification Goethe InstitutCertification Goethe Institut
+Alura logo
+Lógica de Programação com JavaScript
+Lógica de Programação com JavaScript
+AluraAlura
+Show credential
+JavaScript
+
+Curso Lógica de programação mergulhe em programação com JavaScriptCurso Lógica de programação mergulhe em programação com JavaScript
+Curso introdutório à lógica de programação utilizando a linguagem JavaScript. O conteúdo faz parte do programa ONE (Oracle Next Education), uma parceria com a Alura.Curso introdutório à lógica de programação utilizando a linguagem JavaScript. O conteúdo faz parte do programa ONE (Oracle Next Education), uma parceria com a Alura.
+Show all 5 licenses & certifications
+SkillsSkills
+Key Performance Indicators
+Key Performance Indicators
+Company logo
+Business Automation Consultant at i9 ConsultingBusiness Automation Consultant at i9 Consulting
+Process Automation
+Process Automation
+Company logo
+Trainee Consultant at i9 ConsultingTrainee Consultant at i9 Consulting
+Show all 28 skills
+Honors & awardsHonors & awards
+3rd Place Winner | Civil Defense Hackathon
+3rd Place Winner | Civil Defense Hackathon
+Issued by UFSC & Defesa Civil SC · Oct 2025Issued by UFSC & Defesa Civil SC · Oct 2025
+Universidade Federal de Santa Catarina logo
+Associated with Universidade Federal de Santa Catarina
+Associated with Universidade Federal de Santa Catarina
+Developed a WhatsApp Chatbot MVP for crisis management using Python and Twilio. I acted in a hybrid role: coding the backend automation and delivering the final pitch to a panel of expert judges. The solution was designed to reduce emergency line congestion during natural disasters.Developed a WhatsApp Chatbot MVP for crisis management using Python and Twilio. I acted in a hybrid role: coding the backend automation and delivering the final pitch to a panel of expert judges. The solution was designed to reduce emergency line congestion during natural disasters.…see more
+2nd Place Winner | Startup Weekend
+2nd Place Winner | Startup Weekend
+Issued by Techstars · Aug 2025Issued by Techstars · Aug 2025
+Co-founded "ShouldIGO", a social platform for travelers. In just 54 hours, we validated the business model, designed the prototype, and I delivered the final pitch, securing 2nd place among competing startups.Co-founded "ShouldIGO", a social platform for travelers. In just 54 hours, we validated the business model, designed the prototype, and I delivered the final pitch, securing 2nd place among competing startups.
+Show all 4 honors & awards
+LanguagesLanguages
+English
+English
+Full professional proficiencyFull professional proficiency
+French
+French
+Elementary proficiencyElementary proficiency
+German intermidiario 
+portugues nativo 
+
+
+
+Honors & awards
+3rd Place Winner | Civil Defense Hackathon
+3rd Place Winner | Civil Defense Hackathon
+Issued by UFSC & Defesa Civil SC · Oct 2025Issued by UFSC & Defesa Civil SC · Oct 2025
+Universidade Federal de Santa Catarina logo
+Associated with Universidade Federal de Santa Catarina
+Associated with Universidade Federal de Santa Catarina
+Developed a WhatsApp Chatbot MVP for crisis management using Python and Twilio. I acted in a hybrid role: coding the backend automation and delivering the final pitch to a panel of expert judges. The solution was designed to reduce emergency line congestion during natural disasters.
+Developed a WhatsApp Chatbot MVP for crisis management using Python and Twilio. I acted in a hybrid role: coding the backend automation and delivering the final pitch to a panel of expert judges. The solution was designed to reduce emergency line congestion during natural disasters.
+2nd Place Winner | Startup Weekend
+2nd Place Winner | Startup Weekend
+Issued by Techstars · Aug 2025Issued by Techstars · Aug 2025
+Co-founded "ShouldIGO", a social platform for travelers. In just 54 hours, we validated the business model, designed the prototype, and I delivered the final pitch, securing 2nd place among competing startups.
+Co-founded "ShouldIGO", a social platform for travelers. In just 54 hours, we validated the business model, designed the prototype, and I delivered the final pitch, securing 2nd place among competing startups.
+Menção Honrosa - Olimpíada Internacional Canguru de Matemática
+Menção Honrosa - Olimpíada Internacional Canguru de Matemática
+Issued by Association Kangourou sans Frontières (AKSF) · Nov 2018Issued by Association Kangourou sans Frontières (AKSF) · Nov 2018
+Associated with Colégio Catarinense
+Associated with Colégio Catarinense
+General Leadership & Sports Awards | Pinheiral Camp
+General Leadership & Sports Awards | Pinheiral Camp
+Issued by Colégio CatarinenseIssued by Colégio Catarinense
+Associated with Colégio Catarinense
+Associated with Colégio Catarinense
+Recipient of the "Standout Participant" award, elected by counselors for demonstrated leadership, proactivity, and exemplary conduct. Additionally recognized with over 10 awards for sports performance and social integration throughout the years.
+
+----------------
+
+
+
+

@@ -1,126 +1,1451 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="all">
-    <title>Minha Página Pessoal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Cecília Zica | Portfolio</title>
 </head>
 <body>
     <header>
+        <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <nav>
             <ul>
-                <li><a href="#section-home">Home</a></li>
-                <li><a href="#section-graduation">Graduação</a></li>
-                <li><a href="#section-learning">Aprendendo</a></li>
-                <li><a href="#section-aboutme">Sobre mim</a></li>
-                <li><a href="#section-contact">Contato</a></li>
+                <li><a href="#section-home"><i class="bi bi-house-door"></i><span class="nav-text"> Home</span></a></li>
+                <li><a href="#section-about"><i class="bi bi-person"></i><span class="nav-text"> About</span></a></li>
+                <li><a href="#section-education"><i class="bi bi-mortarboard"></i><span class="nav-text"> Education</span></a></li>
+                <li><a href="#section-experience"><i class="bi bi-briefcase"></i><span class="nav-text"> Experience</span></a></li>
+                <li><a href="#section-skills"><i class="bi bi-lightning-charge"></i><span class="nav-text"> Skills</span></a></li>
+                <li><a href="#section-data"><i class="bi bi-bar-chart-line"></i><span class="nav-text"> Data Lab</span></a></li>
+                <li><a href="#section-projects"><i class="bi bi-folder2-open"></i><span class="nav-text"> Projects</span></a></li>
+                <li><a href="#section-awards"><i class="bi bi-trophy"></i><span class="nav-text"> Awards</span></a></li>
+                <li><a href="#section-contact"><i class="bi bi-envelope"></i><span class="nav-text"> Contact</span></a></li>
             </ul>
         </nav>
+        <div class="header-actions">
+            <button id="language-toggle" type="button" aria-label="Switch language">PT-BR</button>
+            <button id="theme-toggle" type="button" aria-label="Switch theme">☀️</button>
+        </div>
     </header>
+
     <aside>
         <h1>Cecília Zica</h1>
-
         <div class="profile-photo-container">
-             <img src="imgs/imagem_cecilia_selfie.jpg" alt="Foto de Cecília Zica em formato de Selfie, jovem morena sorrindo.">
+            <img src="imgs/imagem_cecilia_selfie.jpg" alt="Photo of Cecília Zica smiling.">
         </div>
-
-        <p class="role">Estudante de Sistemas de Informação</p>
-        <p class="bio">Aluna da Universidade Federal de Santa Catarina (UFSC), iniciante em desenvolvimento de sistemas sempre em busca de aprender novas tecnologias.</p>
+        <p class="role">Data Intern | Information Systems Student</p>
+        <p class="bio">Bachelor's student at UFSC, Data Intern at Franq Open Banking, and CNPq researcher focused on data, automation, and real-world impact.</p>
     </aside>
+
     <main>
-        <section id="section-home" class="card">
-            <h1>Quem sou eu?</h1>
-            
-            <img id="photo-whoami" src="imgs/imagem_cecilia_microfone.jpg" alt="Foto de Cecília Zica com um microfone.">
-
-            <p>Muito prazer! Sou a Cecília Zica, estudante do curso de Sistemas de Informação na UFSC. 
-                Tenho grande interesse na área de desennvolvimento, buscando sempre aprender sobre as melhores práticas de sistemas. No momento estou aprendendo mais sobre design e usabilidade para criar interfaces intuitivas e responsivas!</p>
-            
-            <p>Atualmente estou aprofundando meus conhecimentos em programação, sistemas e tecnologias em minha graduação. Além de estar constantemente estudando outros idiomas (uma paixão minha).</p>
-            
-            <p>Estou sempre em busca do meu aprimoramento pessoal e gostaria de encontrar um lugar onde posso contribuir e também aprender aplicando meus conhecimentos adquiridos!</p>
+        <section id="section-home" class="hero-section">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <p class="hero-eyebrow">DATA • AUTOMATION • IMPACT</p>
+                    <h1>Turning complex data into smart decisions.</h1>
+                    <p class="hero-description">I am Cecília Zica, an Information Systems student at UFSC, Data Intern at Franq Open Banking, and CNPq researcher focused on analytics, automation, and practical AI.</p>
+                    <div class="hero-highlights">
+                        <span>Looker • n8n • Streamlit • SQL • Python</span>
+                        <span>20h/month saved with automation</span>
+                        <span>300k+ rows analyzed per lot in AgroTech research</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#section-data" class="hero-btn primary">Explore Data Lab</a>
+                        <a href="#section-experience" class="hero-btn secondary">View Experience</a>
+                    </div>
+                </div>
+                <div class="hero-photo-wrapper">
+                    <img class="hero-photo" src="imgs/imagem_cecilia_microfone.jpg" alt="Cecília Zica presenting with a microphone.">
+                </div>
+            </div>
         </section>
 
-        <section id="section-graduation" class="card">
-            <h1>Disciplinas</h1>
-            <h2>2025 - 2 (cursando)</h2>
+        <section id="section-about" class="card">
+            <h1>About</h1>
+            <p>Currently pursuing a Bachelor's degree in Information Systems at Universidade Federal de Santa Catarina, while working as a Data Intern at Franq Open Banking. My daily routine involves exploring and implementing solutions in Python, SQL, n8n, dbt, and Data Visualization, focusing on process automation and generating business intelligence. I am in a stage of constant learning, discovering the diverse possibilities within the data field.</p>
+            <p>In parallel, I am a PIBIC/CNPq Researcher, using R for statistical data analysis in the AgroTech sector. My professional foundation includes a background as a Consultant at i9 Consultoria, where I developed a strategic vision of management and business processes.</p>
+            <p>With international experience in Berlin and France, I bring strong adaptability and intercultural communication skills, always seeking to bridge the technical side of Data Science with solutions that create real impact.</p>
+        </section>
+
+        <section id="section-education" class="card">
+            <h1>Education</h1>
+
+            <h2>2026 - 1 (In Progress)</h2>
             <ul>
-                <li><strong>EGC5009</strong> - Geração de Idéias e Criatividade em Informática</li>
-                <li><strong>EPS5211</strong> - Programação Econômica e Financeira</li>
-                <li><strong>INE5609</strong> - Estruturas de Dados</li>
-                <li><strong>INE5649</strong> - Técnicas Estatísticas de Predição</li>
-                <li><strong>INE5646</strong> - Programação para Web </li>
-            <h2>2025 - 1</h2>
-            <ul>
-                <li><strong>CAD5103</strong> - Administração I</li>
-                <li><strong>EGC5036</strong> - Marketing Pessoal e Empreendedorismo</li>
-                <li><strong>INE5605</strong> - Desenvolvimento de Sistemas Orientados a Objetos I</li>
-                <li><strong>INE5606</strong> - Probabilidade e Estatística</li>
-                <li><strong>INE5607</strong> - Organização e Arquitetura de Computadores</li>
+                <li><strong>INE5608</strong> - Systems Analysis and Design</li>
+                <li><strong>INE5611</strong> - Operating Systems</li>
+                <li><strong>INE5613</strong> - Databases I</li>
+                <li><strong>INE5659</strong> - Strategic Management of Technologies, Information and Communication</li>
+                <li><strong>INE5670</strong> - Mobile and Embedded Systems Development</li>
             </ul>
-            <h2>2024 - 2</h2>
+
+            <h2>2025 - 2 ✓ Completed</h2>
             <ul>
-                <li><strong>CAD5240</strong> - Aspectos Comportamentais do Empreendedor</li>
-                <li><strong>EGC5015</strong> - Teoria Geral de Sistemas</li>
-                <li><strong>INE5603</strong> - Programação Orientada a Objetos I</li>
-                <li><strong>INE5601</strong> - Fundamentos Matemáticos da Informática</li>
-                <li><strong>INE5602</strong> - Introdução à Informática</li>
+                <li><strong>EGC5009</strong> - Idea Generation and Creativity in Computing</li>
+                <li><strong>EPS5211</strong> - Economic and Financial Programming</li>
+                <li><strong>INE5609</strong> - Data Structures</li>
+                <li><strong>INE5646</strong> - Web Programming</li>
+                <li><strong>INE5649</strong> - Statistical Prediction Techniques</li>
+            </ul>
+            <p><strong>Semester GPA:</strong> 9.3</p>
+
+            <h2>2025 - 1 ✓ Completed</h2>
+            <ul>
+                <li><strong>CAD5103</strong> - Administration I</li>
+                <li><strong>EGC5036</strong> - Personal Marketing and Entrepreneurship</li>
+                <li><strong>INE5605</strong> - Object-Oriented Systems Development I</li>
+                <li><strong>INE5606</strong> - Probability and Statistics</li>
+                <li><strong>INE5607</strong> - Computer Organization and Architecture</li>
+            </ul>
+
+            <h2>2024 - 2 ✓ Completed</h2>
+            <ul>
+                <li><strong>CAD5240</strong> - Behavioral Aspects of Entrepreneurship</li>
+                <li><strong>EGC5015</strong> - General Systems Theory</li>
+                <li><strong>INE5601</strong> - Mathematical Foundations of Informatics</li>
+                <li><strong>INE5602</strong> - Introduction to Informatics</li>
+                <li><strong>INE5603</strong> - Introduction to Object-Oriented Programming</li>
+            </ul>
+
+            <h2>Languages</h2>
+            <ul>
+                <li><strong>Portuguese</strong> - Native</li>
+                <li><strong>English</strong> - Fluent</li>
+                <li><strong>German</strong> - B1 (Goethe-Institut)</li>
+                <li><strong>French</strong> - Basic</li>
             </ul>
         </section>
 
-        <section id="section-learning" class="card">
-            <h1>Aprendendo</h1>
-            Meus interesses de aprendizado no momento são:
-            <ul>
-                <li>Aprimorar minha lógica de programação</li>
-                <li>Usabilidade e Experiência do Usuário em Web</li>
-                <li>Análise de dados e Estatística</li>
-                <li>Estruturamento de dados</li>
+        <section id="section-experience" class="card">
+            <h1>Experience</h1>
 
+            <h2>Data Intern - Franq Open Banking</h2>
+            <p><strong>Feb 2026 - Present</strong> | Florianópolis, SC</p>
+            <p>Working with data products and internal analytics solutions using Python, SQL, Looker, n8n, Streamlit, dbt, Tag Manager, web scraping, and web analytics, with emphasis on process automation and BI generation.</p>
+
+            <h2>Data Science Researcher | Scientific Initiation Scholar (CNPq) - UFSC</h2>
+            <p><strong>Aug 2025 - Present</strong> | Hybrid</p>
+            <p>Contributing to AgroTech research with statistical analysis, time series, optimization, and anomaly detection to improve sensor positioning and operational efficiency.</p>
+
+            <h2>i9 Consultoria</h2>
+            <p><strong>Sep 2025 - Mar 2026</strong> | Florianópolis, SC</p>
+            <ul>
+                <li><strong>Business Automation Consultant</strong> - KPI design and process automation</li>
+                <li><strong>Trainee Consultant</strong> - REST APIs, process automation, and business analysis</li>
+                <li><strong>Trainee</strong> - End-to-end business immersion across strategy, finance, HR, logistics, and sales</li>
             </ul>
+
+            <h2>Sports Leader (Grêmio) | Colégio Catarinense</h2>
+            <p><strong>2016 – 2022</strong> | Florianópolis, SC — 6th grade through end of high school</p>
+            <p>Led sports operations for my class for 6 consecutive years across Colégio Catarinense's renowned <strong>Olimpíadas</strong> — a traditional multi-sport event with 2,000+ student participants.</p>
+            <ul>
+                <li><strong>Logistics</strong> — managed uniforms, team compositions, and scheduling for each year's competition</li>
+                <li><strong>Financial</strong> — collected, tracked, and allocated class funds for all sports activities</li>
+                <li><strong>Team building</strong> — selected players and coached teams across multiple sports</li>
+                <li><strong>Event production</strong> — choreographed and commanded the opening ceremony dance, representing the class in front of the entire school</li>
+            </ul>
+
+            <h2>Volleyball Athlete | Federação Catarinense de Voleibol</h2>
+            <p><strong>2018 – 2021</strong> | Santa Catarina, Brazil</p>
+            <p>Competed as a <strong>setter (levantadora)</strong> in the Federação Catarinense de Voleibol. The setter role demands constant communication, strategic thinking, and precise reading of teammates — orchestrating every offensive play while adapting to each attacker's rhythm and form on the day. This experience built resilience, discipline, and real-time decision-making under pressure.</p>
+
+            <h2>High School Exchange Program | Kurt Schwitters Oberschule</h2>
+            <p><strong>Dec 2019 – Dec 2020</strong> | Berlin, Germany</p>
+            <p>One-year international study experience in Berlin. Attended Kurt Schwitters Oberschule as part of a high school exchange program, immersed in German culture and language while maintaining full academic studies. Developed deep adaptability, a global perspective, and cross-cultural communication skills.</p>
+
+            <h2>Immersive French Language Program | L'atelier 9</h2>
+            <p><strong>Apr 2024 – May 2024</strong> | Paris, France</p>
+            <p>One-month intensive French immersion program in Paris focused on conversation, grammar, and cultural fluency. Full-time classes in small groups with real-life language activities. Enhanced communication skills and adaptability in a multilingual environment.</p>
         </section>
 
-        <section id="section-aboutme" class="card">
-    <h1>Sobre mim</h1>
-    
-    <div class="photo-section">
-        
-        <div>
-            <h2>Formação:</h2>
-            <ul>
-                <li>Graduanda em Sistemas de Informação (UFSC, 2024 - Presente)</li>
-            </ul>
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Python</li>
-                <li>JavaScript (Básico) | HTML5 & CSS3</li>
-                <li>Git & GitHub</li>
-                <li>Análise de Dados e Estatística</li>
-                <li>Software R</li>
-                <li>Design Responsivo</li>
-            </ul>
-        </div>
-        
-        <img class="dev-me-photo" src="imgs/imagem_desenvolvimento_sistemas.jpeg" alt="Foto ilustrativa de um computador com imagens indicando desenvolvimento de sistemas">
-    
-    </div> </section>
- 
+        <section id="section-timeline" class="card">
+            <h1>Career Timeline</h1>
+            <p style="margin-bottom: 14px; font-size: 0.92rem; color: rgba(248,238,227,0.75);">A visual overview of my journey across professional, research, academic, and sports experiences.</p>
+            <div class="chart-wrapper" style="height: 460px;">
+                <canvas id="timeline-chart"></canvas>
+            </div>
+        </section>
+
+        <section id="section-skills" class="card">
+            <h1>Skills</h1>
+            <div class="skills-section-header"><i class="bi bi-cpu"></i> Technical Skills</div>
+            <div class="skills-grid">
+                <article class="skill-item"><h3>Key Performance Indicators</h3><p>Applied as Business Automation Consultant at i9 Consultoria.</p></article>
+                <article class="skill-item"><h3>Process Automation</h3><p>Applied at i9 Consultoria and currently at Franq Open Banking.</p></article>
+                <article class="skill-item"><h3>REST APIs</h3><p>Applied as Trainee Consultant at i9 Consultoria.</p></article>
+                <article class="skill-item"><h3>Business Analysis</h3><p>Applied during Trainee phase at i9 Consultoria.</p></article>
+                <article class="skill-item"><h3>Data Modeling</h3><p>Applied in CNPq scientific initiation projects at UFSC.</p></article>
+                <article class="skill-item"><h3>Data Pipelines</h3><p>Applied across UFSC research and data workflows in industry.</p></article>
+                <article class="skill-item"><h3>Data Quality</h3><p>Applied in multi-source data workflows and validation routines.</p></article>
+                <article class="skill-item"><h3>Data Visualization</h3><p>Applied in UFSC research and current BI routines with Looker and Streamlit.</p></article>
+                <article class="skill-item"><h3>Time Series Analysis</h3><p>Applied as Data Science Researcher (CNPq) at UFSC.</p></article>
+                <article class="skill-item"><h3>Anomaly Detection</h3><p>Applied in CNPq research datasets and sensor behavior studies.</p></article>
+                <article class="skill-item"><h3>Big Data & Optimization</h3><p>Applied in AgroTech statistical studies and model improvement.</p></article>
+                <article class="skill-item"><h3>Python, R, SQL, JavaScript</h3><p>Applied in academic, research, and professional environments.</p></article>
+                <article class="skill-item"><h3>Git & GitHub</h3><p>Applied in collaborative software projects and version control.</p></article>
+                <article class="skill-item"><h3>Analytical Skills</h3><p>Developed across UFSC coursework, consulting projects, and research.</p></article>
+                <article class="skill-item"><h3>Design Sensibility</h3><p>Applied in UI/UX decisions across web projects and data visualization.</p></article>
+            </div>
+            <div class="skills-section-header"><i class="bi bi-people"></i> Soft Skills</div>
+            <div class="skills-grid">
+                <article class="skill-item soft"><h3>Resilience & Discipline</h3><p>Built through competitive volleyball, 6 years of sports leadership, and solo international experiences.</p></article>
+                <article class="skill-item soft"><h3>Teamwork</h3><p>Applied across consulting projects, research groups, hackathons, and software teams.</p></article>
+                <article class="skill-item soft"><h3>Adaptability</h3><p>Demonstrated by living and studying in Germany and France, thriving in new environments.</p></article>
+                <article class="skill-item soft"><h3>Intercultural Communication</h3><p>Developed through exchanges in Berlin and Paris, working across languages and cultures.</p></article>
+                <article class="skill-item soft"><h3>Communication</h3><p>Applied through pitches at Startup Weekend and Civil Defense Hackathon, and team leadership since 2016.</p></article>
+                <article class="skill-item soft"><h3>Problem Solving & Business Understanding</h3><p>Applied at i9 Consultoria and Franq, connecting technical solutions to real business impact.</p></article>
+            </div>
+        </section>
+
+        <section id="section-data" class="card">
+            <h1>Data Lab</h1>
+            <p>Interactive case studies based on real work I delivered at Franq and CNPq.</p>
+            <div class="kpi-facts">
+                <div class="kpi-group kpi-franq">
+                    <div class="kpi-group-label"><i class="bi bi-lightning-charge-fill"></i> Franq Open Banking</div>
+                    <article><strong>20h/month saved</strong><span>Manual document sampling fully automated in n8n.</span></article>
+                    <article><strong>1-click workflow</strong><span>Sampling runs instantly for AI quality checks and hallucination control.</span></article>
+                    <article><strong>~5 min human review</strong><span>After n8n runs, a human simply opens the ready spreadsheet and reviews if the AI read each document correctly — no manual sampling needed.</span></article>
+                </div>
+                <div class="kpi-group kpi-cnpq">
+                    <div class="kpi-group-label"><i class="bi bi-seedling"></i> CNPq AgroTech</div>
+                    <article><strong>300k+ rows per lot</strong><span>Automated reading, normalization, and chart generation for temperature/humidity data.</span></article>
+                    <article><strong>Actionable insights</strong><span>Visual analytics on thermal/physical stress factors linked to higher poultry mortality.</span></article>
+                </div>
+            </div>
+            <div class="chart-controls">
+                <label>
+                    Case Study
+                    <select id="metric-select">
+                        <option value="franq_time">Franq - Time Reduction</option>
+                        <option value="cnpq_rows">CNPq - Data Volume</option>
+                    </select>
+                </label>
+                <label>
+                    Chart Type
+                    <select id="chart-type-select">
+                        <option value="line">Line</option>
+                        <option value="bar">Bar</option>
+                    </select>
+                </label>
+                <label>
+                    Period
+                    <select id="period-select">
+                        <option value="12">Last 12 months</option>
+                        <option value="6">Last 6 months</option>
+                        <option value="3">Last 3 months</option>
+                    </select>
+                </label>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="portfolio-chart"></canvas>
+            </div>
+        </section>
+
+        <section id="section-projects" class="card">
+            <h1>Projects</h1>
+            <div class="projects-carousel">
+                <button class="carousel-btn" id="prev-project" aria-label="Previous project">❮</button>
+
+                <div class="projects-track" id="projects-track">
+                    <article class="project-slide active">
+                        <div class="project-gallery">
+                            <div class="gallery-viewport">
+                                <button class="gallery-arrow gallery-prev" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+                                <div class="gallery-images">
+                                    <img src="imgs/hotel1.png" class="gallery-img active" alt="Hotel app – screen 1">
+                                    <img src="imgs/hotel2.png" class="gallery-img" alt="Hotel app – screen 2">
+                                    <img src="imgs/hotel3.png" class="gallery-img" alt="Hotel app – screen 3">
+                                    <img src="imgs/hotel4.png" class="gallery-img" alt="Hotel app – screen 4">
+                                    <img src="imgs/hotel5.png" class="gallery-img" alt="Hotel app – screen 5">
+                                </div>
+                                <button class="gallery-arrow gallery-next" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="gallery-dots">
+                                <button class="dot active" aria-label="Image 1"></button>
+                                <button class="dot" aria-label="Image 2"></button>
+                                <button class="dot" aria-label="Image 3"></button>
+                                <button class="dot" aria-label="Image 4"></button>
+                                <button class="dot" aria-label="Image 5"></button>
+                            </div>
+                        </div>
+                        <h2>Hotel Management Web Application</h2>
+                        <p>In UFSC's Web Programming course, my team and I built a complete hotel management web application with authentication, responsive UI, room selection, booking with shared guest data, and payment simulation.</p>
+                        <p>The frontend was developed with React and the backend with Node.js. More than the final product, this project strengthened our practical understanding of full-stack architecture, teamwork, and software delivery in real scenarios.</p>
+                        <p><strong>Team:</strong> João Paulo Decker Oleinik, Nicole Cristina, Vinicius Gessner Anverze, Sofia Damas.</p>
+                    </article>
+
+                    <article class="project-slide">
+                        <div class="project-gallery">
+                            <div class="gallery-viewport">
+                                <button class="gallery-arrow gallery-prev" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+                                <div class="gallery-images">
+                                    <img src="imgs/oscar1.png" class="gallery-img active" alt="Oscar app – screen 1">
+                                    <img src="imgs/oscar2.png" class="gallery-img" alt="Oscar app – screen 2">
+                                    <img src="imgs/oscar3.png" class="gallery-img" alt="Oscar app – screen 3">
+                                    <img src="imgs/oscar4.png" class="gallery-img" alt="Oscar app – screen 4">
+                                    <img src="imgs/oscar5.png" class="gallery-img" alt="Oscar app – screen 5">
+                                    <img src="imgs/oscar6.png" class="gallery-img" alt="Oscar app – screen 6">
+                                </div>
+                                <button class="gallery-arrow gallery-next" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+                            </div>
+                            <div class="gallery-dots">
+                                <button class="dot active" aria-label="Image 1"></button>
+                                <button class="dot" aria-label="Image 2"></button>
+                                <button class="dot" aria-label="Image 3"></button>
+                                <button class="dot" aria-label="Image 4"></button>
+                                <button class="dot" aria-label="Image 5"></button>
+                                <button class="dot" aria-label="Image 6"></button>
+                            </div>
+                        </div>
+                        <h2>Oscar Voting System (OOP Final Project)</h2>
+                        <p>For the Object-Oriented Systems Development course, I built a full Oscar voting system with my teammate João Paulo Decker Oleinik, evolving a console app into an interactive desktop application.</p>
+                        <p>The system supports registration of movies, actors, actresses, and directors, category nominations, voting flows, winner generation, and a user-friendly interface. The biggest learning came from applying MVC architecture in depth, including persistence, exception handling, and maintainable design decisions.</p>
+                        <p><strong>Key takeaway:</strong> process quality matters as much as the final result when building scalable software in team environments.</p>
+                    </article>
+                </div>
+
+                <button class="carousel-btn" id="next-project" aria-label="Next project">❯</button>
+            </div>
+        </section>
+
+        <section id="section-awards" class="card">
+            <h1>Honors & Awards</h1>
+            <div class="awards-list">
+                <article class="award-item">
+                    <h2>3rd Place Winner | Civil Defense Hackathon</h2>
+                    <p><strong>Issued by UFSC & Defesa Civil SC · Oct 2025</strong></p>
+                    <p>Developed a WhatsApp chatbot MVP for crisis management using Python and Twilio. I worked in a hybrid role, building backend automation and delivering the final pitch to expert judges.</p>
+                </article>
+
+                <article class="award-item">
+                    <h2>2nd Place Winner | Startup Weekend</h2>
+                    <p><strong>Issued by Techstars · Aug 2025</strong></p>
+                    <p>Co-founded “ShouldIGO”, a social platform for travelers. In 54 hours, we validated the business model, designed the prototype, and I delivered the final pitch that secured 2nd place.</p>
+                </article>
+
+                <article class="award-item">
+                    <h2>Honorable Mention | International Kangaroo Math Olympiad</h2>
+                    <p><strong>Issued by Association Kangourou sans Frontières (AKSF) · Nov 2018</strong></p>
+                    <p>Recognized for high performance in international mathematics competition.</p>
+                </article>
+
+                <article class="award-item">
+                    <h2>General Leadership & Sports Awards | Pinheiral Camp</h2>
+                    <p><strong>Issued by Colégio Catarinense</strong></p>
+                    <p>Received the “Standout Participant” distinction for leadership, proactivity, and conduct, plus 10+ awards for sports performance and social integration.</p>
+                </article>
+            </div>
+        </section>
+
         <section id="section-contact" class="card">
-            <h1>Entre em contato comigo!</h1>
+            <h1>Contact</h1>
             <address>
-                <p>Cecília Zica Camargo</p>
-                <p>Departamento de Informática e Estatística (INE)</p>
+                <p><strong>Cecília Zica Camargo</strong></p>
+                <p>Department of Informatics and Statistics (INE)</p>
                 <p>Universidade Federal de Santa Catarina (UFSC)</p>
-                <p>Florianópolis, SC - Brasil</p>
+                <p>Florianópolis, SC - Brazil</p>
                 <p>Email: zicacamargocecilia@gmail.com</p>
             </address>
         </section>
     </main>
+
     <footer>
-        <div class="news"><q>A disciplina de Programação para Web (INE5646) está sendo incrível para aprender e desenvolver!</q></div>
-        <div><p>&copy; 2025 - Cecília Zica</p></div>
+        <p>&copy; 2026 - Cecília Zica</p>
     </footer>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let currentLanguage = 'en';
+        let currentTheme = 'dark';
+
+        let portfolioChart = null;
+
+        function mountProjectGalleries() {
+            document.querySelectorAll('.project-gallery').forEach(gallery => {
+                const imgs = gallery.querySelectorAll('.gallery-img');
+                const dots = gallery.querySelectorAll('.dot');
+                const prevBtn = gallery.querySelector('.gallery-prev');
+                const nextBtn = gallery.querySelector('.gallery-next');
+                if (!imgs.length) return;
+                let current = 0;
+
+                function show(idx) {
+                    imgs[current].classList.remove('active');
+                    if (dots[current]) dots[current].classList.remove('active');
+                    current = ((idx % imgs.length) + imgs.length) % imgs.length;
+                    imgs[current].classList.add('active');
+                    if (dots[current]) dots[current].classList.add('active');
+                }
+
+                if (prevBtn) prevBtn.addEventListener('click', e => { e.stopPropagation(); show(current - 1); });
+                if (nextBtn) nextBtn.addEventListener('click', e => { e.stopPropagation(); show(current + 1); });
+                dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+            });
+        }
+
+        function mountCarousel() {
+            const slides = document.querySelectorAll('.project-slide');
+            const prevBtn = document.getElementById('prev-project');
+            const nextBtn = document.getElementById('next-project');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide) => slide.classList.remove('active'));
+                if (slides[index]) {
+                    slides[index].classList.add('active');
+                }
+            }
+
+            if (prevBtn && nextBtn && slides.length > 0) {
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    showSlide(currentIndex);
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                });
+            }
+
+            showSlide(currentIndex);
+        }
+
+        function mountInteractiveChart() {
+            const metricSelect = document.getElementById('metric-select');
+            const chartTypeSelect = document.getElementById('chart-type-select');
+            const periodSelect = document.getElementById('period-select');
+            const canvas = document.getElementById('portfolio-chart');
+
+            if (!metricSelect || !chartTypeSelect || !periodSelect || !canvas || typeof Chart === 'undefined') {
+                return;
+            }
+
+            const scenarios = {
+                franq_time: {
+                    labels: ['Before (manual process)', 'After (n8n automation)'],
+                    values: [20, 0],
+                    datasetLabel: 'Hours per month'
+                },
+                cnpq_rows: {
+                    labels: ['Per lot (minimum)', '4 lots (minimum cumulative)', '8 lots (minimum cumulative)'],
+                    values: [300000, 1200000, 2400000],
+                    datasetLabel: 'Rows processed'
+                }
+            };
+
+            function renderChart() {
+                const metric = metricSelect.value;
+                const type = chartTypeSelect.value;
+                const selectedScenario = scenarios[metric] || scenarios.franq_time;
+                const period = Number(periodSelect.value);
+                const totalPoints = selectedScenario.values.length;
+                const safePeriod = Math.min(period, totalPoints);
+                const data = selectedScenario.values.slice(-safePeriod);
+                const labels = selectedScenario.labels.slice(-safePeriod);
+
+                const style = getComputedStyle(document.body);
+                const accent = style.getPropertyValue('--accent-color').trim() || '#f2c66d';
+                const textColor = style.getPropertyValue('--text-color').trim() || '#f8eee3';
+                const gridColor = document.body.classList.contains('dark-mode')
+                    ? 'rgba(248, 238, 227, 0.15)'
+                    : 'rgba(74, 31, 53, 0.15)';
+                const tooltipBg = document.body.classList.contains('dark-mode') ? '#2a1020' : '#fffaf4';
+                const tooltipText = document.body.classList.contains('dark-mode') ? '#fff7ef' : '#4a1f35';
+
+                if (portfolioChart) {
+                    portfolioChart.destroy();
+                }
+
+                portfolioChart = new Chart(canvas.getContext('2d'), {
+                    type,
+                    data: {
+                        labels,
+                        datasets: [
+                            {
+                                label: selectedScenario.datasetLabel,
+                                data,
+                                borderColor: accent,
+                                backgroundColor: type === 'line' ? 'rgba(242, 198, 109, 0.18)' : 'rgba(242, 198, 109, 0.72)',
+                                pointBackgroundColor: accent,
+                                pointBorderColor: '#fff7ef',
+                                borderWidth: 2,
+                                tension: 0.3,
+                                fill: type === 'line'
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: textColor
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: tooltipBg,
+                                titleColor: tooltipText,
+                                bodyColor: tooltipText,
+                                borderColor: accent,
+                                borderWidth: 1
+                            }
+                        },
+                        scales: {
+                            x: {
+                                ticks: {
+                                    color: textColor
+                                },
+                                grid: {
+                                    color: gridColor
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    color: textColor
+                                },
+                                grid: {
+                                    color: gridColor
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            metricSelect.addEventListener('change', renderChart);
+            chartTypeSelect.addEventListener('change', renderChart);
+            periodSelect.addEventListener('change', renderChart);
+
+            renderChart();
+        }
+
+        function mountTimelineChart() {
+            const canvas = document.getElementById('timeline-chart');
+            if (!canvas || typeof Chart === 'undefined') return;
+
+            if (window._timelineChart) {
+                window._timelineChart.destroy();
+            }
+
+            const isDark = document.body.classList.contains('dark-mode');
+            const style = getComputedStyle(document.body);
+            const textColor = style.getPropertyValue('--text-color').trim() || '#f8eee3';
+            const gridColor = isDark ? 'rgba(248,238,227,0.1)' : 'rgba(74,31,53,0.1)';
+            const tooltipBg = isDark ? '#2a1020' : '#fffaf4';
+            const tooltipText = isDark ? '#fff7ef' : '#4a1f35';
+            const isEN = currentLanguage === 'en';
+
+            const labels = isEN
+                ? ['Grêmio | Col. Catarinense', 'Volleyball', 'Berlin Exchange', 'Paris – French', 'i9 Consultoria', 'CNPq Research', 'Franq OB']
+                : ['Grêmio | Col. Catarinense', 'Voleibol', 'Intercâmbio Berlim', 'Paris – Francês', 'i9 Consultoria', 'Pesquisa CNPq', 'Franq OB'];
+
+            // Decimal year format: year + (month - 1) / 12
+            const timelineData = [
+                [2016, 2022],                     // Grêmio: 2016 – 2022
+                [2018, 2021],                     // Volleyball: 2018 – 2021
+                [2019 + 11/12, 2020 + 11/12],    // Berlin: Dec 2019 – Dec 2020
+                [2024 + 3/12, 2024 + 4/12],      // Paris: Apr – May 2024
+                [2025 + 8/12, 2026 + 2/12],      // i9: Sep 2025 – Mar 2026
+                [2025 + 7/12, 2026 + 2/12],      // CNPq: Aug 2025 – present
+                [2026 + 1/12, 2026 + 2/12],      // Franq: Feb 2026 – present
+            ];
+
+            const barColors = [
+                'rgba(160,100,200,0.85)',
+                'rgba(139,196,138,0.85)',
+                'rgba(110,181,209,0.85)',
+                'rgba(100,155,210,0.85)',
+                'rgba(201,150,90,0.85)',
+                'rgba(224,123,154,0.85)',
+                'rgba(242,198,109,0.9)',
+            ];
+
+            function toDateLabel(d) {
+                const y = Math.floor(d);
+                const m = Math.round((d - y) * 12) + 1;
+                return String(m).padStart(2, '0') + '/' + y;
+            }
+
+            window._timelineChart = new Chart(canvas.getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels,
+                    datasets: [{
+                        data: timelineData,
+                        backgroundColor: barColors,
+                        borderColor: barColors.map(c => c.replace('0.85)', '1)').replace('0.9)', '1)')),
+                        borderWidth: 1,
+                        borderRadius: 5,
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: tooltipBg,
+                            titleColor: tooltipText,
+                            bodyColor: tooltipText,
+                            callbacks: {
+                                label(ctx) {
+                                    const [start, end] = ctx.raw;
+                                    const endLabel = (end >= 2026 + 1/12) ? (isEN ? 'Present' : 'Presente') : toDateLabel(end);
+                                    return toDateLabel(start) + ' → ' + endLabel;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            min: 2015,
+                            max: 2026.8,
+                            ticks: {
+                                color: textColor,
+                                callback(v) { return Number.isInteger(Math.round(v)) && Math.abs(v - Math.round(v)) < 0.01 ? String(Math.round(v)) : ''; }
+                            },
+                            grid: { color: gridColor }
+                        },
+                        y: {
+                            ticks: { color: textColor },
+                            grid: { color: gridColor }
+                        }
+                    }
+                }
+            });
+        }
+
+        const contentByLanguage = {
+            en: {
+                htmlLang: 'en',
+                nav: [
+                    '<i class="bi bi-house-door"></i><span class="nav-text"> Home</span>',
+                    '<i class="bi bi-person"></i><span class="nav-text"> About</span>',
+                    '<i class="bi bi-mortarboard"></i><span class="nav-text"> Education</span>',
+                    '<i class="bi bi-briefcase"></i><span class="nav-text"> Experience</span>',
+                    '<i class="bi bi-lightning-charge"></i><span class="nav-text"> Skills</span>',
+                    '<i class="bi bi-bar-chart-line"></i><span class="nav-text"> Data Lab</span>',
+                    '<i class="bi bi-folder2-open"></i><span class="nav-text"> Projects</span>',
+                    '<i class="bi bi-trophy"></i><span class="nav-text"> Awards</span>',
+                    '<i class="bi bi-envelope"></i><span class="nav-text"> Contact</span>',
+                ],
+                toggleLabel: 'PT-BR',
+                role: 'Data Intern | Information Systems Student',
+                bio: "Bachelor's student at UFSC, Data Intern at Franq Open Banking, and CNPq researcher focused on data, automation, and real-world impact.",
+                home: `
+                    <div class="hero-layout">
+                        <div class="hero-content">
+                            <p class="hero-eyebrow">DATA • AUTOMATION • IMPACT</p>
+                            <h1>Turning complex data into smart decisions.</h1>
+                            <p class="hero-description">I am Cecília Zica, an Information Systems student at UFSC, Data Intern at Franq Open Banking, and CNPq researcher focused on analytics, automation, and practical AI.</p>
+                            <div class="hero-highlights">
+                                <span>Looker • n8n • Streamlit • SQL • Python</span>
+                                <span>20h/month saved with automation</span>
+                                <span>300k+ rows analyzed per lot in AgroTech research</span>
+                            </div>
+                            <div class="hero-actions">
+                                <a href="#section-data" class="hero-btn primary">Explore Data Lab</a>
+                                <a href="#section-experience" class="hero-btn secondary">View Experience</a>
+                            </div>
+                        </div>
+                        <div class="hero-photo-wrapper">
+                            <img class="hero-photo" src="imgs/imagem_cecilia_microfone.jpg" alt="Cecília Zica presenting with a microphone.">
+                        </div>
+                    </div>
+                `,
+                about: `
+                    <h1>About</h1>
+                    <p>Currently pursuing a Bachelor's degree in Information Systems at Universidade Federal de Santa Catarina, while working as a Data Intern at Franq Open Banking. My daily routine involves exploring and implementing solutions in Python, SQL, n8n, dbt, and Data Visualization, focusing on process automation and generating business intelligence. I am in a stage of constant learning, discovering the diverse possibilities within the data field.</p>
+                    <p>In parallel, I am a PIBIC/CNPq Researcher, using R for statistical data analysis in the AgroTech sector. My professional foundation includes a background as a Consultant at i9 Consultoria, where I developed a strategic vision of management and business processes.</p>
+                    <p>With international experience in Berlin and France, I bring strong adaptability and intercultural communication skills, always seeking to bridge the technical side of Data Science with solutions that create real impact.</p>
+                `,
+                education: `
+                    <h1>Education</h1>
+                    <h2>2026 - 1 (In Progress)</h2>
+                    <ul>
+                        <li><strong>INE5608</strong> - Systems Analysis and Design</li>
+                        <li><strong>INE5611</strong> - Operating Systems</li>
+                        <li><strong>INE5613</strong> - Databases I</li>
+                        <li><strong>INE5659</strong> - Strategic Management of Technologies, Information and Communication</li>
+                        <li><strong>INE5670</strong> - Mobile and Embedded Systems Development</li>
+                    </ul>
+                    <h2>2025 - 2 ✓ Completed</h2>
+                    <ul>
+                        <li><strong>EGC5009</strong> - Idea Generation and Creativity in Computing</li>
+                        <li><strong>EPS5211</strong> - Economic and Financial Programming</li>
+                        <li><strong>INE5609</strong> - Data Structures</li>
+                        <li><strong>INE5646</strong> - Web Programming</li>
+                        <li><strong>INE5649</strong> - Statistical Prediction Techniques</li>
+                    </ul>
+                    <p><strong>Semester GPA:</strong> 9.3</p>
+                    <h2>2025 - 1 ✓ Completed</h2>
+                    <ul>
+                        <li><strong>CAD5103</strong> - Administration I</li>
+                        <li><strong>EGC5036</strong> - Personal Marketing and Entrepreneurship</li>
+                        <li><strong>INE5605</strong> - Object-Oriented Systems Development I</li>
+                        <li><strong>INE5606</strong> - Probability and Statistics</li>
+                        <li><strong>INE5607</strong> - Computer Organization and Architecture</li>
+                    </ul>
+                    <h2>2024 - 2 ✓ Completed</h2>
+                    <ul>
+                        <li><strong>CAD5240</strong> - Behavioral Aspects of Entrepreneurship</li>
+                        <li><strong>EGC5015</strong> - General Systems Theory</li>
+                        <li><strong>INE5601</strong> - Mathematical Foundations of Informatics</li>
+                        <li><strong>INE5602</strong> - Introduction to Informatics</li>
+                        <li><strong>INE5603</strong> - Introduction to Object-Oriented Programming</li>
+                    </ul>
+                    <h2>Languages</h2>
+                    <ul>
+                        <li><strong>Portuguese</strong> - Native</li>
+                        <li><strong>English</strong> - Fluent</li>
+                        <li><strong>German</strong> - B1 (Goethe-Institut)</li>
+                        <li><strong>French</strong> - Basic</li>
+                    </ul>
+                `,
+                experience: `
+                    <h1>Experience</h1>
+                    <h2>Data Intern - Franq Open Banking</h2>
+                    <p><strong>Feb 2026 - Present</strong> | Florianópolis, SC</p>
+                    <p>Working with data products and internal analytics solutions using Python, SQL, Looker, n8n, Streamlit, dbt, Tag Manager, web scraping, and web analytics, with emphasis on process automation and BI generation.</p>
+                    <h2>Data Science Researcher | Scientific Initiation Scholar (CNPq) - UFSC</h2>
+                    <p><strong>Aug 2025 - Present</strong> | Hybrid</p>
+                    <p>Contributing to AgroTech research with statistical analysis, time series, optimization, and anomaly detection to improve sensor positioning and operational efficiency.</p>
+                    <h2>i9 Consultoria</h2>
+                    <p><strong>Sep 2025 - Mar 2026</strong> | Florianópolis, SC</p>
+                    <ul>
+                        <li><strong>Business Automation Consultant</strong> - KPI design and process automation</li>
+                        <li><strong>Trainee Consultant</strong> - REST APIs, process automation, and business analysis</li>
+                        <li><strong>Trainee</strong> - End-to-end business immersion across strategy, finance, HR, logistics, and sales</li>
+                    </ul>
+                    <h2>Sports Leader (Grêmio) | Colégio Catarinense</h2>
+                    <p><strong>2016 – 2022</strong> | Florianópolis, SC — 6th grade through end of high school</p>
+                    <p>Led sports operations for my class for 6 consecutive years across Colégio Catarinense's renowned <strong>Olimpíadas</strong> — a traditional multi-sport event with 2,000+ student participants.</p>
+                    <ul>
+                        <li><strong>Logistics</strong> — managed uniforms, team compositions, and scheduling for each year's competition</li>
+                        <li><strong>Financial</strong> — collected, tracked, and allocated class funds for all sports activities</li>
+                        <li><strong>Team building</strong> — selected players and coached teams across multiple sports</li>
+                        <li><strong>Event production</strong> — choreographed and commanded the opening ceremony dance, representing the class in front of the entire school</li>
+                    </ul>
+                    <h2>Volleyball Athlete | Federação Catarinense de Voleibol</h2>
+                    <p><strong>2018 – 2021</strong> | Santa Catarina, Brazil</p>
+                    <p>Competed as a <strong>setter (levantadora)</strong> in the Federação Catarinense de Voleibol. The setter role demands constant communication, strategic thinking, and precise reading of teammates — orchestrating every offensive play while adapting to each attacker's rhythm and form on the day. This experience built resilience, discipline, and real-time decision-making under pressure.</p>
+                    <h2>High School Exchange Program | Kurt Schwitters Oberschule</h2>
+                    <p><strong>Dec 2019 – Dec 2020</strong> | Berlin, Germany</p>
+                    <p>One-year international study experience in Berlin. Attended Kurt Schwitters Oberschule as part of a high school exchange program, immersed in German culture and language while maintaining full academic studies. Developed deep adaptability, a global perspective, and cross-cultural communication skills.</p>
+                    <h2>Immersive French Language Program | L'atelier 9</h2>
+                    <p><strong>Apr 2024 – May 2024</strong> | Paris, France</p>
+                    <p>One-month intensive French immersion program in Paris focused on conversation, grammar, and cultural fluency. Full-time classes in small groups with real-life language activities. Enhanced communication skills and adaptability in a multilingual environment.</p>
+                `,
+                timeline: `
+                    <h1>Career Timeline</h1>
+                    <p style="margin-bottom: 14px; font-size: 0.92rem; color: rgba(248,238,227,0.75);">A visual overview of my journey across professional, research, academic, and sports experiences.</p>
+                    <div class="chart-wrapper" style="height: 400px;">
+                        <canvas id="timeline-chart"></canvas>
+                    </div>
+                `,
+                skills: `
+                    <h1>Skills</h1>
+                    <div class="skills-section-header"><i class="bi bi-cpu"></i> Technical Skills</div>
+                    <div class="skills-grid">
+                        <article class="skill-item"><h3>Key Performance Indicators</h3><p>Applied as Business Automation Consultant at i9 Consultoria.</p></article>
+                        <article class="skill-item"><h3>Process Automation</h3><p>Applied at i9 Consultoria and currently at Franq Open Banking.</p></article>
+                        <article class="skill-item"><h3>REST APIs</h3><p>Applied as Trainee Consultant at i9 Consultoria.</p></article>
+                        <article class="skill-item"><h3>Business Analysis</h3><p>Applied during Trainee phase at i9 Consultoria.</p></article>
+                        <article class="skill-item"><h3>Data Modeling</h3><p>Applied in CNPq scientific initiation projects at UFSC.</p></article>
+                        <article class="skill-item"><h3>Data Pipelines</h3><p>Applied across UFSC research and data workflows in industry.</p></article>
+                        <article class="skill-item"><h3>Data Quality</h3><p>Applied in multi-source data workflows and validation routines.</p></article>
+                        <article class="skill-item"><h3>Data Visualization</h3><p>Applied in UFSC research and current BI routines with Looker and Streamlit.</p></article>
+                        <article class="skill-item"><h3>Time Series Analysis</h3><p>Applied as Data Science Researcher (CNPq) at UFSC.</p></article>
+                        <article class="skill-item"><h3>Anomaly Detection</h3><p>Applied in CNPq research datasets and sensor behavior studies.</p></article>
+                        <article class="skill-item"><h3>Big Data & Optimization</h3><p>Applied in AgroTech statistical studies and model improvement.</p></article>
+                        <article class="skill-item"><h3>Python, R, SQL, JavaScript</h3><p>Applied in academic, research, and professional environments.</p></article>
+                        <article class="skill-item"><h3>Git & GitHub</h3><p>Applied in collaborative software projects and version control.</p></article>
+                        <article class="skill-item"><h3>Analytical Skills</h3><p>Developed across UFSC coursework, consulting projects, and research.</p></article>
+                        <article class="skill-item"><h3>Design Sensibility</h3><p>Applied in UI/UX decisions across web projects and data visualization.</p></article>
+                    </div>
+                    <div class="skills-section-header"><i class="bi bi-people"></i> Soft Skills</div>
+                    <div class="skills-grid">
+                        <article class="skill-item soft"><h3>Resilience & Discipline</h3><p>Built through competitive volleyball, 6 years of sports leadership, and solo international experiences.</p></article>
+                        <article class="skill-item soft"><h3>Teamwork</h3><p>Applied across consulting projects, research groups, hackathons, and software teams.</p></article>
+                        <article class="skill-item soft"><h3>Adaptability</h3><p>Demonstrated by living and studying in Germany and France, thriving in new environments.</p></article>
+                        <article class="skill-item soft"><h3>Intercultural Communication</h3><p>Developed through exchanges in Berlin and Paris, working across languages and cultures.</p></article>
+                        <article class="skill-item soft"><h3>Communication</h3><p>Applied through pitches at Startup Weekend and Civil Defense Hackathon, and team leadership since 2016.</p></article>
+                        <article class="skill-item soft"><h3>Problem Solving & Business Understanding</h3><p>Applied at i9 Consultoria and Franq, connecting technical solutions to real business impact.</p></article>
+                    </div>
+                `,
+                dataLab: `
+                    <h1>Data Lab</h1>
+                    <p>Interactive case studies based on real work I delivered at Franq and CNPq.</p>
+                    <div class="kpi-facts">
+                        <div class="kpi-group kpi-franq">
+                            <div class="kpi-group-label"><i class="bi bi-lightning-charge-fill"></i> Franq Open Banking</div>
+                            <article><strong>20h/month saved</strong><span>Manual document sampling fully automated in n8n.</span></article>
+                            <article><strong>1-click workflow</strong><span>Sampling runs instantly for AI quality checks and hallucination control.</span></article>
+                            <article><strong>~5 min human review</strong><span>After n8n runs, a human simply opens the ready spreadsheet and reviews if the AI read each document correctly — no manual sampling needed.</span></article>
+                        </div>
+                        <div class="kpi-group kpi-cnpq">
+                            <div class="kpi-group-label"><i class="bi bi-seedling"></i> CNPq AgroTech</div>
+                            <article><strong>300k+ rows per lot</strong><span>Automated reading, normalization, and chart generation for temperature/humidity data.</span></article>
+                            <article><strong>Actionable insights</strong><span>Visual analytics on thermal/physical stress factors linked to higher poultry mortality.</span></article>
+                        </div>
+                    </div>
+                    <div class="chart-controls">
+                        <label>
+                            Case Study
+                            <select id="metric-select">
+                                <option value="franq_time">Franq - Time Reduction</option>
+                                <option value="cnpq_rows">CNPq - Data Volume</option>
+                            </select>
+                        </label>
+                        <label>
+                            Chart Type
+                            <select id="chart-type-select">
+                                <option value="line">Line</option>
+                                <option value="bar">Bar</option>
+                            </select>
+                        </label>
+                        <label>
+                            Period
+                            <select id="period-select">
+                                <option value="12">Last 12 months</option>
+                                <option value="6">Last 6 months</option>
+                                <option value="3">Last 3 months</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="portfolio-chart"></canvas>
+                    </div>
+                `,
+                projects: `
+                    <h1>Projects</h1>
+                    <div class="projects-carousel">
+                        <button class="carousel-btn" id="prev-project" aria-label="Previous project">❮</button>
+                        <div class="projects-track" id="projects-track">
+                            <article class="project-slide active">
+                                <div class="project-gallery">
+                                    <div class="gallery-viewport">
+                                        <button class="gallery-arrow gallery-prev" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+                                        <div class="gallery-images">
+                                            <img src="imgs/hotel1.png" class="gallery-img active" alt="Hotel app – screen 1">
+                                            <img src="imgs/hotel2.png" class="gallery-img" alt="Hotel app – screen 2">
+                                            <img src="imgs/hotel3.png" class="gallery-img" alt="Hotel app – screen 3">
+                                            <img src="imgs/hotel4.png" class="gallery-img" alt="Hotel app – screen 4">
+                                            <img src="imgs/hotel5.png" class="gallery-img" alt="Hotel app – screen 5">
+                                        </div>
+                                        <button class="gallery-arrow gallery-next" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+                                    </div>
+                                    <div class="gallery-dots">
+                                        <button class="dot active" aria-label="Image 1"></button>
+                                        <button class="dot" aria-label="Image 2"></button>
+                                        <button class="dot" aria-label="Image 3"></button>
+                                        <button class="dot" aria-label="Image 4"></button>
+                                        <button class="dot" aria-label="Image 5"></button>
+                                    </div>
+                                </div>
+                                <h2>Hotel Management Web Application</h2>
+                                <p>In UFSC's Web Programming course, my team and I built a complete hotel management web application with authentication, responsive UI, room selection, booking with shared guest data, and payment simulation.</p>
+                                <p>The frontend was developed with React and the backend with Node.js. More than the final product, this project strengthened our practical understanding of full-stack architecture, teamwork, and software delivery in real scenarios.</p>
+                                <p><strong>Team:</strong> João Paulo Decker Oleinik, Nicole Cristina, Vinicius Gessner Anverze, Sofia Damas.</p>
+                            </article>
+                            <article class="project-slide">
+                                <div class="project-gallery">
+                                    <div class="gallery-viewport">
+                                        <button class="gallery-arrow gallery-prev" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+                                        <div class="gallery-images">
+                                            <img src="imgs/oscar1.png" class="gallery-img active" alt="Oscar app – screen 1">
+                                            <img src="imgs/oscar2.png" class="gallery-img" alt="Oscar app – screen 2">
+                                            <img src="imgs/oscar3.png" class="gallery-img" alt="Oscar app – screen 3">
+                                            <img src="imgs/oscar4.png" class="gallery-img" alt="Oscar app – screen 4">
+                                            <img src="imgs/oscar5.png" class="gallery-img" alt="Oscar app – screen 5">
+                                            <img src="imgs/oscar6.png" class="gallery-img" alt="Oscar app – screen 6">
+                                        </div>
+                                        <button class="gallery-arrow gallery-next" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+                                    </div>
+                                    <div class="gallery-dots">
+                                        <button class="dot active" aria-label="Image 1"></button>
+                                        <button class="dot" aria-label="Image 2"></button>
+                                        <button class="dot" aria-label="Image 3"></button>
+                                        <button class="dot" aria-label="Image 4"></button>
+                                        <button class="dot" aria-label="Image 5"></button>
+                                        <button class="dot" aria-label="Image 6"></button>
+                                    </div>
+                                </div>
+                                <h2>Oscar Voting System (OOP Final Project)</h2>
+                                <p>For the Object-Oriented Systems Development course, I built a full Oscar voting system with my teammate João Paulo Decker Oleinik, evolving a console app into an interactive desktop application.</p>
+                                <p>The system supports registration of movies, actors, actresses, and directors, category nominations, voting flows, winner generation, and a user-friendly interface. The biggest learning came from applying MVC architecture in depth, including persistence, exception handling, and maintainable design decisions.</p>
+                                <p><strong>Key takeaway:</strong> process quality matters as much as the final result when building scalable software in team environments.</p>
+                            </article>
+                        </div>
+                        <button class="carousel-btn" id="next-project" aria-label="Next project">❯</button>
+                    </div>
+                `,
+                awards: `
+                    <h1>Honors & Awards</h1>
+                    <div class="awards-list">
+                        <article class="award-item">
+                            <h2>3rd Place Winner | Civil Defense Hackathon</h2>
+                            <p><strong>Issued by UFSC & Defesa Civil SC · Oct 2025</strong></p>
+                            <p>Developed a WhatsApp chatbot MVP for crisis management using Python and Twilio. I worked in a hybrid role, building backend automation and delivering the final pitch to expert judges.</p>
+                        </article>
+                        <article class="award-item">
+                            <h2>2nd Place Winner | Startup Weekend</h2>
+                            <p><strong>Issued by Techstars · Aug 2025</strong></p>
+                            <p>Co-founded “ShouldIGO”, a social platform for travelers. In 54 hours, we validated the business model, designed the prototype, and I delivered the final pitch that secured 2nd place.</p>
+                        </article>
+                        <article class="award-item">
+                            <h2>Honorable Mention | International Kangaroo Math Olympiad</h2>
+                            <p><strong>Issued by Association Kangourou sans Frontières (AKSF) · Nov 2018</strong></p>
+                            <p>Recognized for high performance in international mathematics competition.</p>
+                        </article>
+                        <article class="award-item">
+                            <h2>General Leadership & Sports Awards | Pinheiral Camp</h2>
+                            <p><strong>Issued by Colégio Catarinense</strong></p>
+                            <p>Received the “Standout Participant” distinction for leadership, proactivity, and conduct, plus 10+ awards for sports performance and social integration.</p>
+                        </article>
+                    </div>
+                `,
+                contact: `
+                    <h1>Contact</h1>
+                    <address>
+                        <p><strong>Cecília Zica Camargo</strong></p>
+                        <p>Department of Informatics and Statistics (INE)</p>
+                        <p>Universidade Federal de Santa Catarina (UFSC)</p>
+                        <p>Florianópolis, SC - Brazil</p>
+                        <p>Email: zicacamargocecilia@gmail.com</p>
+                    </address>
+                `,
+                footer: '&copy; 2026 - Cecília Zica'
+            },
+            pt: {
+                htmlLang: 'pt-BR',
+                nav: [
+                    '<i class="bi bi-house-door"></i><span class="nav-text"> Início</span>',
+                    '<i class="bi bi-person"></i><span class="nav-text"> Sobre</span>',
+                    '<i class="bi bi-mortarboard"></i><span class="nav-text"> Formação</span>',
+                    '<i class="bi bi-briefcase"></i><span class="nav-text"> Experiência</span>',
+                    '<i class="bi bi-lightning-charge"></i><span class="nav-text"> Skills</span>',
+                    '<i class="bi bi-bar-chart-line"></i><span class="nav-text"> Data Lab</span>',
+                    '<i class="bi bi-folder2-open"></i><span class="nav-text"> Projetos</span>',
+                    '<i class="bi bi-trophy"></i><span class="nav-text"> Prêmios</span>',
+                    '<i class="bi bi-envelope"></i><span class="nav-text"> Contato</span>',
+                ],
+                toggleLabel: 'EN',
+                role: 'Estagiária de Dados | Estudante de Sistemas de Informação',
+                bio: 'Graduanda na UFSC, Data Intern na Franq Open Banking e pesquisadora CNPq, com foco em dados, automação e impacto real.',
+                home: `
+                    <div class="hero-layout">
+                        <div class="hero-content">
+                            <p class="hero-eyebrow">DADOS • AUTOMAÇÃO • IMPACTO</p>
+                            <h1>Transformando dados complexos em decisões inteligentes.</h1>
+                            <p class="hero-description">Sou Cecília Zica, estudante de Sistemas de Informação na UFSC, Data Intern na Franq Open Banking e pesquisadora CNPq com foco em analytics, automação e IA aplicada.</p>
+                            <div class="hero-highlights">
+                                <span>Looker • n8n • Streamlit • SQL • Python</span>
+                                <span>20h/mês economizadas com automação</span>
+                                <span>300 mil+ linhas analisadas por lote em pesquisa AgroTech</span>
+                            </div>
+                            <div class="hero-actions">
+                                <a href="#section-data" class="hero-btn primary">Explorar Data Lab</a>
+                                <a href="#section-experience" class="hero-btn secondary">Ver Experiência</a>
+                            </div>
+                        </div>
+                        <div class="hero-photo-wrapper">
+                            <img class="hero-photo" src="imgs/imagem_cecilia_microfone.jpg" alt="Cecília Zica apresentando com microfone.">
+                        </div>
+                    </div>
+                `,
+                about: `
+                    <h1>Sobre</h1>
+                    <p>Atualmente cursando Bacharelado em Sistemas de Informação na Universidade Federal de Santa Catarina, enquanto atuo como Data Intern na Franq Open Banking. No dia a dia exploro e implemento soluções em Python, SQL, n8n, dbt e Visualização de Dados, com foco em automação de processos e geração de inteligência de negócios. Estou em constante aprendizado, descobrindo as diversas possibilidades dentro da área de dados.</p>
+                    <p>Em paralelo, sou Pesquisadora PIBIC/CNPq, utilizando R para análise estatística de dados no setor AgroTech. Minha base profissional inclui passagem como Consultora na i9 Consultoria, onde desenvolvi visão estratégica de gestão e processos de negócio.</p>
+                    <p>Com experiência internacional em Berlim e Paris, trago forte capacidade de adaptação e comunicação intercultural, buscando sempre conectar o lado técnico da Ciência de Dados a soluções de impacto real.</p>
+                `,
+                education: `
+                    <h1>Formação</h1>
+                    <h2>2026 - 1 (Cursando)</h2>
+                    <ul>
+                        <li><strong>INE5608</strong> - Análise e Projeto de Sistemas</li>
+                        <li><strong>INE5611</strong> - Sistemas Operacionais</li>
+                        <li><strong>INE5613</strong> - Bancos de Dados I</li>
+                        <li><strong>INE5659</strong> - Gestão Estratégica de Tecnologias, Informação e Comunicação</li>
+                        <li><strong>INE5670</strong> - Desenvolvimento de Sistemas Móveis e Embarcados</li>
+                    </ul>
+                    <h2>2025 - 2 ✓ Concluído</h2>
+                    <ul>
+                        <li><strong>EGC5009</strong> - Geração de Ideias e Criatividade em Informática</li>
+                        <li><strong>EPS5211</strong> - Programação Econômica e Financeira</li>
+                        <li><strong>INE5609</strong> - Estruturas de Dados</li>
+                        <li><strong>INE5646</strong> - Programação para Web</li>
+                        <li><strong>INE5649</strong> - Técnicas Estatísticas de Predição</li>
+                    </ul>
+                    <p><strong>Média do Semestre:</strong> 9.3</p>
+                    <h2>2025 - 1 ✓ Concluído</h2>
+                    <ul>
+                        <li><strong>CAD5103</strong> - Administração I</li>
+                        <li><strong>EGC5036</strong> - Marketing Pessoal e Empreendedorismo</li>
+                        <li><strong>INE5605</strong> - Desenvolvimento de Sistemas Orientados a Objetos I</li>
+                        <li><strong>INE5606</strong> - Probabilidade e Estatística</li>
+                        <li><strong>INE5607</strong> - Organização e Arquitetura de Computadores</li>
+                    </ul>
+                    <h2>2024 - 2 ✓ Concluído</h2>
+                    <ul>
+                        <li><strong>CAD5240</strong> - Aspectos Comportamentais do Empreendedor</li>
+                        <li><strong>EGC5015</strong> - Teoria Geral de Sistemas</li>
+                        <li><strong>INE5601</strong> - Fundamentos Matemáticos da Informática</li>
+                        <li><strong>INE5602</strong> - Introdução à Informática</li>
+                        <li><strong>INE5603</strong> - Introdução à Programação Orientada a Objetos</li>
+                    </ul>
+                    <h2>Idiomas</h2>
+                    <ul>
+                        <li><strong>Português</strong> - Nativo</li>
+                        <li><strong>Inglês</strong> - Fluente</li>
+                        <li><strong>Alemão</strong> - B1 (Goethe-Institut)</li>
+                        <li><strong>Francês</strong> - Básico</li>
+                    </ul>
+                `,
+                experience: `
+                    <h1>Experiência</h1>
+                    <h2>Data Intern - Franq Open Banking</h2>
+                    <p><strong>Fev 2026 - Presente</strong> | Florianópolis, SC</p>
+                    <p>Atuação com produtos de dados e soluções internas de analytics usando Python, SQL, Looker, n8n, Streamlit, dbt, Tag Manager, web scraping e web analytics, com ênfase em automação de processos e geração de BI.</p>
+                    <h2>Data Science Researcher | Bolsista de Iniciação Científica (CNPq) - UFSC</h2>
+                    <p><strong>Ago 2025 - Presente</strong> | Híbrido</p>
+                    <p>Contribuição em pesquisa AgroTech com análise estatística, séries temporais, otimização e detecção de anomalias para melhorar posicionamento de sensores e eficiência operacional.</p>
+                    <h2>i9 Consultoria</h2>
+                    <p><strong>Set 2025 - Mar 2026</strong> | Florianópolis, SC</p>
+                    <ul>
+                        <li><strong>Business Automation Consultant</strong> - desenho de KPIs e automação de processos</li>
+                        <li><strong>Trainee Consultant</strong> - REST APIs, automação de processos e análise de negócios</li>
+                        <li><strong>Trainee</strong> - imersão de ponta a ponta em estratégia, finanças, RH, logística e vendas</li>
+                    </ul>
+                    <h2>Líder de Esportes (Grêmio) | Colégio Catarinense</h2>
+                    <p><strong>2016 – 2022</strong> | Florianópolis, SC — do 6º ano ao 3º ano do Ensino Médio</p>
+                    <p>Liderei as operações esportivas da minha turma por 6 anos consecutivos nas renomadas <strong>Olimpíadas do Colégio Catarinense</strong> — evento tradicional com mais de 2.000 alunos participantes.</p>
+                    <ul>
+                        <li><strong>Logística</strong> — gerenciamento de uniformes, composição de times e cronogramas a cada ano</li>
+                        <li><strong>Financeiro</strong> — arrecadação, controle e alocação dos recursos da turma para todas as atividades esportivas</li>
+                        <li><strong>Formação de equipes</strong> — escolha de jogadores e treinamento dos times em diversas modalidades</li>
+                        <li><strong>Produção de evento</strong> — criação de coreografia e comando da dança de abertura da cerimônia, representando a turma diante de toda a escola</li>
+                    </ul>
+                    <h2>Atleta de Voleibol | Federação Catarinense de Voleibol</h2>
+                    <p><strong>2018 – 2021</strong> | Santa Catarina, Brasil</p>
+                    <p>Atleta pela Federação Catarinense de Voleibol, atuando como <strong>levantadora</strong>. O papel da levantadora exige comunicação constante, raciocínio estratégico e leitura precisa de cada atacante — entender como cada uma estava no dia, armar o jogo certo para cada uma. Essa experiência desenvolveu resiliência, disciplina e tomada de decisão em tempo real sob pressão.</p>
+                    <h2>Intercâmbio Escolar | Kurt Schwitters Oberschule</h2>
+                    <p><strong>Dez 2019 – Dez 2020</strong> | Berlim, Alemanha</p>
+                    <p>Um ano de intercâmbio em Berlim, frequentando a Kurt Schwitters Oberschule. Imersão total na cultura e língua alemãs mantendo os estudos acadêmicos regulares. Desenvolveu profunda capacidade de adaptação, visão global e habilidades de comunicação intercultural.</p>
+                    <h2>Imersão em Francês | L'atelier 9</h2>
+                    <p><strong>Abr 2024 – Mai 2024</strong> | Paris, França</p>
+                    <p>Programa intensivo de imersão em francês em Paris com foco em conversação, gramática e fluência cultural. Aulas em tempo integral em grupos pequenos com atividades práticas no dia a dia. Aprimorou comunicação e adaptabilidade em ambiente multilíngue.</p>
+                `,
+                timeline: `
+                    <h1>Linha do Tempo</h1>
+                    <p style="margin-bottom: 14px; font-size: 0.92rem; color: rgba(248,238,227,0.75);">Uma visão visual da minha trajetória em experiências profissionais, de pesquisa, acadêmicas e esportivas.</p>
+                    <div class="chart-wrapper" style="height: 400px;">
+                        <canvas id="timeline-chart"></canvas>
+                    </div>
+                `,
+                skills: `
+                    <h1>Skills</h1>
+                    <div class="skills-section-header"><i class="bi bi-cpu"></i> Habilidades Técnicas</div>
+                    <div class="skills-grid">
+                        <article class="skill-item"><h3>Indicadores-Chave (KPIs)</h3><p>Aplicado como Business Automation Consultant na i9 Consultoria.</p></article>
+                        <article class="skill-item"><h3>Automação de Processos</h3><p>Aplicado na i9 Consultoria e atualmente na Franq Open Banking.</p></article>
+                        <article class="skill-item"><h3>REST APIs</h3><p>Aplicado como Trainee Consultant na i9 Consultoria.</p></article>
+                        <article class="skill-item"><h3>Análise de Negócios</h3><p>Aplicado durante a fase de Trainee na i9 Consultoria.</p></article>
+                        <article class="skill-item"><h3>Modelagem de Dados</h3><p>Aplicado em projetos de iniciação científica CNPq na UFSC.</p></article>
+                        <article class="skill-item"><h3>Data Pipelines</h3><p>Aplicado em pesquisa UFSC e fluxos de dados no ambiente profissional.</p></article>
+                        <article class="skill-item"><h3>Qualidade de Dados</h3><p>Aplicado em rotinas de validação e múltiplas fontes de dados.</p></article>
+                        <article class="skill-item"><h3>Visualização de Dados</h3><p>Aplicado em pesquisa na UFSC e rotinas de BI com Looker e Streamlit.</p></article>
+                        <article class="skill-item"><h3>Análise de Séries Temporais</h3><p>Aplicado como pesquisadora de Data Science (CNPq) na UFSC.</p></article>
+                        <article class="skill-item"><h3>Detecção de Anomalias</h3><p>Aplicado em bases de pesquisa CNPq e estudos de sensores.</p></article>
+                        <article class="skill-item"><h3>Big Data e Otimização</h3><p>Aplicado em estudos estatísticos de AgroTech e melhoria de modelos.</p></article>
+                        <article class="skill-item"><h3>Python, R, SQL, JavaScript</h3><p>Aplicado em contextos acadêmicos, pesquisa e atuação profissional.</p></article>
+                        <article class="skill-item"><h3>Git e GitHub</h3><p>Aplicado em projetos colaborativos e versionamento de código.</p></article>
+                        <article class="skill-item"><h3>Raciocínio Analítico</h3><p>Desenvolvido em disciplinas da UFSC, consultoria e pesquisa.</p></article>
+                        <article class="skill-item"><h3>Senso de Design</h3><p>Aplicado em decisões de UI/UX em projetos web e visualização de dados.</p></article>
+                    </div>
+                    <div class="skills-section-header"><i class="bi bi-people"></i> Habilidades Interpessoais</div>
+                    <div class="skills-grid">
+                        <article class="skill-item soft"><h3>Resiliência e Disciplina</h3><p>Desenvolvidas no voleibol competitivo, 6 anos de liderança esportiva e intercâmbios solo.</p></article>
+                        <article class="skill-item soft"><h3>Trabalho em Equipe</h3><p>Aplicado em projetos de consultoria, grupos de pesquisa, hackathons e times de software.</p></article>
+                        <article class="skill-item soft"><h3>Adaptabilidade</h3><p>Demonstrada ao viver e estudar na Alemanha e na França, se adaptando a novos ambientes.</p></article>
+                        <article class="skill-item soft"><h3>Comunicação Intercultural</h3><p>Desenvolvida nas experiências em Berlim e Paris, atuando em contextos multilíngues e multiculturais.</p></article>
+                        <article class="skill-item soft"><h3>Comunicação</h3><p>Aplicada em pitches no Startup Weekend e Hackathon Defesa Civil, e em liderança de equipes desde 2016.</p></article>
+                        <article class="skill-item soft"><h3>Resolução de Problemas e Entendimento de Negócio</h3><p>Aplicado na i9 Consultoria e Franq, conectando soluções técnicas ao impacto real no negócio.</p></article>
+                    </div>
+                `,
+                dataLab: `
+                    <h1>Data Lab</h1>
+                    <p>Cases interativos baseados em entregas reais que realizei na Franq e no CNPq.</p>
+                    <div class="kpi-facts">
+                        <div class="kpi-group kpi-franq">
+                            <div class="kpi-group-label"><i class="bi bi-lightning-charge-fill"></i> Franq Open Banking</div>
+                            <article><strong>20h/mês economizadas</strong><span>Amostragem manual de documentos totalmente automatizada no n8n.</span></article>
+                            <article><strong>Fluxo em 1 clique</strong><span>A amostragem roda instantaneamente para checagem de qualidade da IA.</span></article>
+                            <article><strong>~5 min de revisão humana</strong><span>Após o n8n rodar, basta abrir a planilha pronta e verificar se a IA leu corretamente cada documento amostrado — sem amostragem manual.</span></article>
+                        </div>
+                        <div class="kpi-group kpi-cnpq">
+                            <div class="kpi-group-label"><i class="bi bi-seedling"></i> CNPq AgroTech</div>
+                            <article><strong>300 mil+ linhas por lote</strong><span>Automação de leitura, normalização e geração de gráficos para temperatura/umidade.</span></article>
+                            <article><strong>Insights acionáveis</strong><span>Análises visuais sobre estresse térmico/físico associados à mortalidade de frangos.</span></article>
+                        </div>
+                    </div>
+                    <div class="chart-controls">
+                        <label>
+                            Caso
+                            <select id="metric-select">
+                                <option value="franq_time">Franq - Redução de Tempo</option>
+                                <option value="cnpq_rows">CNPq - Volume de Dados</option>
+                            </select>
+                        </label>
+                        <label>
+                            Tipo de gráfico
+                            <select id="chart-type-select">
+                                <option value="line">Linha</option>
+                                <option value="bar">Barra</option>
+                            </select>
+                        </label>
+                        <label>
+                            Período
+                            <select id="period-select">
+                                <option value="12">Últimos 12 meses</option>
+                                <option value="6">Últimos 6 meses</option>
+                                <option value="3">Últimos 3 meses</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="portfolio-chart"></canvas>
+                    </div>
+                `,
+                projects: `
+                    <h1>Projetos</h1>
+                    <div class="projects-carousel">
+                        <button class="carousel-btn" id="prev-project" aria-label="Projeto anterior">❮</button>
+                        <div class="projects-track" id="projects-track">
+                            <article class="project-slide active">
+                                <div class="project-gallery">
+                                    <div class="gallery-viewport">
+                                        <button class="gallery-arrow gallery-prev" aria-label="Imagem anterior"><i class="bi bi-chevron-left"></i></button>
+                                        <div class="gallery-images">
+                                            <img src="imgs/hotel1.png" class="gallery-img active" alt="App hoteleiro – tela 1">
+                                            <img src="imgs/hotel2.png" class="gallery-img" alt="App hoteleiro – tela 2">
+                                            <img src="imgs/hotel3.png" class="gallery-img" alt="App hoteleiro – tela 3">
+                                            <img src="imgs/hotel4.png" class="gallery-img" alt="App hoteleiro – tela 4">
+                                            <img src="imgs/hotel5.png" class="gallery-img" alt="App hoteleiro – tela 5">
+                                        </div>
+                                        <button class="gallery-arrow gallery-next" aria-label="Próxima imagem"><i class="bi bi-chevron-right"></i></button>
+                                    </div>
+                                    <div class="gallery-dots">
+                                        <button class="dot active" aria-label="Imagem 1"></button>
+                                        <button class="dot" aria-label="Imagem 2"></button>
+                                        <button class="dot" aria-label="Imagem 3"></button>
+                                        <button class="dot" aria-label="Imagem 4"></button>
+                                        <button class="dot" aria-label="Imagem 5"></button>
+                                    </div>
+                                </div>
+                                <h2>Aplicação Web de Sistema Hoteleiro</h2>
+                                <p>Na disciplina de Programação Web da UFSC, meu grupo desenvolveu uma aplicação web completa para gestão hoteleira, com autenticação, interface responsiva, escolha de quartos, reserva com compartilhamento de dados dos hóspedes e simulação de pagamento.</p>
+                                <p>O frontend foi desenvolvido em React e o backend em Node.js. Além da entrega final, o projeto fortaleceu nossa prática em arquitetura full stack, colaboração e desenvolvimento de software real em equipe.</p>
+                                <p><strong>Equipe:</strong> João Paulo Decker Oleinik, Nicole Cristina, Vinicius Gessner Anverze, Sofia Damas.</p>
+                            </article>
+                            <article class="project-slide">
+                                <div class="project-gallery">
+                                    <div class="gallery-viewport">
+                                        <button class="gallery-arrow gallery-prev" aria-label="Imagem anterior"><i class="bi bi-chevron-left"></i></button>
+                                        <div class="gallery-images">
+                                            <img src="imgs/oscar1.png" class="gallery-img active" alt="Sistema Oscar – tela 1">
+                                            <img src="imgs/oscar2.png" class="gallery-img" alt="Sistema Oscar – tela 2">
+                                            <img src="imgs/oscar3.png" class="gallery-img" alt="Sistema Oscar – tela 3">
+                                            <img src="imgs/oscar4.png" class="gallery-img" alt="Sistema Oscar – tela 4">
+                                            <img src="imgs/oscar5.png" class="gallery-img" alt="Sistema Oscar – tela 5">
+                                            <img src="imgs/oscar6.png" class="gallery-img" alt="Sistema Oscar – tela 6">
+                                        </div>
+                                        <button class="gallery-arrow gallery-next" aria-label="Próxima imagem"><i class="bi bi-chevron-right"></i></button>
+                                    </div>
+                                    <div class="gallery-dots">
+                                        <button class="dot active" aria-label="Imagem 1"></button>
+                                        <button class="dot" aria-label="Imagem 2"></button>
+                                        <button class="dot" aria-label="Imagem 3"></button>
+                                        <button class="dot" aria-label="Imagem 4"></button>
+                                        <button class="dot" aria-label="Imagem 5"></button>
+                                        <button class="dot" aria-label="Imagem 6"></button>
+                                    </div>
+                                </div>
+                                <h2>Sistema de Votação do Oscar (Projeto Final POO)</h2>
+                                <p>Na disciplina de Desenvolvimento de Sistemas Orientados a Objetos, construí com meu parceiro João Paulo Decker Oleinik um sistema completo de votação do Oscar, evoluindo uma aplicação de console para uma aplicação desktop interativa.</p>
+                                <p>O sistema permite cadastrar filmes, atores, atrizes e diretores, simular indicações por categoria, votar e gerar vencedores em interface amigável. O maior aprendizado veio da aplicação profunda da arquitetura MVC, incluindo persistência, tratamento de exceções e decisões de design para manutenção e evolução.</p>
+                                <p><strong>Aprendizado-chave:</strong> a qualidade do processo é tão importante quanto o resultado final para criar software escalável em equipe.</p>
+                            </article>
+                        </div>
+                        <button class="carousel-btn" id="next-project" aria-label="Próximo projeto">❯</button>
+                    </div>
+                `,
+                awards: `
+                    <h1>Honras e Prêmios</h1>
+                    <div class="awards-list">
+                        <article class="award-item">
+                            <h2>3º Lugar | Hackathon Defesa Civil</h2>
+                            <p><strong>Emitido por UFSC & Defesa Civil SC · Out 2025</strong></p>
+                            <p>Desenvolvimento de MVP de chatbot para WhatsApp em gestão de crise com Python e Twilio. Atuei em papel híbrido com automação de backend e apresentação final para banca técnica.</p>
+                        </article>
+                        <article class="award-item">
+                            <h2>2º Lugar | Startup Weekend</h2>
+                            <p><strong>Emitido por Techstars · Ago 2025</strong></p>
+                            <p>Co-fundei a “ShouldIGO”, plataforma social para viajantes. Em 54 horas validamos modelo de negócio, desenhamos protótipo e apresentei o pitch final que garantiu o 2º lugar.</p>
+                        </article>
+                        <article class="award-item">
+                            <h2>Menção Honrosa | Olimpíada Internacional Canguru de Matemática</h2>
+                            <p><strong>Emitido por Association Kangourou sans Frontières (AKSF) · Nov 2018</strong></p>
+                            <p>Reconhecimento por alto desempenho em competição internacional de matemática.</p>
+                        </article>
+                        <article class="award-item">
+                            <h2>Prêmios de Liderança Geral e Esportes | Acampamento Pinheiral</h2>
+                            <p><strong>Emitido por Colégio Catarinense</strong></p>
+                            <p>Recebi o destaque de liderança, proatividade e conduta exemplar, além de mais de 10 premiações por desempenho esportivo e integração social.</p>
+                        </article>
+                    </div>
+                `,
+                contact: `
+                    <h1>Contato</h1>
+                    <address>
+                        <p><strong>Cecília Zica Camargo</strong></p>
+                        <p>Departamento de Informática e Estatística (INE)</p>
+                        <p>Universidade Federal de Santa Catarina (UFSC)</p>
+                        <p>Florianópolis, SC - Brasil</p>
+                        <p>Email: zicacamargocecilia@gmail.com</p>
+                    </address>
+                `,
+                footer: '&copy; 2026 - Cecília Zica'
+            }
+        };
+
+        function applyLanguage(language) {
+            const content = contentByLanguage[language];
+            if (!content) {
+                return;
+            }
+
+            document.documentElement.lang = content.htmlLang;
+
+            const navLinks = document.querySelectorAll('header nav ul li a');
+            navLinks.forEach((link, index) => {
+                if (content.nav[index]) {
+                    link.innerHTML = content.nav[index];
+                }
+            });
+
+            const toggleButton = document.getElementById('language-toggle');
+            if (toggleButton) {
+                toggleButton.textContent = content.toggleLabel;
+            }
+
+            document.querySelector('aside .role').textContent = content.role;
+            document.querySelector('aside .bio').textContent = content.bio;
+
+            document.getElementById('section-home').innerHTML = content.home;
+            document.getElementById('section-about').innerHTML = content.about;
+            document.getElementById('section-education').innerHTML = content.education;
+            document.getElementById('section-experience').innerHTML = content.experience;
+            document.getElementById('section-timeline').innerHTML = content.timeline;
+            document.getElementById('section-skills').innerHTML = content.skills;
+            document.getElementById('section-data').innerHTML = content.dataLab;
+            document.getElementById('section-projects').innerHTML = content.projects;
+            document.getElementById('section-awards').innerHTML = content.awards;
+            document.getElementById('section-contact').innerHTML = content.contact;
+
+            const footerParagraph = document.querySelector('footer p');
+            if (footerParagraph) {
+                footerParagraph.innerHTML = content.footer;
+            }
+
+            mountCarousel();
+            mountProjectGalleries();
+            mountInteractiveChart();
+            mountTimelineChart();
+        }
+
+        function applyTheme(theme) {
+            currentTheme = theme;
+            if (theme === 'dark') {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+
+            const themeButton = document.getElementById('theme-toggle');
+            if (themeButton) {
+                themeButton.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+        }
+
+        const languageToggleButton = document.getElementById('language-toggle');
+        if (languageToggleButton) {
+            languageToggleButton.addEventListener('click', () => {
+                currentLanguage = currentLanguage === 'en' ? 'pt' : 'en';
+                applyLanguage(currentLanguage);
+            });
+        }
+
+        const themeToggleButton = document.getElementById('theme-toggle');
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', () => {
+                const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(nextTheme);
+                if (document.getElementById('portfolio-chart')) mountInteractiveChart();
+                if (document.getElementById('timeline-chart')) mountTimelineChart();
+            });
+        }
+
+        const navToggle = document.getElementById('nav-toggle');
+        const navList = document.querySelector('header nav ul');
+        if (navToggle && navList) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navList.classList.toggle('nav-open');
+                navToggle.classList.toggle('is-open', isOpen);
+                navToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+            navList.addEventListener('click', (e) => {
+                if (e.target.closest('a')) {
+                    navList.classList.remove('nav-open');
+                    navToggle.classList.remove('is-open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
+        applyTheme(currentTheme);
+        applyLanguage(currentLanguage);
+
+        // === NAVBAR SHRINK ON SCROLL ===
+        (function () {
+            const header = document.querySelector('header');
+            if (!header) return;
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('header-scrolled', window.scrollY > 60);
+            }, { passive: true });
+        })();
+
+        // === CUSTOM CURSOR ===
+        (function () {
+            const dot = document.getElementById('cursor-dot');
+            const ring = document.getElementById('cursor-ring');
+            if (!dot || !ring) return;
+
+            let mouseX = 0, mouseY = 0;
+            let ringX = 0, ringY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                dot.style.left = mouseX + 'px';
+                dot.style.top = mouseY + 'px';
+            });
+
+            // Smooth ring follow
+            function animateRing() {
+                ringX += (mouseX - ringX) * 0.12;
+                ringY += (mouseY - ringY) * 0.12;
+                ring.style.left = ringX + 'px';
+                ring.style.top = ringY + 'px';
+                requestAnimationFrame(animateRing);
+            }
+            animateRing();
+
+            // Hover effect on interactive elements
+            const interactives = 'a, button, .dot, .carousel-btn, .gallery-arrow, select, input, label';
+            document.addEventListener('mouseover', (e) => {
+                if (e.target.closest(interactives)) {
+                    dot.classList.add('hovering');
+                    ring.classList.add('hovering');
+                }
+            });
+            document.addEventListener('mouseout', (e) => {
+                if (e.target.closest(interactives)) {
+                    dot.classList.remove('hovering');
+                    ring.classList.remove('hovering');
+                }
+            });
+        })();
+
+        // === PAGE NAV SIDEBAR ===
+        (function () {
+            const sections = [
+                { id: 'section-home',       labelEn: 'Home',       labelPt: 'Início' },
+                { id: 'section-about',      labelEn: 'About',      labelPt: 'Sobre' },
+                { id: 'section-education',  labelEn: 'Education',  labelPt: 'Formação' },
+                { id: 'section-experience', labelEn: 'Experience', labelPt: 'Experiência' },
+                { id: 'section-timeline',   labelEn: 'Timeline',   labelPt: 'Linha do Tempo' },
+                { id: 'section-skills',     labelEn: 'Skills',     labelPt: 'Skills' },
+                { id: 'section-data',       labelEn: 'Data Lab',   labelPt: 'Data Lab' },
+                { id: 'section-projects',   labelEn: 'Projects',   labelPt: 'Projetos' },
+                { id: 'section-awards',     labelEn: 'Awards',     labelPt: 'Prêmios' },
+                { id: 'section-contact',    labelEn: 'Contact',    labelPt: 'Contato' },
+            ];
+
+            const pageNav = document.createElement('nav');
+            pageNav.id = 'page-nav';
+            pageNav.setAttribute('aria-label', 'Page sections');
+
+            const dotMap = sections.map(({ id, labelEn, labelPt }) => {
+                const btn = document.createElement('button');
+                btn.className = 'page-nav-dot';
+                btn.setAttribute('data-label', labelEn);
+                btn.setAttribute('data-label-en', labelEn);
+                btn.setAttribute('data-label-pt', labelPt);
+                btn.setAttribute('aria-label', 'Go to ' + labelEn);
+                btn.addEventListener('click', () => {
+                    const el = document.getElementById(id);
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                });
+                pageNav.appendChild(btn);
+                return { btn, id };
+            });
+
+            document.body.appendChild(pageNav);
+
+            // Update dot labels when language changes
+            function updateDotLabels() {
+                const isPt = currentLanguage === 'pt';
+                dotMap.forEach(({ btn }, i) => {
+                    const s = sections[i];
+                    const label = isPt ? s.labelPt : s.labelEn;
+                    btn.setAttribute('data-label', label);
+                    btn.setAttribute('aria-label', (isPt ? 'Ir para ' : 'Go to ') + label);
+                });
+            }
+
+            const origApplyLanguage = window.applyLanguage;
+            // Patch: update labels after language switch
+            const langBtn = document.getElementById('language-toggle');
+            if (langBtn) langBtn.addEventListener('click', () => setTimeout(updateDotLabels, 50));
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const obj = dotMap.find(d => d.id === entry.target.id);
+                    if (obj) obj.btn.classList.toggle('active', entry.isIntersecting);
+                });
+            }, { threshold: 0.3, rootMargin: '-10% 0px -10% 0px' });
+
+            dotMap.forEach(({ id }) => {
+                const el = document.getElementById(id);
+                if (el) observer.observe(el);
+            });
+        })();
+    </script>
 </body>
 </html>
