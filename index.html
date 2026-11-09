@@ -634,13 +634,13 @@
                 const labels = selectedScenario.labels.slice(-safePeriod);
 
                 const style = getComputedStyle(document.body);
-                const accent = style.getPropertyValue('--accent-color').trim() || '#f2c66d';
-                const textColor = style.getPropertyValue('--text-color').trim() || '#f8eee3';
+                const accent = style.getPropertyValue('--accent-color').trim() || '#8a5a4b';
+                const textColor = style.getPropertyValue('--text-color').trim() || '#23211e';
                 const gridColor = document.body.classList.contains('dark-mode')
                     ? 'rgba(248, 238, 227, 0.15)'
                     : 'rgba(74, 31, 53, 0.15)';
-                const tooltipBg = document.body.classList.contains('dark-mode') ? '#2a1020' : '#fffaf4';
-                const tooltipText = document.body.classList.contains('dark-mode') ? '#fff7ef' : '#4a1f35';
+                const tooltipBg = document.body.classList.contains('dark-mode') ? '#1d1c19' : '#fdfcfa';
+                const tooltipText = document.body.classList.contains('dark-mode') ? '#ece9e3' : '#23211e';
 
                 if (portfolioChart) {
                     portfolioChart.destroy();
@@ -655,9 +655,9 @@
                                 label: selectedScenario.datasetLabel,
                                 data,
                                 borderColor: accent,
-                                backgroundColor: type === 'line' ? 'rgba(242, 198, 109, 0.18)' : 'rgba(242, 198, 109, 0.72)',
+                                backgroundColor: type === 'line' ? 'rgba(160, 110, 90, 0.16)' : 'rgba(160, 110, 90, 0.72)',
                                 pointBackgroundColor: accent,
-                                pointBorderColor: '#fff7ef',
+                                pointBorderColor: 'rgba(253,252,250,0.9)',
                                 borderWidth: 2,
                                 tension: 0.3,
                                 fill: type === 'line'
@@ -720,10 +720,10 @@
 
             const isDark = document.body.classList.contains('dark-mode');
             const style = getComputedStyle(document.body);
-            const textColor = style.getPropertyValue('--text-color').trim() || '#f8eee3';
+            const textColor = style.getPropertyValue('--text-color').trim() || '#23211e';
             const gridColor = isDark ? 'rgba(248,238,227,0.1)' : 'rgba(74,31,53,0.1)';
-            const tooltipBg = isDark ? '#2a1020' : '#fffaf4';
-            const tooltipText = isDark ? '#fff7ef' : '#4a1f35';
+            const tooltipBg = isDark ? '#1d1c19' : '#fdfcfa';
+            const tooltipText = isDark ? '#ece9e3' : '#23211e';
             const isEN = currentLanguage === 'en';
 
             const labels = isEN
@@ -741,14 +741,15 @@
                 [2026 + 1/12, 2026 + 2/12],      // Franq: Feb 2026 – present
             ];
 
+            // uma cor so, em degrade de opacidade: a linha do tempo nao precisa de arco-iris
             const barColors = [
-                'rgba(160,100,200,0.85)',
-                'rgba(139,196,138,0.85)',
-                'rgba(110,181,209,0.85)',
-                'rgba(100,155,210,0.85)',
-                'rgba(201,150,90,0.85)',
-                'rgba(224,123,154,0.85)',
-                'rgba(242,198,109,0.9)',
+                'rgba(160,110,90,0.38)',
+                'rgba(160,110,90,0.47)',
+                'rgba(160,110,90,0.56)',
+                'rgba(160,110,90,0.65)',
+                'rgba(160,110,90,0.74)',
+                'rgba(160,110,90,0.83)',
+                'rgba(160,110,90,0.92)',
             ];
 
             function toDateLabel(d) {

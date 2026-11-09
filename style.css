@@ -1729,3 +1729,28 @@ body:not(.dark-mode) footer { background: transparent !important; border-top-col
 body:not(.dark-mode) aside { background: transparent !important; }
 header a:hover { background-color: transparent; }
 #nav-toggle { background: transparent; border: 1px solid var(--line); }
+
+/* nada de rosa: soft skills e rotulos herdam o acento unico */
+.skill-item.soft,
+body:not(.dark-mode) .skill-item.soft {
+    background: transparent;
+    border: 1px solid var(--line);
+}
+
+.skill-item.soft h3,
+body:not(.dark-mode) .skill-item.soft h3,
+.skill-item h3,
+.kpi-cnpq .kpi-group-label,
+body:not(.dark-mode) .kpi-cnpq .kpi-group-label,
+.skills-section-header,
+.award-item h2,
+.timeline-legend b { color: var(--accent-color); }
+
+.skills-section-header i, .award-item i { color: var(--accent-color) !important; }
+
+/* graficos: moldura discreta, sem painel colorido */
+.chart-wrapper, .chart-controls select,
+body:not(.dark-mode) .chart-wrapper, body:not(.dark-mode) .chart-controls select {
+    background: transparent;
+    border: 1px solid var(--line);
+}
