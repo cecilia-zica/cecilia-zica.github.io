@@ -441,3 +441,138 @@ body.proj-page {
     .cabinet-cta { flex-wrap: wrap; gap: 8px; }
     .cabinet-cta i { margin-left: 0; }
 }
+
+/* === CORRECOES E GALERIA VISUAL === */
+/* Cartao e link: nao pode herdar a cor de link do site (saia azul). */
+.pcard, .pcard:visited, .cabinet-cta, .cabinet-cta:visited { color: inherit; text-decoration: none; }
+.pcard h2, .pcard p, .pcard span { color: inherit; }
+
+/* O cursor custom so existe na home; nas paginas de projeto volta o ponteiro do sistema. */
+body.proj-page, body.proj-page *, body.proj-page *::before, body.proj-page *::after { cursor: auto !important; }
+body.proj-page a, body.proj-page button, body.proj-page .chip, body.proj-page summary { cursor: pointer !important; }
+body.proj-page .pgallery img { cursor: zoom-in !important; }
+
+/* ── capa do cartao: miniatura real ou capa tipografica ── */
+.pcard { padding: 0; overflow: hidden; }
+.pcard-body { display: flex; flex-direction: column; gap: 9px; padding: 20px 22px 22px; flex: 1; }
+
+.pcover {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent-color) 18%, transparent);
+    background:
+        radial-gradient(120% 120% at 15% 10%, color-mix(in srgb, var(--accent-color) 22%, transparent), transparent 60%),
+        linear-gradient(135deg, color-mix(in srgb, var(--primary-color) 70%, transparent), color-mix(in srgb, var(--card-bg) 90%, transparent));
+}
+
+.pcover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(color-mix(in srgb, var(--accent-color) 30%, transparent) 1px, transparent 1px);
+    background-size: 13px 13px;
+    opacity: 0.4;
+}
+
+.pcover i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.3rem;
+    color: var(--accent-color);
+    z-index: 2;
+    transition: transform 0.35s var(--ease-out);
+}
+
+.pcard:hover .pcover i { transform: translate(-50%, -50%) scale(1.12); }
+
+.pcover.has-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 0.6;
+    transition: transform 0.45s var(--ease-out), opacity 0.3s ease;
+}
+
+.pcard:hover .pcover.has-img img { transform: scale(1.04); opacity: 0.78; }
+
+.pcover.has-img i {
+    font-size: 1.5rem;
+    left: auto;
+    right: 14px;
+    top: 14px;
+    transform: none;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--light-gray) 86%, transparent);
+    border: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
+}
+
+.pcard:hover .pcover.has-img i { transform: none; }
+.pcover.has-img::after { opacity: 0.12; }
+
+/* matiz por categoria, so na capa — o cartao em si nao muda de cor */
+.pcover.cat-product i { color: #e7bf72; }
+.pcover.cat-software i { color: #e09a6a; }
+.pcover.cat-research i { color: #e07b9a; }
+
+/* ── lightbox ── */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    gap: 14px;
+    padding: 28px;
+    background: rgba(12, 6, 11, 0.92);
+    backdrop-filter: blur(6px);
+    animation: lbIn 0.22s ease;
+}
+
+#lightbox[hidden] { display: none; }
+@keyframes lbIn { from { opacity: 0; } }
+
+#lightbox img {
+    max-width: min(1180px, 94vw);
+    max-height: 82vh;
+    width: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(242, 198, 109, 0.4);
+    cursor: zoom-out !important;
+}
+
+#lightbox .lb-cap {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    letter-spacing: 0.06em;
+    color: #f7dfad;
+    text-align: center;
+    max-width: 70ch;
+}
+
+#lightbox .lb-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.7rem;
+    line-height: 1;
+    color: #f7dfad;
+    background: transparent;
+    border: 1px solid rgba(242, 198, 109, 0.45);
+    border-radius: 999px;
+    cursor: pointer !important;
+}
+
+#lightbox .lb-close:hover { background: rgba(242, 198, 109, 0.16); }

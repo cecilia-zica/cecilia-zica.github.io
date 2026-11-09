@@ -68,10 +68,10 @@
         <nav>
             <ul>
                 <li><a href="#section-home"><i class="bi bi-house-door"></i><span class="nav-text"> Home</span></a></li>
+                <li><a href="#section-projects"><i class="bi bi-images"></i><span class="nav-text"> Projects</span></a></li>
                 <li><a href="#section-ai"><i class="bi bi-robot"></i><span class="nav-text"> AI</span></a></li>
                 <li><a href="#section-about"><i class="bi bi-person"></i><span class="nav-text"> About</span></a></li>
                 <li><a href="#section-experience"><i class="bi bi-briefcase"></i><span class="nav-text"> Experience</span></a></li>
-                <li><a href="#section-projects"><i class="bi bi-folder2-open"></i><span class="nav-text"> Projects</span></a></li>
                 <li hidden><a href="#section-data"><i class="bi bi-bar-chart-line"></i><span class="nav-text"> Data Lab</span></a></li>
                 <li><a href="#section-skills"><i class="bi bi-lightning-charge"></i><span class="nav-text"> Skills</span></a></li>
                 <li><a href="#section-awards"><i class="bi bi-trophy"></i><span class="nav-text"> Awards</span></a></li>
@@ -108,14 +108,103 @@
                         <span>Decision rules for 7 partner banks in production</span>
                     </div>
                     <div class="hero-actions">
-                        <a href="#section-ai" class="hero-btn primary">See what I built with AI</a>
-                        <a href="#section-projects" class="hero-btn secondary">View Projects</a>
+                        <a href="#section-projects" class="hero-btn primary">See the project gallery</a>
+                        <a href="#section-ai" class="hero-btn secondary">What I built with AI</a>
                     </div>
                 </div>
                 <div class="hero-photo-wrapper">
                     <img class="hero-photo" src="imgs/imagem_cecilia_microfone.jpg" alt="Cecília Zica presenting with a microphone.">
                 </div>
             </div>
+        </section>
+
+        <section id="section-projects" class="card">
+            <h1 data-en="Project gallery" data-pt="Galeria de projetos">Project gallery</h1>
+            <p class="projects-lede" data-en="Seven highlights. Each cover opens its own page with the problem, what I built, the measured result and the stack." data-pt="Sete destaques. Cada capa abre a própria página, com o problema, o que eu construí, o resultado medido e a stack.">Seven highlights. Each cover opens its own page with the problem, what I built, the measured result and the stack.</p>
+            <div class="pgrid">
+                <a class="pcard" href="projetos/decision-engines.html" data-cat="ai" style="--i:0">
+                  <span class="pcover cat-ai"><i class="bi bi-diagram-3"></i></span>
+                  <span class="pcard-body">
+                    <span class="pcard-tag"><span data-en="AI &amp; business rules" data-pt="IA e regra de negócio">AI & business rules</span></span>
+                    <h2><span data-en="Credit decision engines for 7 partner banks" data-pt="Motores de decisão de crédito para 7 bancos">Credit decision engines for 7 partner banks</span></h2>
+                    <p class="pcard-sum"><span data-en="Eligibility, lead classification and offer rules written as logic and put under automated test." data-pt="Elegibilidade, classificação de leads e ofertas viraram lógica sob teste automatizado.">Eligibility, lead classification and offer rules written as logic and put under automated test.</span></p>
+                    <p class="card-kpi"><b>408</b> <span data-en="scenarios under test" data-pt="cenários sob teste">scenarios under test</span></p>
+                    <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                    <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                  </span>
+                </a>
+                <a class="pcard" href="projetos/ai-audit.html" data-cat="ai" style="--i:1">
+                  <span class="pcover cat-ai"><i class="bi bi-clipboard-check"></i></span>
+                  <span class="pcard-body">
+                    <span class="pcard-tag"><span data-en="AI quality" data-pt="Qualidade de IA">AI quality</span></span>
+                    <h2><span data-en="Audit of a document-classification AI agent" data-pt="Auditoria de um agente de IA de classificação documental">Audit of a document-classification AI agent</span></h2>
+                    <p class="pcard-sum"><span data-en="A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number." data-pt="Pipeline que relê 4.754 registros com Gemini e transforma o “a gente acha que funciona” em número.">A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.</span></p>
+                    <p class="card-kpi"><b>4.754</b> <span data-en="records audited" data-pt="registros auditados">records audited</span></p>
+                    <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                    <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                  </span>
+                </a>
+                <a class="pcard" href="projetos/triage-agents.html" data-cat="ai" style="--i:2">
+                  <span class="pcover cat-ai"><i class="bi bi-robot"></i></span>
+                  <span class="pcard-body">
+                    <span class="pcard-tag"><span data-en="AI agents · Operations" data-pt="Agentes de IA · Operação">AI agents · Operations</span></span>
+                    <h2><span data-en="Partner request triage with agent orchestration" data-pt="Triagem de solicitações de parceiros com orquestração de agentes">Partner request triage with agent orchestration</span></h2>
+                    <p class="pcard-sum"><span data-en="Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue." data-pt="Dois agentes leem pedidos em texto livre, classificam urgência e nomeiam o que falta antes de um humano abrir a fila.">Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue.</span></p>
+                    <p class="card-kpi"><b>2</b> <span data-en="agents in the chain" data-pt="agentes na cadeia">agents in the chain</span></p>
+                    <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                    <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                  </span>
+                </a>
+                <a class="pcard" href="projetos/n8n-sampling-audit.html" data-cat="ai" style="--i:3">
+                  <span class="pcover cat-ai"><i class="bi bi-lightning-charge"></i></span>
+                  <span class="pcard-body">
+                    <span class="pcard-tag"><span data-en="Automation · Operations" data-pt="Automação · Operação">Automation · Operations</span></span>
+                    <h2><span data-en="Sampling audit automated in n8n" data-pt="Auditoria amostral automatizada no n8n">Sampling audit automated in n8n</span></h2>
+                    <p class="pcard-sum"><span data-en="16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes." data-pt="16 workflows transformaram 4 horas semanais de planilha em 5 minutos.">16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes.</span></p>
+                    <p class="card-kpi"><b>20h</b> <span data-en="returned per month" data-pt="devolvidas por mês">returned per month</span></p>
+                    <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                    <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                  </span>
+                </a>
+                <a class="pcard" href="projetos/product-dashboard.html" data-cat="product" style="--i:4">
+                  <span class="pcover has-img"><img src="imgs/franq-activity.png" alt="" loading="lazy" aria-hidden="true"><i class="bi bi-bar-chart-line"></i></span>
+                  <span class="pcard-body">
+                    <span class="pcard-tag"><span data-en="Product analytics" data-pt="Product analytics">Product analytics</span></span>
+                    <h2><span data-en="Executive product dashboard — the company’s first Streamlit" data-pt="Dashboard executivo de produto — o primeiro Streamlit da empresa">Executive product dashboard — the company’s first Streamlit</span></h2>
+                    <p class="pcard-sum"><span data-en="Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board." data-pt="Três superfícies de venda, leitura ao vivo do warehouse, mais de 600 testes de qualidade de dado, apresentado à diretoria.">Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board.</span></p>
+                    <p class="card-kpi"><b>24h→30min</b> <span data-en="data latency" data-pt="latência do dado">data latency</span></p>
+                    <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                    <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                  </span>
+                </a>
+                <a class="pcard" href="projetos/cardiotrack.html" data-cat="software" style="--i:5">
+                  <span class="pcover cat-software"><i class="bi bi-heart-pulse"></i></span>
+                  <span class="pcard-body">
+                    <span class="pcard-tag"><span data-en="IoT · Backend · Mobile" data-pt="IoT · Backend · Mobile">IoT · Backend · Mobile</span></span>
+                    <h2><span data-en="CardioTrack — IoT heart monitoring, end to end" data-pt="CardioTrack — monitoramento cardíaco IoT, ponta a ponta">CardioTrack — IoT heart monitoring, end to end</span></h2>
+                    <p class="pcard-sum"><span data-en="Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes." data-pt="Firmware no ESP32, backend em Go e app em Flutter, implantados com Kubernetes.">Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes.</span></p>
+                    <p class="card-kpi"><b>3</b> <span data-en="layers built solo" data-pt="camadas construídas sozinha">layers built solo</span></p>
+                    <span class="pcard-meta"><span class="org">UFSC</span><span class="yr">2026</span></span>
+                    <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                  </span>
+                </a>
+                <a class="pcard" href="projetos/parallel-automata.html" data-cat="software" style="--i:6">
+                  <span class="pcover cat-software"><i class="bi bi-cpu"></i></span>
+                  <span class="pcard-body">
+                    <span class="pcard-tag"><span data-en="Parallel computing" data-pt="Computação paralela">Parallel computing</span></span>
+                    <h2><span data-en="Parallel cellular automata in C — 33.9× speedup" data-pt="Autômatos celulares paralelos em C — speedup de 33,9×">Parallel cellular automata in C — 33.9× speedup</span></h2>
+                    <p class="pcard-sum"><span data-en="Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer." data-pt="Pthreads com faixas fixas de linhas e sincronização por barreiras, medido no supercomputador Santos Dumont.">Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer.</span></p>
+                    <p class="card-kpi"><b>33,9×</b> <span data-en="speedup" data-pt="speedup">speedup</span></p>
+                    <span class="pcard-meta"><span class="org">UFSC · INE5645</span><span class="yr">2026</span></span>
+                    <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                  </span>
+                </a>
+            </div>
+            <a class="cabinet-cta" href="projetos/index.html">
+                <span class="cta-label" data-en="Project cabinet" data-pt="Armário de projetos">Project cabinet</span>
+                <b data-en="See all 14 projects" data-pt="Ver todos os 14 projetos">See all 14 projects</b>
+                <i class="bi bi-arrow-right"></i>
+            </a>
         </section>
 
         <section id="section-ai" class="card">
@@ -271,73 +360,6 @@
             <p>One-month intensive French immersion program in Paris focused on conversation, grammar, and cultural fluency. Full-time classes in small groups with real-life language activities. Enhanced communication skills and adaptability in a multilingual environment.</p>
         </section>
 
-        <section id="section-projects" class="card">
-            <h1>Projects</h1>
-            <p class="projects-lede">Seven highlights below. Each card opens its own page with the problem, what I built, the measured result and the stack.</p>
-            <div class="pgrid">
-              <a class="pcard" href="projetos/decision-engines.html" style="--i:0">
-                <span class="pcard-tag">AI & business rules</span>
-                <h2>Credit decision engines for 7 partner banks</h2>
-                <p class="pcard-sum">Eligibility, lead classification and offer rules written as logic and put under automated test.</p>
-                <p class="card-kpi"><b>408</b> scenarios under test</p>
-                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                <span class="pcard-go">Open project</span>
-              </a>
-              <a class="pcard" href="projetos/ai-audit.html" style="--i:1">
-                <span class="pcard-tag">AI quality</span>
-                <h2>Audit of a document-classification AI agent</h2>
-                <p class="pcard-sum">A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.</p>
-                <p class="card-kpi"><b>4.754</b> records audited</p>
-                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                <span class="pcard-go">Open project</span>
-              </a>
-              <a class="pcard" href="projetos/triage-agents.html" style="--i:2">
-                <span class="pcard-tag">AI agents · Operations</span>
-                <h2>Partner request triage with agent orchestration</h2>
-                <p class="pcard-sum">Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue.</p>
-                <p class="card-kpi"><b>2</b> agents in the chain</p>
-                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                <span class="pcard-go">Open project</span>
-              </a>
-              <a class="pcard" href="projetos/n8n-sampling-audit.html" style="--i:3">
-                <span class="pcard-tag">Automation · Operations</span>
-                <h2>Sampling audit automated in n8n</h2>
-                <p class="pcard-sum">16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes.</p>
-                <p class="card-kpi"><b>20h</b> returned per month</p>
-                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                <span class="pcard-go">Open project</span>
-              </a>
-              <a class="pcard" href="projetos/product-dashboard.html" style="--i:4">
-                <span class="pcard-tag">Product analytics</span>
-                <h2>Executive product dashboard — the company’s first Streamlit</h2>
-                <p class="pcard-sum">Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board.</p>
-                <p class="card-kpi"><b>24h→30min</b> data latency</p>
-                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                <span class="pcard-go">Open project</span>
-              </a>
-              <a class="pcard" href="projetos/cardiotrack.html" style="--i:5">
-                <span class="pcard-tag">IoT · Backend · Mobile</span>
-                <h2>CardioTrack — IoT heart monitoring, end to end</h2>
-                <p class="pcard-sum">Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes.</p>
-                <p class="card-kpi"><b>3</b> layers built solo</p>
-                <span class="pcard-meta"><span class="org">UFSC</span><span class="yr">2026</span></span>
-                <span class="pcard-go">Open project</span>
-              </a>
-              <a class="pcard" href="projetos/parallel-automata.html" style="--i:6">
-                <span class="pcard-tag">Parallel computing</span>
-                <h2>Parallel cellular automata in C — 33.9× speedup</h2>
-                <p class="pcard-sum">Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer.</p>
-                <p class="card-kpi"><b>33,9×</b> speedup</p>
-                <span class="pcard-meta"><span class="org">UFSC · INE5645</span><span class="yr">2026</span></span>
-                <span class="pcard-go">Open project</span>
-              </a>
-            </div>
-            <a class="cabinet-cta" href="projetos/index.html">
-                <span class="cta-label">Project cabinet</span>
-                <b>See all 14 projects</b>
-                <i class="bi bi-arrow-right"></i>
-            </a>
-        </section>
 
         <!-- Data Lab temporariamente oculto (codigo preservado). Para reexibir: remover o atributo "hidden" abaixo e do <li> no menu, e reativar o dot em page-nav. -->
         <section id="section-data" class="card" hidden>
@@ -514,6 +536,7 @@
         </section>
     </main>
 
+    <div id="lightbox" hidden><button class="lb-close" aria-label="Close">&times;</button><img alt=""><p class="lb-cap"></p></div>
     <footer>
         <p>&copy; 2026 - Cecília Zica</p>
     </footer>
@@ -798,10 +821,10 @@
                 htmlLang: 'en',
                 nav: [
                     '<i class="bi bi-house-door"></i><span class="nav-text"> Home</span>',
+                    '<i class="bi bi-images"></i><span class="nav-text"> Projects</span>',
                     '<i class="bi bi-robot"></i><span class="nav-text"> AI</span>',
                     '<i class="bi bi-person"></i><span class="nav-text"> About</span>',
                     '<i class="bi bi-briefcase"></i><span class="nav-text"> Experience</span>',
-                    '<i class="bi bi-folder2-open"></i><span class="nav-text"> Projects</span>',
                     '<i class="bi bi-bar-chart-line"></i><span class="nav-text"> Data Lab</span>',
                     '<i class="bi bi-lightning-charge"></i><span class="nav-text"> Skills</span>',
                     '<i class="bi bi-trophy"></i><span class="nav-text"> Awards</span>',
@@ -824,8 +847,8 @@
                                 <span>Decision rules for 7 partner banks in production</span>
                             </div>
                             <div class="hero-actions">
-                                <a href="#section-ai" class="hero-btn primary">See what I built with AI</a>
-                                <a href="#section-projects" class="hero-btn secondary">View Projects</a>
+                                <a href="#section-projects" class="hero-btn primary">See the project gallery</a>
+                                <a href="#section-ai" class="hero-btn secondary">What I built with AI</a>
                             </div>
                         </div>
                         <div class="hero-photo-wrapper">
@@ -1101,69 +1124,90 @@
                     </div>
                 `,
                 projects: `
-            <h1>Projects</h1>
-                    <p class="projects-lede">Seven highlights below. Each card opens its own page with the problem, what I built, the measured result and the stack.</p>
+                    <h1 data-en="Project gallery" data-pt="Galeria de projetos">Project gallery</h1>
+                    <p class="projects-lede" data-en="Seven highlights. Each cover opens its own page with the problem, what I built, the measured result and the stack." data-pt="Sete destaques. Cada capa abre a própria página, com o problema, o que eu construí, o resultado medido e a stack.">Seven highlights. Each cover opens its own page with the problem, what I built, the measured result and the stack.</p>
                     <div class="pgrid">
-                      <a class="pcard" href="projetos/decision-engines.html" style="--i:0">
-                        <span class="pcard-tag">AI & business rules</span>
-                        <h2>Credit decision engines for 7 partner banks</h2>
-                        <p class="pcard-sum">Eligibility, lead classification and offer rules written as logic and put under automated test.</p>
-                        <p class="card-kpi"><b>408</b> scenarios under test</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Open project</span>
-                      </a>
-                      <a class="pcard" href="projetos/ai-audit.html" style="--i:1">
-                        <span class="pcard-tag">AI quality</span>
-                        <h2>Audit of a document-classification AI agent</h2>
-                        <p class="pcard-sum">A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.</p>
-                        <p class="card-kpi"><b>4.754</b> records audited</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Open project</span>
-                      </a>
-                      <a class="pcard" href="projetos/triage-agents.html" style="--i:2">
-                        <span class="pcard-tag">AI agents · Operations</span>
-                        <h2>Partner request triage with agent orchestration</h2>
-                        <p class="pcard-sum">Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue.</p>
-                        <p class="card-kpi"><b>2</b> agents in the chain</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Open project</span>
-                      </a>
-                      <a class="pcard" href="projetos/n8n-sampling-audit.html" style="--i:3">
-                        <span class="pcard-tag">Automation · Operations</span>
-                        <h2>Sampling audit automated in n8n</h2>
-                        <p class="pcard-sum">16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes.</p>
-                        <p class="card-kpi"><b>20h</b> returned per month</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Open project</span>
-                      </a>
-                      <a class="pcard" href="projetos/product-dashboard.html" style="--i:4">
-                        <span class="pcard-tag">Product analytics</span>
-                        <h2>Executive product dashboard — the company’s first Streamlit</h2>
-                        <p class="pcard-sum">Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board.</p>
-                        <p class="card-kpi"><b>24h→30min</b> data latency</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Open project</span>
-                      </a>
-                      <a class="pcard" href="projetos/cardiotrack.html" style="--i:5">
-                        <span class="pcard-tag">IoT · Backend · Mobile</span>
-                        <h2>CardioTrack — IoT heart monitoring, end to end</h2>
-                        <p class="pcard-sum">Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes.</p>
-                        <p class="card-kpi"><b>3</b> layers built solo</p>
-                        <span class="pcard-meta"><span class="org">UFSC</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Open project</span>
-                      </a>
-                      <a class="pcard" href="projetos/parallel-automata.html" style="--i:6">
-                        <span class="pcard-tag">Parallel computing</span>
-                        <h2>Parallel cellular automata in C — 33.9× speedup</h2>
-                        <p class="pcard-sum">Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer.</p>
-                        <p class="card-kpi"><b>33,9×</b> speedup</p>
-                        <span class="pcard-meta"><span class="org">UFSC · INE5645</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Open project</span>
-                      </a>
+                        <a class="pcard" href="projetos/decision-engines.html" data-cat="ai" style="--i:0">
+                          <span class="pcover cat-ai"><i class="bi bi-diagram-3"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="AI &amp; business rules" data-pt="IA e regra de negócio">AI & business rules</span></span>
+                            <h2><span data-en="Credit decision engines for 7 partner banks" data-pt="Motores de decisão de crédito para 7 bancos">Credit decision engines for 7 partner banks</span></h2>
+                            <p class="pcard-sum"><span data-en="Eligibility, lead classification and offer rules written as logic and put under automated test." data-pt="Elegibilidade, classificação de leads e ofertas viraram lógica sob teste automatizado.">Eligibility, lead classification and offer rules written as logic and put under automated test.</span></p>
+                            <p class="card-kpi"><b>408</b> <span data-en="scenarios under test" data-pt="cenários sob teste">scenarios under test</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/ai-audit.html" data-cat="ai" style="--i:1">
+                          <span class="pcover cat-ai"><i class="bi bi-clipboard-check"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="AI quality" data-pt="Qualidade de IA">AI quality</span></span>
+                            <h2><span data-en="Audit of a document-classification AI agent" data-pt="Auditoria de um agente de IA de classificação documental">Audit of a document-classification AI agent</span></h2>
+                            <p class="pcard-sum"><span data-en="A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number." data-pt="Pipeline que relê 4.754 registros com Gemini e transforma o “a gente acha que funciona” em número.">A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.</span></p>
+                            <p class="card-kpi"><b>4.754</b> <span data-en="records audited" data-pt="registros auditados">records audited</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/triage-agents.html" data-cat="ai" style="--i:2">
+                          <span class="pcover cat-ai"><i class="bi bi-robot"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="AI agents · Operations" data-pt="Agentes de IA · Operação">AI agents · Operations</span></span>
+                            <h2><span data-en="Partner request triage with agent orchestration" data-pt="Triagem de solicitações de parceiros com orquestração de agentes">Partner request triage with agent orchestration</span></h2>
+                            <p class="pcard-sum"><span data-en="Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue." data-pt="Dois agentes leem pedidos em texto livre, classificam urgência e nomeiam o que falta antes de um humano abrir a fila.">Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue.</span></p>
+                            <p class="card-kpi"><b>2</b> <span data-en="agents in the chain" data-pt="agentes na cadeia">agents in the chain</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/n8n-sampling-audit.html" data-cat="ai" style="--i:3">
+                          <span class="pcover cat-ai"><i class="bi bi-lightning-charge"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="Automation · Operations" data-pt="Automação · Operação">Automation · Operations</span></span>
+                            <h2><span data-en="Sampling audit automated in n8n" data-pt="Auditoria amostral automatizada no n8n">Sampling audit automated in n8n</span></h2>
+                            <p class="pcard-sum"><span data-en="16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes." data-pt="16 workflows transformaram 4 horas semanais de planilha em 5 minutos.">16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes.</span></p>
+                            <p class="card-kpi"><b>20h</b> <span data-en="returned per month" data-pt="devolvidas por mês">returned per month</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/product-dashboard.html" data-cat="product" style="--i:4">
+                          <span class="pcover has-img"><img src="imgs/franq-activity.png" alt="" loading="lazy" aria-hidden="true"><i class="bi bi-bar-chart-line"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="Product analytics" data-pt="Product analytics">Product analytics</span></span>
+                            <h2><span data-en="Executive product dashboard — the company’s first Streamlit" data-pt="Dashboard executivo de produto — o primeiro Streamlit da empresa">Executive product dashboard — the company’s first Streamlit</span></h2>
+                            <p class="pcard-sum"><span data-en="Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board." data-pt="Três superfícies de venda, leitura ao vivo do warehouse, mais de 600 testes de qualidade de dado, apresentado à diretoria.">Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board.</span></p>
+                            <p class="card-kpi"><b>24h→30min</b> <span data-en="data latency" data-pt="latência do dado">data latency</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/cardiotrack.html" data-cat="software" style="--i:5">
+                          <span class="pcover cat-software"><i class="bi bi-heart-pulse"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="IoT · Backend · Mobile" data-pt="IoT · Backend · Mobile">IoT · Backend · Mobile</span></span>
+                            <h2><span data-en="CardioTrack — IoT heart monitoring, end to end" data-pt="CardioTrack — monitoramento cardíaco IoT, ponta a ponta">CardioTrack — IoT heart monitoring, end to end</span></h2>
+                            <p class="pcard-sum"><span data-en="Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes." data-pt="Firmware no ESP32, backend em Go e app em Flutter, implantados com Kubernetes.">Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes.</span></p>
+                            <p class="card-kpi"><b>3</b> <span data-en="layers built solo" data-pt="camadas construídas sozinha">layers built solo</span></p>
+                            <span class="pcard-meta"><span class="org">UFSC</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/parallel-automata.html" data-cat="software" style="--i:6">
+                          <span class="pcover cat-software"><i class="bi bi-cpu"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="Parallel computing" data-pt="Computação paralela">Parallel computing</span></span>
+                            <h2><span data-en="Parallel cellular automata in C — 33.9× speedup" data-pt="Autômatos celulares paralelos em C — speedup de 33,9×">Parallel cellular automata in C — 33.9× speedup</span></h2>
+                            <p class="pcard-sum"><span data-en="Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer." data-pt="Pthreads com faixas fixas de linhas e sincronização por barreiras, medido no supercomputador Santos Dumont.">Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer.</span></p>
+                            <p class="card-kpi"><b>33,9×</b> <span data-en="speedup" data-pt="speedup">speedup</span></p>
+                            <span class="pcard-meta"><span class="org">UFSC · INE5645</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
                     </div>
                     <a class="cabinet-cta" href="projetos/index.html">
-                        <span class="cta-label">Project cabinet</span>
-                        <b>See all 14 projects</b>
+                        <span class="cta-label" data-en="Project cabinet" data-pt="Armário de projetos">Project cabinet</span>
+                        <b data-en="See all 14 projects" data-pt="Ver todos os 14 projetos">See all 14 projects</b>
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 `,
@@ -1208,10 +1252,10 @@
                 htmlLang: 'pt-BR',
                 nav: [
                     '<i class="bi bi-house-door"></i><span class="nav-text"> Início</span>',
+                    '<i class="bi bi-images"></i><span class="nav-text"> Projetos</span>',
                     '<i class="bi bi-robot"></i><span class="nav-text"> IA</span>',
                     '<i class="bi bi-person"></i><span class="nav-text"> Sobre</span>',
                     '<i class="bi bi-briefcase"></i><span class="nav-text"> Experiência</span>',
-                    '<i class="bi bi-folder2-open"></i><span class="nav-text"> Projetos</span>',
                     '<i class="bi bi-bar-chart-line"></i><span class="nav-text"> Data Lab</span>',
                     '<i class="bi bi-lightning-charge"></i><span class="nav-text"> Skills</span>',
                     '<i class="bi bi-trophy"></i><span class="nav-text"> Prêmios</span>',
@@ -1234,8 +1278,8 @@
                                 <span>Régua de decisão de 7 bancos parceiros em produção</span>
                             </div>
                             <div class="hero-actions">
-                                <a href="#section-ai" class="hero-btn primary">Ver o que construí com IA</a>
-                                <a href="#section-projects" class="hero-btn secondary">Ver Projetos</a>
+                                <a href="#section-projects" class="hero-btn primary">Ver a galeria de projetos</a>
+                                <a href="#section-ai" class="hero-btn secondary">O que construí com IA</a>
                             </div>
                         </div>
                         <div class="hero-photo-wrapper">
@@ -1511,69 +1555,90 @@
                     </div>
                 `,
                 projects: `
-                    <h1>Projetos</h1>
-                    <p class="projects-lede">Sete destaques abaixo. Cada cartão abre a própria página, com o problema, o que eu construí, o resultado medido e a stack.</p>
+                    <h1 data-en="Project gallery" data-pt="Galeria de projetos">Project gallery</h1>
+                    <p class="projects-lede" data-en="Seven highlights. Each cover opens its own page with the problem, what I built, the measured result and the stack." data-pt="Sete destaques. Cada capa abre a própria página, com o problema, o que eu construí, o resultado medido e a stack.">Seven highlights. Each cover opens its own page with the problem, what I built, the measured result and the stack.</p>
                     <div class="pgrid">
-                      <a class="pcard" href="projetos/decision-engines.html" style="--i:0">
-                        <span class="pcard-tag">IA e regra de negócio</span>
-                        <h2>Motores de decisão de crédito para 7 bancos</h2>
-                        <p class="pcard-sum">Elegibilidade, classificação de leads e ofertas viraram lógica sob teste automatizado.</p>
-                        <p class="card-kpi"><b>408</b> cenários sob teste</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Abrir projeto</span>
-                      </a>
-                      <a class="pcard" href="projetos/ai-audit.html" style="--i:1">
-                        <span class="pcard-tag">Qualidade de IA</span>
-                        <h2>Auditoria de um agente de IA de classificação documental</h2>
-                        <p class="pcard-sum">Pipeline que relê 4.754 registros com Gemini e transforma o “a gente acha que funciona” em número.</p>
-                        <p class="card-kpi"><b>4.754</b> registros auditados</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Abrir projeto</span>
-                      </a>
-                      <a class="pcard" href="projetos/triage-agents.html" style="--i:2">
-                        <span class="pcard-tag">Agentes de IA · Operação</span>
-                        <h2>Triagem de solicitações de parceiros com orquestração de agentes</h2>
-                        <p class="pcard-sum">Dois agentes leem pedidos em texto livre, classificam urgência e nomeiam o que falta antes de um humano abrir a fila.</p>
-                        <p class="card-kpi"><b>2</b> agentes na cadeia</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Abrir projeto</span>
-                      </a>
-                      <a class="pcard" href="projetos/n8n-sampling-audit.html" style="--i:3">
-                        <span class="pcard-tag">Automação · Operação</span>
-                        <h2>Auditoria amostral automatizada no n8n</h2>
-                        <p class="pcard-sum">16 workflows transformaram 4 horas semanais de planilha em 5 minutos.</p>
-                        <p class="card-kpi"><b>20h</b> devolvidas por mês</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Abrir projeto</span>
-                      </a>
-                      <a class="pcard" href="projetos/product-dashboard.html" style="--i:4">
-                        <span class="pcard-tag">Product analytics</span>
-                        <h2>Dashboard executivo de produto — o primeiro Streamlit da empresa</h2>
-                        <p class="pcard-sum">Três superfícies de venda, leitura ao vivo do warehouse, mais de 600 testes de qualidade de dado, apresentado à diretoria.</p>
-                        <p class="card-kpi"><b>24h→30min</b> latência do dado</p>
-                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Abrir projeto</span>
-                      </a>
-                      <a class="pcard" href="projetos/cardiotrack.html" style="--i:5">
-                        <span class="pcard-tag">IoT · Backend · Mobile</span>
-                        <h2>CardioTrack — monitoramento cardíaco IoT, ponta a ponta</h2>
-                        <p class="pcard-sum">Firmware no ESP32, backend em Go e app em Flutter, implantados com Kubernetes.</p>
-                        <p class="card-kpi"><b>3</b> camadas construídas sozinha</p>
-                        <span class="pcard-meta"><span class="org">UFSC</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Abrir projeto</span>
-                      </a>
-                      <a class="pcard" href="projetos/parallel-automata.html" style="--i:6">
-                        <span class="pcard-tag">Computação paralela</span>
-                        <h2>Autômatos celulares paralelos em C — speedup de 33,9×</h2>
-                        <p class="pcard-sum">Pthreads com faixas fixas de linhas e sincronização por barreiras, medido no supercomputador Santos Dumont.</p>
-                        <p class="card-kpi"><b>33,9×</b> speedup</p>
-                        <span class="pcard-meta"><span class="org">UFSC · INE5645</span><span class="yr">2026</span></span>
-                        <span class="pcard-go">Abrir projeto</span>
-                      </a>
+                        <a class="pcard" href="projetos/decision-engines.html" data-cat="ai" style="--i:0">
+                          <span class="pcover cat-ai"><i class="bi bi-diagram-3"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="AI &amp; business rules" data-pt="IA e regra de negócio">AI & business rules</span></span>
+                            <h2><span data-en="Credit decision engines for 7 partner banks" data-pt="Motores de decisão de crédito para 7 bancos">Credit decision engines for 7 partner banks</span></h2>
+                            <p class="pcard-sum"><span data-en="Eligibility, lead classification and offer rules written as logic and put under automated test." data-pt="Elegibilidade, classificação de leads e ofertas viraram lógica sob teste automatizado.">Eligibility, lead classification and offer rules written as logic and put under automated test.</span></p>
+                            <p class="card-kpi"><b>408</b> <span data-en="scenarios under test" data-pt="cenários sob teste">scenarios under test</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/ai-audit.html" data-cat="ai" style="--i:1">
+                          <span class="pcover cat-ai"><i class="bi bi-clipboard-check"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="AI quality" data-pt="Qualidade de IA">AI quality</span></span>
+                            <h2><span data-en="Audit of a document-classification AI agent" data-pt="Auditoria de um agente de IA de classificação documental">Audit of a document-classification AI agent</span></h2>
+                            <p class="pcard-sum"><span data-en="A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number." data-pt="Pipeline que relê 4.754 registros com Gemini e transforma o “a gente acha que funciona” em número.">A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.</span></p>
+                            <p class="card-kpi"><b>4.754</b> <span data-en="records audited" data-pt="registros auditados">records audited</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/triage-agents.html" data-cat="ai" style="--i:2">
+                          <span class="pcover cat-ai"><i class="bi bi-robot"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="AI agents · Operations" data-pt="Agentes de IA · Operação">AI agents · Operations</span></span>
+                            <h2><span data-en="Partner request triage with agent orchestration" data-pt="Triagem de solicitações de parceiros com orquestração de agentes">Partner request triage with agent orchestration</span></h2>
+                            <p class="pcard-sum"><span data-en="Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue." data-pt="Dois agentes leem pedidos em texto livre, classificam urgência e nomeiam o que falta antes de um humano abrir a fila.">Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue.</span></p>
+                            <p class="card-kpi"><b>2</b> <span data-en="agents in the chain" data-pt="agentes na cadeia">agents in the chain</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/n8n-sampling-audit.html" data-cat="ai" style="--i:3">
+                          <span class="pcover cat-ai"><i class="bi bi-lightning-charge"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="Automation · Operations" data-pt="Automação · Operação">Automation · Operations</span></span>
+                            <h2><span data-en="Sampling audit automated in n8n" data-pt="Auditoria amostral automatizada no n8n">Sampling audit automated in n8n</span></h2>
+                            <p class="pcard-sum"><span data-en="16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes." data-pt="16 workflows transformaram 4 horas semanais de planilha em 5 minutos.">16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes.</span></p>
+                            <p class="card-kpi"><b>20h</b> <span data-en="returned per month" data-pt="devolvidas por mês">returned per month</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/product-dashboard.html" data-cat="product" style="--i:4">
+                          <span class="pcover has-img"><img src="imgs/franq-activity.png" alt="" loading="lazy" aria-hidden="true"><i class="bi bi-bar-chart-line"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="Product analytics" data-pt="Product analytics">Product analytics</span></span>
+                            <h2><span data-en="Executive product dashboard — the company’s first Streamlit" data-pt="Dashboard executivo de produto — o primeiro Streamlit da empresa">Executive product dashboard — the company’s first Streamlit</span></h2>
+                            <p class="pcard-sum"><span data-en="Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board." data-pt="Três superfícies de venda, leitura ao vivo do warehouse, mais de 600 testes de qualidade de dado, apresentado à diretoria.">Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board.</span></p>
+                            <p class="card-kpi"><b>24h→30min</b> <span data-en="data latency" data-pt="latência do dado">data latency</span></p>
+                            <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/cardiotrack.html" data-cat="software" style="--i:5">
+                          <span class="pcover cat-software"><i class="bi bi-heart-pulse"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="IoT · Backend · Mobile" data-pt="IoT · Backend · Mobile">IoT · Backend · Mobile</span></span>
+                            <h2><span data-en="CardioTrack — IoT heart monitoring, end to end" data-pt="CardioTrack — monitoramento cardíaco IoT, ponta a ponta">CardioTrack — IoT heart monitoring, end to end</span></h2>
+                            <p class="pcard-sum"><span data-en="Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes." data-pt="Firmware no ESP32, backend em Go e app em Flutter, implantados com Kubernetes.">Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes.</span></p>
+                            <p class="card-kpi"><b>3</b> <span data-en="layers built solo" data-pt="camadas construídas sozinha">layers built solo</span></p>
+                            <span class="pcard-meta"><span class="org">UFSC</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
+                        <a class="pcard" href="projetos/parallel-automata.html" data-cat="software" style="--i:6">
+                          <span class="pcover cat-software"><i class="bi bi-cpu"></i></span>
+                          <span class="pcard-body">
+                            <span class="pcard-tag"><span data-en="Parallel computing" data-pt="Computação paralela">Parallel computing</span></span>
+                            <h2><span data-en="Parallel cellular automata in C — 33.9× speedup" data-pt="Autômatos celulares paralelos em C — speedup de 33,9×">Parallel cellular automata in C — 33.9× speedup</span></h2>
+                            <p class="pcard-sum"><span data-en="Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer." data-pt="Pthreads com faixas fixas de linhas e sincronização por barreiras, medido no supercomputador Santos Dumont.">Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer.</span></p>
+                            <p class="card-kpi"><b>33,9×</b> <span data-en="speedup" data-pt="speedup">speedup</span></p>
+                            <span class="pcard-meta"><span class="org">UFSC · INE5645</span><span class="yr">2026</span></span>
+                            <span class="pcard-go" data-en="Open project" data-pt="Abrir projeto">Open project</span>
+                          </span>
+                        </a>
                     </div>
                     <a class="cabinet-cta" href="projetos/index.html">
-                        <span class="cta-label">Armário de projetos</span>
-                        <b>Ver todos os 14 projetos</b>
+                        <span class="cta-label" data-en="Project cabinet" data-pt="Armário de projetos">Project cabinet</span>
+                        <b data-en="See all 14 projects" data-pt="Ver todos os 14 projetos">See all 14 projects</b>
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 `,
@@ -1771,10 +1836,10 @@
         (function () {
             const sections = [
                 { id: 'section-home',       labelEn: 'Home',       labelPt: 'Início' },
+                { id: 'section-projects',   labelEn: 'Projects',   labelPt: 'Projetos' },
                 { id: 'section-ai',         labelEn: 'AI',         labelPt: 'IA' },
                 { id: 'section-about',      labelEn: 'About',      labelPt: 'Sobre' },
                 { id: 'section-experience', labelEn: 'Experience', labelPt: 'Experiência' },
-                { id: 'section-projects',   labelEn: 'Projects',   labelPt: 'Projetos' },
                 // { id: 'section-data',       labelEn: 'Data Lab',   labelPt: 'Data Lab' }, // Data Lab oculto por enquanto
                 { id: 'section-skills',     labelEn: 'Skills',     labelPt: 'Skills' },
                 { id: 'section-awards',     labelEn: 'Awards',     labelPt: 'Prêmios' },
@@ -1853,5 +1918,6 @@
             cards.forEach(card => revealObserver.observe(card));
         })();
     </script>
+    <script src="projetos/lightbox.js"></script>
 </body>
 </html>
