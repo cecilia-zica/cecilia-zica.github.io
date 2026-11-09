@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audit of a document-classification AI agent · Cecília Zica</title>
+<meta name="description" content="A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="projetos.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Audit of a document-classification AI agent", "author": {"@type": "Person", "name": "Cecília Zica Camargo"}, "about": "AI quality", "dateCreated": "2026", "description": "A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.", "keywords": "Python, BigQuery, Gemini 2.5 Flash, SQL, Stratified sampling"}</script>
+</head>
+<body class="proj-page">
+<header class="proj-header">
+  <a class="brand" href="../index.html"><i class="bi bi-arrow-left"></i> <span data-en="Cecília Zica" data-pt="Cecília Zica">Cecília Zica</span></a>
+  <nav class="proj-nav">
+    <a href="../index.html#section-ai" data-en="AI" data-pt="IA">AI</a>
+    <a href="index.html" data-en="Projects" data-pt="Projetos">Projects</a>
+    <a href="../index.html#section-experience" data-en="Experience" data-pt="Experiência">Experience</a>
+    <a href="../index.html#section-contact" data-en="Contact" data-pt="Contato">Contact</a>
+  </nav>
+  <div class="proj-actions">
+    <button id="lang" type="button" aria-label="Switch language">PT-BR</button>
+    <button id="theme" type="button" aria-label="Switch theme">☀️</button>
+  </div>
+</header>
+<main class="proj-main pdetail">
+  <nav class="crumb"><a href="index.html" data-en="Projects" data-pt="Projetos">Projects</a> <i class="bi bi-chevron-right"></i> <span class="cat"><span data-en="AI &amp; automation" data-pt="IA e automação">AI & automation</span></span></nav>
+  <p class="eyebrow"><span data-en="AI quality" data-pt="Qualidade de IA">AI quality</span></p>
+  <h1><span data-en="Audit of a document-classification AI agent" data-pt="Auditoria de um agente de IA de classificação documental">Audit of a document-classification AI agent</span></h1>
+  <p class="lede"><span data-en="A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number." data-pt="Pipeline que relê 4.754 registros com Gemini e transforma o “a gente acha que funciona” em número.">A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.</span></p>
+  <div class="pmeta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></div>
+  <div class="pkpis"><div class="pkpi"><b>4.754</b><span data-en="records audited" data-pt="registros auditados">records audited</span></div><div class="pkpi"><b>100%</b><span data-en="document types covered" data-pt="tipos de documento cobertos">document types covered</span></div></div>
+  <section class="pblock"><h2 data-en="The problem" data-pt="O problema">The problem</h2><p><span data-en="An AI agent was reading customer documents in production and nobody could say how often it was right, or which document type it struggled with." data-pt="Um agente de IA lia documentos de clientes em produção e ninguém sabia dizer com que frequência ele acertava, nem em que tipo de documento ele tropeçava.">An AI agent was reading customer documents in production and nobody could say how often it was right, or which document type it struggled with.</span></p></section>
+  <section class="pblock"><h2 data-en="What I built" data-pt="O que eu construí">What I built</h2><p><span data-en="A Python pipeline joining BigQuery and Gemini 2.5 Flash: it pulls the agent’s verdicts, re-reads the same documents and compares field by field. Stratified sampling keeps rare document types in the measurement." data-pt="Um pipeline em Python ligando BigQuery e Gemini 2.5 Flash: puxa os veredictos do agente, relê os mesmos documentos e compara campo a campo. A amostragem estratificada mantém os tipos raros dentro da medição.">A Python pipeline joining BigQuery and Gemini 2.5 Flash: it pulls the agent’s verdicts, re-reads the same documents and compares field by field. Stratified sampling keeps rare document types in the measurement.</span></p></section>
+  <section class="pblock"><h2 data-en="Result" data-pt="Resultado">Result</h2><p class="result"><span data-en="4,754 records audited end to end, with accuracy broken down by document type — the input that decides where to improve the agent first." data-pt="4.754 registros auditados ponta a ponta, com acerto aberto por tipo de documento — a entrada que decide onde melhorar o agente primeiro.">4,754 records audited end to end, with accuracy broken down by document type — the input that decides where to improve the agent first.</span></p></section>
+  
+  <section class="pblock"><h2 data-en="Stack" data-pt="Stack">Stack</h2><ul class="pstack"><li>Python</li><li>BigQuery</li><li>Gemini 2.5 Flash</li><li>SQL</li><li>Stratified sampling</li></ul></section>
+  <nav class="pnav">
+    <a class="prev" href="decision-engines.html"><span data-en="Previous" data-pt="Anterior">Previous</span><b>Credit decision engines for 7 partner banks</b></a>
+    <a class="next" href="triage-agents.html"><span data-en="Next" data-pt="Próximo">Next</span><b>Partner request triage with agent orchestration</b></a>
+  </nav>
+  <a class="back-all" href="index.html" data-en="← Back to all projects" data-pt="← Voltar para todos os projetos">← Back to all projects</a>
+</main>
+<footer class="proj-footer">
+  <p><span data-en="Cecília Zica Camargo — Florianópolis, SC" data-pt="Cecília Zica Camargo — Florianópolis, SC">Cecília Zica Camargo — Florianópolis, SC</span>
+     · <a href="mailto:zicacamargocecilia@gmail.com">zicacamargocecilia@gmail.com</a>
+     · <a href="https://github.com/cecilia-zica" target="_blank" rel="noopener">GitHub</a>
+     · <a href="https://www.linkedin.com/in/cecília-zica-camargo" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+<script src="projetos.js"></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+/* === GAVETA DE PROJETOS === */
+/* Herda a paleta de ../style.css. Layout proprio: a home e grid de areas, aqui e fluxo simples. */
+
+body.proj-page {
+    display: block;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.proj-page a { color: inherit; }
+
+/* ── cabecalho fino e fixo ── */
+.proj-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px clamp(18px, 5vw, 56px);
+    backdrop-filter: blur(14px);
+    background: color-mix(in srgb, var(--light-gray) 82%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--accent-color) 24%, transparent);
+}
+
+.proj-header .brand {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.proj-header .brand i { color: var(--accent-color); transition: transform 0.25s var(--ease-out); }
+.proj-header .brand:hover i { transform: translateX(-4px); }
+
+.proj-nav {
+    display: flex;
+    gap: 22px;
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.proj-nav a { text-decoration: none; opacity: 0.72; transition: opacity 0.2s ease, color 0.2s ease; }
+.proj-nav a:hover { opacity: 1; color: var(--accent-color); }
+
+.proj-actions { display: flex; gap: 8px; }
+
+.proj-actions button {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    padding: 7px 11px;
+    border-radius: 999px;
+    cursor: pointer;
+    color: inherit;
+    background: transparent;
+    border: 1px solid color-mix(in srgb, var(--accent-color) 45%, transparent);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.proj-actions button:hover { background: color-mix(in srgb, var(--accent-color) 16%, transparent); }
+
+/* ── corpo ── */
+.proj-main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: clamp(36px, 6vw, 72px) clamp(18px, 5vw, 56px) 80px;
+}
+
+.proj-main .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 14px;
+}
+
+.proj-main h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 5.4vw, 3.4rem);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    max-width: 19ch;
+}
+
+.proj-main .lede {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    max-width: 62ch;
+    opacity: 0.9;
+}
+
+/* ── filtros ── */
+.chips { display: flex; flex-wrap: wrap; gap: 9px; margin: 32px 0 26px; }
+
+.chip {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    color: inherit;
+    background: transparent;
+    border: 1px solid color-mix(in srgb, var(--accent-color) 34%, transparent);
+    transition: all 0.22s var(--ease-out);
+}
+
+.chip:hover { border-color: var(--accent-color); }
+
+.chip.on {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #2a1020;
+    font-weight: 600;
+}
+
+/* ── a grade: uma gaveta por projeto ── */
+.pgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 18px;
+}
+
+.pcard {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 22px;
+    border-radius: 16px;
+    text-decoration: none;
+    border: 1px solid color-mix(in srgb, var(--accent-color) 22%, transparent);
+    background: color-mix(in srgb, var(--card-bg) 70%, transparent);
+    transition: transform 0.3s var(--ease-out), border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: cardIn 0.5s var(--ease-out) backwards;
+    animation-delay: calc(var(--i) * 0.045s);
+}
+
+@keyframes cardIn { from { opacity: 0; transform: translateY(14px); } }
+
+.pcard:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.pcard[hidden] { display: none; }
+
+.pcard-tag {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.pcard h2 {
+    font-family: var(--font-display);
+    font-size: 1.28rem;
+    line-height: 1.22;
+    letter-spacing: -0.01em;
+}
+
+.pcard-sum { font-size: 0.92rem; line-height: 1.5; opacity: 0.86; }
+
+.card-kpi {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+    opacity: 0.9;
+}
+
+.card-kpi b { color: var(--accent-color); font-size: 1rem; margin-right: 6px; }
+
+.pcard-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    border-top: 1px solid color-mix(in srgb, var(--accent-color) 16%, transparent);
+}
+
+.pcard-go {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: all 0.25s var(--ease-out);
+}
+
+.pcard:hover .pcard-go { opacity: 1; transform: none; }
+
+/* ── pagina de um projeto ── */
+.crumb {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.72;
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.crumb a { text-decoration: none; }
+.crumb a:hover { color: var(--accent-color); }
+
+.pmeta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 18px;
+    margin: 22px 0 8px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.pmeta .org { color: var(--accent-color); }
+.pmeta .yr { opacity: 0.6; }
+
+.plink {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 13px;
+    border-radius: 999px;
+    text-decoration: none;
+    border: 1px solid color-mix(in srgb, var(--accent-color) 45%, transparent);
+    transition: background 0.2s ease;
+}
+
+.plink:hover { background: color-mix(in srgb, var(--accent-color) 16%, transparent); }
+
+.pkpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+    margin: 28px 0 8px;
+}
+
+.pkpi {
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 1px solid color-mix(in srgb, var(--accent-color) 24%, transparent);
+    background: color-mix(in srgb, var(--accent-color) 6%, transparent);
+}
+
+.pkpi b {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.85rem;
+    line-height: 1.05;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.pkpi span {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+.pblock { margin-top: 38px; }
+
+.pblock h2 {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent-color) 20%, transparent);
+}
+
+.pblock p { font-size: 1.02rem; line-height: 1.7; max-width: 68ch; }
+.pblock .result { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.45; }
+
+.pteam { margin-top: 12px; font-size: 0.88rem; opacity: 0.7; }
+.pteam span { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; }
+
+.pnote { font-family: var(--font-mono); font-size: 0.72rem; opacity: 0.75; margin-bottom: 14px; }
+
+.pgallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+.pgallery figure { margin: 0; display: flex; flex-direction: column; gap: 9px; }
+
+.pgallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid color-mix(in srgb, var(--accent-color) 28%, transparent);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s var(--ease-out);
+}
+
+.pgallery img:hover { transform: scale(1.012); }
+.pgallery figcaption { font-size: 0.85rem; opacity: 0.8; line-height: 1.45; }
+
+.pstack { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+
+.pstack li {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    padding: 7px 12px;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--accent-color) 26%, transparent);
+    background: color-mix(in srgb, var(--accent-color) 5%, transparent);
+}
+
+.pnav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 52px;
+}
+
+.pnav a {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 18px;
+    border-radius: 14px;
+    text-decoration: none;
+    border: 1px solid color-mix(in srgb, var(--accent-color) 20%, transparent);
+    transition: border-color 0.25s ease, transform 0.25s var(--ease-out);
+}
+
+.pnav a:hover { border-color: var(--accent-color); transform: translateY(-2px); }
+.pnav .next { text-align: right; }
+
+.pnav span {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.pnav b { font-family: var(--font-display); font-size: 1.02rem; line-height: 1.3; font-weight: 700; }
+
+.back-all {
+    display: inline-block;
+    margin-top: 34px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.back-all:hover { color: var(--accent-color); opacity: 1; }
+
+.proj-footer {
+    padding: 26px clamp(18px, 5vw, 56px) 40px;
+    border-top: 1px solid color-mix(in srgb, var(--accent-color) 20%, transparent);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    opacity: 0.75;
+    text-align: center;
+}
+
+.proj-footer a { color: var(--accent-color); text-decoration: none; }
+.proj-footer a:hover { text-decoration: underline; }
+
+@media (max-width: 760px) {
+    .proj-nav { display: none; }
+    .proj-actions { margin-left: auto; }
+    .pnav { grid-template-columns: 1fr; }
+    .pnav .next { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pcard { animation: none; }
+    .pcard:hover, .pnav a:hover, .pgallery img:hover { transform: none; }
+}
+
+/* === DESTAQUE DE PROJETOS NA HOME === */
+.projects-lede {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 62ch;
+    margin-bottom: 22px;
+    opacity: 0.9;
+}
+
+.cabinet-cta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 22px;
+    padding: 20px 24px;
+    border-radius: 16px;
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color) 8%, transparent);
+    transition: background 0.25s ease, transform 0.25s var(--ease-out);
+}
+
+.cabinet-cta:hover { background: color-mix(in srgb, var(--accent-color) 16%, transparent); transform: translateY(-2px); }
+
+.cabinet-cta .cta-label {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.cabinet-cta b { font-family: var(--font-display); font-size: 1.22rem; font-weight: 700; }
+.cabinet-cta i { margin-left: auto; color: var(--accent-color); font-size: 1.1rem; transition: transform 0.25s var(--ease-out); }
+.cabinet-cta:hover i { transform: translateX(5px); }
+
+@media (max-width: 560px) {
+    .cabinet-cta { flex-wrap: wrap; gap: 8px; }
+    .cabinet-cta i { margin-left: 0; }
+}

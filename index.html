@@ -5,11 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="all">
+    <link rel="stylesheet" type="text/css" href="projetos/projetos.css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Cecília Zica | Portfolio</title>
+    <title>Cecília Zica | AI Builder &amp; Data — Portfolio</title>
+    <meta name="description" content="Cecília Zica — Information Systems student at UFSC and Data Intern at Franq Open Banking. I build AI in production: credit decision engines for 7 partner banks, an audited document-classification agent (4,754 records, Gemini 2.5 Flash), agent orchestration for partner-request triage, 16 n8n automations that return 20 hours a month to the operation, and the company's first Streamlit product dashboard (24h to 30min data latency).">
+    <meta name="author" content="Cecília Zica Camargo">
+    <link rel="canonical" href="https://cecilia-zica.github.io/">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Cecília Zica | AI Builder &amp; Data — Portfolio">
+    <meta property="og:description" content="AI in production: decision engines, audited AI agents, n8n automations and product dashboards — built at Franq Open Banking with measured business results.">
+    <meta property="og:url" content="https://cecilia-zica.github.io/">
+    <meta property="og:image" content="https://cecilia-zica.github.io/imgs/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Cecília Zica Camargo",
+      "alternateName": "Cecília Zica",
+      "email": "zicacamargocecilia@gmail.com",
+      "telephone": "+55-48-98805-2194",
+      "url": "https://cecilia-zica.github.io/",
+      "image": "https://cecilia-zica.github.io/imgs/imagem_cecilia_selfie.jpg",
+      "jobTitle": "AI & Data Intern",
+      "description": "Information Systems student at UFSC who builds AI systems in production: credit decision engines, audited AI agents, workflow automation and product analytics.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Florianópolis", "addressRegion": "SC", "addressCountry": "BR" },
+      "sameAs": [
+        "https://github.com/cecilia-zica",
+        "https://www.linkedin.com/in/cec%C3%ADlia-zica-camargo"
+      ],
+      "worksFor": { "@type": "Organization", "name": "Franq Open Banking", "url": "https://www.franq.com.br/" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Universidade Federal de Santa Catarina (UFSC)" },
+        { "@type": "EducationalOrganization", "name": "Kurt Schwitters Oberschule, Berlin" }
+      ],
+      "knowsLanguage": ["pt-BR", "en", "de", "fr", "es"],
+      "knowsAbout": [
+        "Artificial Intelligence", "AI agents", "LLM orchestration", "Prompt engineering",
+        "Google Gemini", "Claude", "Classification pipelines",
+        "Process automation", "n8n", "Workflow automation",
+        "Product analytics", "Data Analytics", "Business Intelligence",
+        "Python", "SQL", "dbt", "BigQuery", "Streamlit", "Machine Learning", "R",
+        "Decision engines", "Credit eligibility rules", "Operations analytics", "Logistics data"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "AI & Data Intern",
+        "occupationLocation": { "@type": "City", "name": "Florianópolis" },
+        "skills": "AI agents, LLM orchestration, n8n automation, Python, SQL, dbt, BigQuery, Streamlit, product analytics, decision engines"
+      }
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -19,6 +68,7 @@
         <nav>
             <ul>
                 <li><a href="#section-home"><i class="bi bi-house-door"></i><span class="nav-text"> Home</span></a></li>
+                <li><a href="#section-ai"><i class="bi bi-robot"></i><span class="nav-text"> AI</span></a></li>
                 <li><a href="#section-about"><i class="bi bi-person"></i><span class="nav-text"> About</span></a></li>
                 <li><a href="#section-experience"><i class="bi bi-briefcase"></i><span class="nav-text"> Experience</span></a></li>
                 <li><a href="#section-projects"><i class="bi bi-folder2-open"></i><span class="nav-text"> Projects</span></a></li>
@@ -40,31 +90,127 @@
         <div class="profile-photo-container">
             <img src="imgs/imagem_cecilia_selfie.jpg" alt="Photo of Cecília Zica smiling.">
         </div>
-        <p class="role">Data Intern | Information Systems Student</p>
-        <p class="bio">Bachelor's student at UFSC, Data Intern at Franq Open Banking, and CNPq researcher focused on data, automation, and real-world impact.</p>
+        <p class="role">AI &amp; Data Intern | Information Systems @ UFSC</p>
+        <p class="bio">I build AI in production — decision engines, agents and automations that move business numbers at Franq Open Banking.</p>
     </aside>
 
     <main>
         <section id="section-home" class="hero-section">
             <div class="hero-layout">
                 <div class="hero-content">
-                    <p class="hero-eyebrow">DATA • AUTOMATION • IMPACT</p>
-                    <h1>Turning complex data into <em>smart decisions</em>.</h1>
-                    <p class="hero-description">I am Cecília Zica, an Information Systems student at UFSC, Data Intern at Franq Open Banking, and CNPq researcher focused on analytics, automation, and practical AI.</p>
+                    <p class="hero-eyebrow">AI • PRODUCT • OPERATIONS</p>
+                    <h1>I build AI that moves <em>business numbers</em>.</h1>
+                    <p class="hero-description">I am Cecília Zica, an Information Systems student at UFSC and Data Intern at Franq Open Banking, where I ship decision engines, AI agents and automations that give hours back to the operation — each one with a measured result.</p>
                     <div class="hero-highlights">
-                        <span>Looker • n8n • Streamlit • SQL • Python</span>
-                        <span>20h/month saved with automation</span>
-                        <span>300k+ rows analyzed per lot in AgroTech research</span>
+                        <span>AI agents • n8n • Python • BigQuery • Streamlit</span>
+                        <span>20h/month returned to the operation</span>
+                        <span>4,754 records audited with Gemini 2.5 Flash</span>
+                        <span>Decision rules for 7 partner banks in production</span>
                     </div>
                     <div class="hero-actions">
-                        <a href="#section-projects" class="hero-btn primary">View Projects</a>
-                        <a href="#section-experience" class="hero-btn secondary">View Experience</a>
+                        <a href="#section-ai" class="hero-btn primary">See what I built with AI</a>
+                        <a href="#section-projects" class="hero-btn secondary">View Projects</a>
                     </div>
                 </div>
                 <div class="hero-photo-wrapper">
                     <img class="hero-photo" src="imgs/imagem_cecilia_microfone.jpg" alt="Cecília Zica presenting with a microphone.">
                 </div>
             </div>
+        </section>
+
+        <section id="section-ai" class="card">
+            <h1>AI in Production</h1>
+            <p class="ai-lede">Five AI systems I shipped at <strong>Franq Open Banking</strong> — decision engines, an audited document-classification agent, and automations that hand hours back to the operation. All of them run in production and are used by other people.</p>
+
+            <div class="kpi-facts ai-kpis">
+                <div class="kpi-group kpi-franq">
+                    <div class="kpi-group-label"><i class="bi bi-robot"></i> AI &amp; Automation</div>
+                    <article><strong>20h/month</strong><span>Given back to the operation: weekly sampling audit went from 4 hours to 5 minutes in n8n.</span></article>
+                    <article><strong>4,754 records</strong><span>Classification agent audited end to end with a Python + BigQuery + Gemini 2.5 Flash pipeline.</span></article>
+                </div>
+                <div class="kpi-group kpi-cnpq">
+                    <div class="kpi-group-label"><i class="bi bi-diagram-3"></i> Product &amp; Decisioning</div>
+                    <article><strong>408 scenarios</strong><span>Automated tests covering eligibility and lead-classification rules for 7 partner banks.</span></article>
+                    <article><strong>24h &rarr; 30min</strong><span>Data latency in the executive product dashboard, presented to the board.</span></article>
+                </div>
+            </div>
+
+            <h2>What I built</h2>
+            <ol class="ai-builds">
+                <li>
+                    <h3>Partner request triage &mdash; agent orchestration</h3>
+                    <p class="build-tag">Operations &middot; Python &middot; LLM orchestration</p>
+                    <p><strong>Problem:</strong> partner requests arrived as free text and someone had to read every one to know where it should go.</p>
+                    <p><strong>Build:</strong> two agents in Python — the first classifies category and urgency, the second finds the missing information and suggests the routing.</p>
+                    <p><strong>Result:</strong> the queue reaches a human already triaged, with the gap in the request named.</p>
+                </li>
+                <li>
+                    <h3>Audit of a document-classification agent</h3>
+                    <p class="build-tag">AI quality &middot; BigQuery &middot; Gemini 2.5 Flash</p>
+                    <p><strong>Problem:</strong> an AI agent was reading customer documents and nobody could say how often it was right.</p>
+                    <p><strong>Build:</strong> a Python pipeline joining BigQuery and Gemini 2.5 Flash that re-reads 4,754 records and compares verdicts.</p>
+                    <p><strong>Result:</strong> accuracy measured by document type, which turned "we think it works" into a number.</p>
+                </li>
+                <li>
+                    <h3>Sampling audit automated in n8n</h3>
+                    <p class="build-tag">Operations &middot; n8n &middot; stratified sampling</p>
+                    <p><strong>Problem:</strong> the weekly quality sample was built by hand in spreadsheets, 4 hours every week.</p>
+                    <p><strong>Build:</strong> 16 n8n workflows wiring BigQuery, Google Sheets and Gmail, with stratified sampling by document type.</p>
+                    <p><strong>Result:</strong> 5 minutes a week — roughly 20 hours a month returned to the team. The reviewer opens a sheet that is already filled.</p>
+                </li>
+                <li>
+                    <h3>Credit decision engines for 7 partner banks</h3>
+                    <p class="build-tag">Product &middot; business rules &middot; Python &middot; ML</p>
+                    <p><strong>Problem:</strong> eligibility, lead classification and offer rules lived in people's heads and in slide decks.</p>
+                    <p><strong>Build:</strong> I mapped the rules of Itaú, Bradesco, Banco Pan, Banco BV, Banco Safra, Porto Seguro Bank and Santander, wrote them as logic in DecisionRules, and led the migration to Python and Machine Learning.</p>
+                    <p><strong>Result:</strong> 408 scenarios under automated test (292 eligibility, 116 classification) — a rule change is now provable before it reaches a customer.</p>
+                </li>
+                <li>
+                    <h3>Executive product dashboard &mdash; first Streamlit in the company</h3>
+                    <p class="build-tag">Product analytics &middot; Streamlit &middot; dbt &middot; BigQuery</p>
+                    <p><strong>Problem:</strong> product and sales questions were answered one SQL query at a time, and two people reached two different numbers.</p>
+                    <p><strong>Build:</strong> the proof of concept that introduced Streamlit to the company's stack: three sales surfaces, live reads from the data warehouse, 600+ automated data-quality tests, and a visual standard co-created with Design.</p>
+                    <p><strong>Result:</strong> data latency down from 24 hours to 30 minutes, presented to the board and used by the team every week.</p>
+                </li>
+            </ol>
+
+            <h2>Proof &mdash; screens in production</h2>
+            <p class="proof-note"><i class="bi bi-eye-slash"></i> Real screens from the dashboard I built. Numbers are blurred on purpose: the data belongs to Franq.</p>
+            <div class="proof-gallery">
+                <figure>
+                    <img src="imgs/franq-activity.png" alt="Activity tab of the product dashboard: a horizontal bar chart of events per product category, with a product and date-range filter." loading="lazy">
+                    <figcaption><b>Activity</b>Which product the customer actually touched, by event volume in 30 days.</figcaption>
+                </figure>
+                <figure>
+                    <img src="imgs/franq-funnel.png" alt="Conversion funnel with three stages and a 26-week trend chart of funnel entries and conversion rate." loading="lazy">
+                    <figcaption><b>Funnel</b>Entered, advanced, sent a proposal — plus the 26-week trend.</figcaption>
+                </figure>
+                <figure>
+                    <img src="imgs/franq-product-filter.png" alt="Product filter with a note explaining that 15 infrastructure events are hidden from the chart." loading="lazy">
+                    <figcaption><b>Honest filtering</b>Fifteen infrastructure events stay out. They fire on every page and do not measure product.</figcaption>
+                </figure>
+                <figure>
+                    <img src="imgs/franq-he-funnel.png" alt="Home Equity funnel where the dashboard shows a warning instead of a chart because the stages are not in descending order." loading="lazy">
+                    <figcaption><b>When the data is wrong</b>If the funnel stages do not hold, the screen warns instead of drawing a chart.</figcaption>
+                </figure>
+                <figure class="wide">
+                    <img src="imgs/franq-compare-light.png" alt="Compare tab in light theme: three sales surfaces indexed to the first week on the same scale, plus usage-quality bar charts." loading="lazy">
+                    <figcaption><b>Compare &middot; light theme</b>Three surfaces on one indexed scale, so the slope is the comparison — not the height.</figcaption>
+                </figure>
+                <figure class="wide">
+                    <img src="imgs/franq-compare-dark.png" alt="The same Compare tab rendered in dark theme, showing the visual standard works in both themes." loading="lazy">
+                    <figcaption><b>The same screen &middot; dark theme</b>Visual standard co-created with Design, checked in both themes and on mobile.</figcaption>
+                </figure>
+            </div>
+
+            <h2>How I build</h2>
+            <ul class="ai-principles">
+                <li><strong>Start from the decision.</strong> Before the model, the question: what will someone do differently with this number?</li>
+                <li><strong>Automate repetition, never judgement.</strong> n8n and agents prepare the work; the human still decides.</li>
+                <li><strong>Ship with proof.</strong> Every delivery carries a test, a measured number and a note on what it does not solve.</li>
+            </ul>
+
+            <p class="ai-stack"><span>Tools</span> Claude &middot; GPT &middot; Gemini &middot; prompt engineering &middot; agent orchestration &middot; n8n &middot; Python &middot; SQL &middot; BigQuery &middot; dbt &middot; Streamlit &middot; Looker Studio &middot; Git</p>
         </section>
 
         <section id="section-about" class="card">
@@ -79,7 +225,16 @@
 
             <h2>Data Intern - Franq Open Banking</h2>
             <p><strong>Feb 2026 - Present</strong> | Florianópolis, SC</p>
-            <p>Working with data products and internal analytics solutions using Python, SQL, Looker, n8n, Streamlit, dbt, Tag Manager, web scraping, and web analytics, with emphasis on process automation and BI generation.</p>
+            <p>I build AI and data products end to end — from the business rule to the screen someone uses. Main deliveries:</p>
+            <ul>
+                <li><strong>Decision engines</strong> — eligibility, lead classification and personalized offers for 7 partner banks, with 408 scenarios under automated test and migration to Python and Machine Learning.</li>
+                <li><strong>AI agents</strong> — orchestration in Python that triages partner requests by category and urgency and names the missing information.</li>
+                <li><strong>AI auditing</strong> — Python + BigQuery + Gemini 2.5 Flash pipeline measuring a document-classification agent across 4,754 records.</li>
+                <li><strong>Operations automation</strong> — 16 n8n workflows with stratified sampling: 4 hours of weekly manual work down to 5 minutes.</li>
+                <li><strong>Product analytics</strong> — the company's first Streamlit dashboard, 600+ data-quality tests, latency from 24h to 30min, presented to the board.</li>
+                <li><strong>Analytics base in dbt</strong> — a 360° view of individuals and companies (CNAE, Serasa) feeding ML models.</li>
+            </ul>
+            <p><em>Stack:</em> Python, SQL, dbt, BigQuery, Streamlit, n8n, Gemini, Looker, Tag Manager, web analytics.</p>
 
             <h2>Data Science Researcher | Scientific Initiation Scholar (CNPq) - UFSC</h2>
             <p><strong>Aug 2025 - Present</strong> | Hybrid</p>
@@ -118,69 +273,70 @@
 
         <section id="section-projects" class="card">
             <h1>Projects</h1>
-            <div class="projects-carousel">
-                <button class="carousel-btn" id="prev-project" aria-label="Previous project">❮</button>
-
-                <div class="projects-track" id="projects-track">
-                    <article class="project-slide active">
-                        <div class="project-gallery">
-                            <div class="gallery-viewport">
-                                <button class="gallery-arrow gallery-prev" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
-                                <div class="gallery-images">
-                                    <img src="imgs/hotel1.png" class="gallery-img active" alt="Hotel app – screen 1">
-                                    <img src="imgs/hotel2.png" class="gallery-img" alt="Hotel app – screen 2">
-                                    <img src="imgs/hotel3.png" class="gallery-img" alt="Hotel app – screen 3">
-                                    <img src="imgs/hotel4.png" class="gallery-img" alt="Hotel app – screen 4">
-                                    <img src="imgs/hotel5.png" class="gallery-img" alt="Hotel app – screen 5">
-                                </div>
-                                <button class="gallery-arrow gallery-next" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
-                            </div>
-                            <div class="gallery-dots">
-                                <button class="dot active" aria-label="Image 1"></button>
-                                <button class="dot" aria-label="Image 2"></button>
-                                <button class="dot" aria-label="Image 3"></button>
-                                <button class="dot" aria-label="Image 4"></button>
-                                <button class="dot" aria-label="Image 5"></button>
-                            </div>
-                        </div>
-                        <h2>Hotel Management Web Application</h2>
-                        <p>In UFSC's Web Programming course, my team and I built a complete hotel management web application with authentication, responsive UI, room selection, booking with shared guest data, and payment simulation.</p>
-                        <p>The frontend was developed with React and the backend with Node.js. More than the final product, this project strengthened our practical understanding of full-stack architecture, teamwork, and software delivery in real scenarios.</p>
-                        <p><strong>Team:</strong> João Paulo Decker Oleinik, Nicole Cristina, Vinicius Gessner Anverze, Sofia Damas.</p>
-                    </article>
-
-                    <article class="project-slide">
-                        <div class="project-gallery">
-                            <div class="gallery-viewport">
-                                <button class="gallery-arrow gallery-prev" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
-                                <div class="gallery-images">
-                                    <img src="imgs/oscar1.png" class="gallery-img active" alt="Oscar app – screen 1">
-                                    <img src="imgs/oscar2.png" class="gallery-img" alt="Oscar app – screen 2">
-                                    <img src="imgs/oscar3.png" class="gallery-img" alt="Oscar app – screen 3">
-                                    <img src="imgs/oscar4.png" class="gallery-img" alt="Oscar app – screen 4">
-                                    <img src="imgs/oscar5.png" class="gallery-img" alt="Oscar app – screen 5">
-                                    <img src="imgs/oscar6.png" class="gallery-img" alt="Oscar app – screen 6">
-                                </div>
-                                <button class="gallery-arrow gallery-next" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
-                            </div>
-                            <div class="gallery-dots">
-                                <button class="dot active" aria-label="Image 1"></button>
-                                <button class="dot" aria-label="Image 2"></button>
-                                <button class="dot" aria-label="Image 3"></button>
-                                <button class="dot" aria-label="Image 4"></button>
-                                <button class="dot" aria-label="Image 5"></button>
-                                <button class="dot" aria-label="Image 6"></button>
-                            </div>
-                        </div>
-                        <h2>Oscar Voting System (OOP Final Project)</h2>
-                        <p>For the Object-Oriented Systems Development course, I built a full Oscar voting system with my teammate João Paulo Decker Oleinik, evolving a console app into an interactive desktop application.</p>
-                        <p>The system supports registration of movies, actors, actresses, and directors, category nominations, voting flows, winner generation, and a user-friendly interface. The biggest learning came from applying MVC architecture in depth, including persistence, exception handling, and maintainable design decisions.</p>
-                        <p><strong>Key takeaway:</strong> process quality matters as much as the final result when building scalable software in team environments.</p>
-                    </article>
-                </div>
-
-                <button class="carousel-btn" id="next-project" aria-label="Next project">❯</button>
+            <p class="projects-lede">Seven highlights below. Each card opens its own page with the problem, what I built, the measured result and the stack.</p>
+            <div class="pgrid">
+              <a class="pcard" href="projetos/decision-engines.html" style="--i:0">
+                <span class="pcard-tag">AI & business rules</span>
+                <h2>Credit decision engines for 7 partner banks</h2>
+                <p class="pcard-sum">Eligibility, lead classification and offer rules written as logic and put under automated test.</p>
+                <p class="card-kpi"><b>408</b> scenarios under test</p>
+                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                <span class="pcard-go">Open project</span>
+              </a>
+              <a class="pcard" href="projetos/ai-audit.html" style="--i:1">
+                <span class="pcard-tag">AI quality</span>
+                <h2>Audit of a document-classification AI agent</h2>
+                <p class="pcard-sum">A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.</p>
+                <p class="card-kpi"><b>4.754</b> records audited</p>
+                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                <span class="pcard-go">Open project</span>
+              </a>
+              <a class="pcard" href="projetos/triage-agents.html" style="--i:2">
+                <span class="pcard-tag">AI agents · Operations</span>
+                <h2>Partner request triage with agent orchestration</h2>
+                <p class="pcard-sum">Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue.</p>
+                <p class="card-kpi"><b>2</b> agents in the chain</p>
+                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                <span class="pcard-go">Open project</span>
+              </a>
+              <a class="pcard" href="projetos/n8n-sampling-audit.html" style="--i:3">
+                <span class="pcard-tag">Automation · Operations</span>
+                <h2>Sampling audit automated in n8n</h2>
+                <p class="pcard-sum">16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes.</p>
+                <p class="card-kpi"><b>20h</b> returned per month</p>
+                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                <span class="pcard-go">Open project</span>
+              </a>
+              <a class="pcard" href="projetos/product-dashboard.html" style="--i:4">
+                <span class="pcard-tag">Product analytics</span>
+                <h2>Executive product dashboard — the company’s first Streamlit</h2>
+                <p class="pcard-sum">Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board.</p>
+                <p class="card-kpi"><b>24h→30min</b> data latency</p>
+                <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                <span class="pcard-go">Open project</span>
+              </a>
+              <a class="pcard" href="projetos/cardiotrack.html" style="--i:5">
+                <span class="pcard-tag">IoT · Backend · Mobile</span>
+                <h2>CardioTrack — IoT heart monitoring, end to end</h2>
+                <p class="pcard-sum">Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes.</p>
+                <p class="card-kpi"><b>3</b> layers built solo</p>
+                <span class="pcard-meta"><span class="org">UFSC</span><span class="yr">2026</span></span>
+                <span class="pcard-go">Open project</span>
+              </a>
+              <a class="pcard" href="projetos/parallel-automata.html" style="--i:6">
+                <span class="pcard-tag">Parallel computing</span>
+                <h2>Parallel cellular automata in C — 33.9× speedup</h2>
+                <p class="pcard-sum">Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer.</p>
+                <p class="card-kpi"><b>33,9×</b> speedup</p>
+                <span class="pcard-meta"><span class="org">UFSC · INE5645</span><span class="yr">2026</span></span>
+                <span class="pcard-go">Open project</span>
+              </a>
             </div>
+            <a class="cabinet-cta" href="projetos/index.html">
+                <span class="cta-label">Project cabinet</span>
+                <b>See all 14 projects</b>
+                <i class="bi bi-arrow-right"></i>
+            </a>
         </section>
 
         <!-- Data Lab temporariamente oculto (codigo preservado). Para reexibir: remover o atributo "hidden" abaixo e do <li> no menu, e reativar o dot em page-nav. -->
@@ -367,8 +523,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        let currentLanguage = 'en';
-        let currentTheme = 'dark';
+        function readStore(key, fallback) {
+            try { return localStorage.getItem(key) || fallback; } catch (e) { return fallback; }
+        }
+        function writeStore(key, value) {
+            try { localStorage.setItem(key, value); } catch (e) { /* modo privado: segue sem lembrar */ }
+        }
+
+        let currentLanguage = readStore('cz-lang', 'en') === 'pt' ? 'pt' : 'en';
+        let currentTheme = readStore('cz-theme', 'dark') === 'light' ? 'light' : 'dark';
 
         let portfolioChart = null;
 
@@ -635,6 +798,7 @@
                 htmlLang: 'en',
                 nav: [
                     '<i class="bi bi-house-door"></i><span class="nav-text"> Home</span>',
+                    '<i class="bi bi-robot"></i><span class="nav-text"> AI</span>',
                     '<i class="bi bi-person"></i><span class="nav-text"> About</span>',
                     '<i class="bi bi-briefcase"></i><span class="nav-text"> Experience</span>',
                     '<i class="bi bi-folder2-open"></i><span class="nav-text"> Projects</span>',
@@ -645,22 +809,23 @@
                     '<i class="bi bi-envelope"></i><span class="nav-text"> Contact</span>',
                 ],
                 toggleLabel: 'PT-BR',
-                role: 'Data Intern | Information Systems Student',
-                bio: "Bachelor's student at UFSC, Data Intern at Franq Open Banking, and CNPq researcher focused on data, automation, and real-world impact.",
+                role: 'AI & Data Intern | Information Systems @ UFSC',
+                bio: "I build AI in production — decision engines, agents and automations that move business numbers at Franq Open Banking.",
                 home: `
                     <div class="hero-layout">
                         <div class="hero-content">
-                            <p class="hero-eyebrow">DATA • AUTOMATION • IMPACT</p>
-                            <h1>Turning complex data into <em>smart decisions</em>.</h1>
-                            <p class="hero-description">I am Cecília Zica, an Information Systems student at UFSC, Data Intern at Franq Open Banking, and CNPq researcher focused on analytics, automation, and practical AI.</p>
+                            <p class="hero-eyebrow">AI • PRODUCT • OPERATIONS</p>
+                            <h1>I build AI that moves <em>business numbers</em>.</h1>
+                            <p class="hero-description">I am Cecília Zica, an Information Systems student at UFSC and Data Intern at Franq Open Banking, where I ship decision engines, AI agents and automations that give hours back to the operation — each one with a measured result.</p>
                             <div class="hero-highlights">
-                                <span>Looker • n8n • Streamlit • SQL • Python</span>
-                                <span>20h/month saved with automation</span>
-                                <span>300k+ rows analyzed per lot in AgroTech research</span>
+                                <span>AI agents • n8n • Python • BigQuery • Streamlit</span>
+                                <span>20h/month returned to the operation</span>
+                                <span>4,754 records audited with Gemini 2.5 Flash</span>
+                                <span>Decision rules for 7 partner banks in production</span>
                             </div>
                             <div class="hero-actions">
-                                <a href="#section-projects" class="hero-btn primary">View Projects</a>
-                                <a href="#section-experience" class="hero-btn secondary">View Experience</a>
+                                <a href="#section-ai" class="hero-btn primary">See what I built with AI</a>
+                                <a href="#section-projects" class="hero-btn secondary">View Projects</a>
                             </div>
                         </div>
                         <div class="hero-photo-wrapper">
@@ -673,6 +838,100 @@
                     <p>Currently pursuing a Bachelor's degree in Information Systems at Universidade Federal de Santa Catarina, while working as a Data Intern at Franq Open Banking. My daily routine involves exploring and implementing solutions in Python, SQL, n8n, dbt, and Data Visualization, focusing on process automation and generating business intelligence. I am in a stage of constant learning, discovering the diverse possibilities within the data field.</p>
                     <p>In parallel, I am a PIBIC/CNPq Researcher, using R for statistical data analysis in the AgroTech sector. My professional foundation includes a background as a Consultant at i9 Consultoria, where I developed a strategic vision of management and business processes.</p>
                     <p>With international experience in Berlin and France, I bring strong adaptability and intercultural communication skills, always seeking to bridge the technical side of Data Science with solutions that create real impact.</p>
+                `,
+                ai: `
+                <h1>AI in Production</h1>
+                <p class="ai-lede">Five AI systems I shipped at <strong>Franq Open Banking</strong> — decision engines, an audited document-classification agent, and automations that hand hours back to the operation. All of them run in production and are used by other people.</p>
+
+                <div class="kpi-facts ai-kpis">
+                    <div class="kpi-group kpi-franq">
+                        <div class="kpi-group-label"><i class="bi bi-robot"></i> AI &amp; Automation</div>
+                        <article><strong>20h/month</strong><span>Given back to the operation: weekly sampling audit went from 4 hours to 5 minutes in n8n.</span></article>
+                        <article><strong>4,754 records</strong><span>Classification agent audited end to end with a Python + BigQuery + Gemini 2.5 Flash pipeline.</span></article>
+                    </div>
+                    <div class="kpi-group kpi-cnpq">
+                        <div class="kpi-group-label"><i class="bi bi-diagram-3"></i> Product &amp; Decisioning</div>
+                        <article><strong>408 scenarios</strong><span>Automated tests covering eligibility and lead-classification rules for 7 partner banks.</span></article>
+                        <article><strong>24h &rarr; 30min</strong><span>Data latency in the executive product dashboard, presented to the board.</span></article>
+                    </div>
+                </div>
+
+                <h2>What I built</h2>
+                <ol class="ai-builds">
+                    <li>
+                        <h3>Partner request triage &mdash; agent orchestration</h3>
+                        <p class="build-tag">Operations &middot; Python &middot; LLM orchestration</p>
+                        <p><strong>Problem:</strong> partner requests arrived as free text and someone had to read every one to know where it should go.</p>
+                        <p><strong>Build:</strong> two agents in Python — the first classifies category and urgency, the second finds the missing information and suggests the routing.</p>
+                        <p><strong>Result:</strong> the queue reaches a human already triaged, with the gap in the request named.</p>
+                    </li>
+                    <li>
+                        <h3>Audit of a document-classification agent</h3>
+                        <p class="build-tag">AI quality &middot; BigQuery &middot; Gemini 2.5 Flash</p>
+                        <p><strong>Problem:</strong> an AI agent was reading customer documents and nobody could say how often it was right.</p>
+                        <p><strong>Build:</strong> a Python pipeline joining BigQuery and Gemini 2.5 Flash that re-reads 4,754 records and compares verdicts.</p>
+                        <p><strong>Result:</strong> accuracy measured by document type, which turned "we think it works" into a number.</p>
+                    </li>
+                    <li>
+                        <h3>Sampling audit automated in n8n</h3>
+                        <p class="build-tag">Operations &middot; n8n &middot; stratified sampling</p>
+                        <p><strong>Problem:</strong> the weekly quality sample was built by hand in spreadsheets, 4 hours every week.</p>
+                        <p><strong>Build:</strong> 16 n8n workflows wiring BigQuery, Google Sheets and Gmail, with stratified sampling by document type.</p>
+                        <p><strong>Result:</strong> 5 minutes a week — roughly 20 hours a month returned to the team. The reviewer opens a sheet that is already filled.</p>
+                    </li>
+                    <li>
+                        <h3>Credit decision engines for 7 partner banks</h3>
+                        <p class="build-tag">Product &middot; business rules &middot; Python &middot; ML</p>
+                        <p><strong>Problem:</strong> eligibility, lead classification and offer rules lived in people's heads and in slide decks.</p>
+                        <p><strong>Build:</strong> I mapped the rules of Itaú, Bradesco, Banco Pan, Banco BV, Banco Safra, Porto Seguro Bank and Santander, wrote them as logic in DecisionRules, and led the migration to Python and Machine Learning.</p>
+                        <p><strong>Result:</strong> 408 scenarios under automated test (292 eligibility, 116 classification) — a rule change is now provable before it reaches a customer.</p>
+                    </li>
+                    <li>
+                        <h3>Executive product dashboard &mdash; first Streamlit in the company</h3>
+                        <p class="build-tag">Product analytics &middot; Streamlit &middot; dbt &middot; BigQuery</p>
+                        <p><strong>Problem:</strong> product and sales questions were answered one SQL query at a time, and two people reached two different numbers.</p>
+                        <p><strong>Build:</strong> the proof of concept that introduced Streamlit to the company's stack: three sales surfaces, live reads from the data warehouse, 600+ automated data-quality tests, and a visual standard co-created with Design.</p>
+                        <p><strong>Result:</strong> data latency down from 24 hours to 30 minutes, presented to the board and used by the team every week.</p>
+                    </li>
+                </ol>
+
+                <h2>Proof &mdash; screens in production</h2>
+                <p class="proof-note"><i class="bi bi-eye-slash"></i> Real screens from the dashboard I built. Numbers are blurred on purpose: the data belongs to Franq.</p>
+                <div class="proof-gallery">
+                    <figure>
+                        <img src="imgs/franq-activity.png" alt="Activity tab of the product dashboard: a horizontal bar chart of events per product category, with a product and date-range filter." loading="lazy">
+                        <figcaption><b>Activity</b>Which product the customer actually touched, by event volume in 30 days.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imgs/franq-funnel.png" alt="Conversion funnel with three stages and a 26-week trend chart of funnel entries and conversion rate." loading="lazy">
+                        <figcaption><b>Funnel</b>Entered, advanced, sent a proposal — plus the 26-week trend.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imgs/franq-product-filter.png" alt="Product filter with a note explaining that 15 infrastructure events are hidden from the chart." loading="lazy">
+                        <figcaption><b>Honest filtering</b>Fifteen infrastructure events stay out. They fire on every page and do not measure product.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imgs/franq-he-funnel.png" alt="Home Equity funnel where the dashboard shows a warning instead of a chart because the stages are not in descending order." loading="lazy">
+                        <figcaption><b>When the data is wrong</b>If the funnel stages do not hold, the screen warns instead of drawing a chart.</figcaption>
+                    </figure>
+                    <figure class="wide">
+                        <img src="imgs/franq-compare-light.png" alt="Compare tab in light theme: three sales surfaces indexed to the first week on the same scale, plus usage-quality bar charts." loading="lazy">
+                        <figcaption><b>Compare &middot; light theme</b>Three surfaces on one indexed scale, so the slope is the comparison — not the height.</figcaption>
+                    </figure>
+                    <figure class="wide">
+                        <img src="imgs/franq-compare-dark.png" alt="The same Compare tab rendered in dark theme, showing the visual standard works in both themes." loading="lazy">
+                        <figcaption><b>The same screen &middot; dark theme</b>Visual standard co-created with Design, checked in both themes and on mobile.</figcaption>
+                    </figure>
+                </div>
+
+                <h2>How I build</h2>
+                <ul class="ai-principles">
+                    <li><strong>Start from the decision.</strong> Before the model, the question: what will someone do differently with this number?</li>
+                    <li><strong>Automate repetition, never judgement.</strong> n8n and agents prepare the work; the human still decides.</li>
+                    <li><strong>Ship with proof.</strong> Every delivery carries a test, a measured number and a note on what it does not solve.</li>
+                </ul>
+
+                <p class="ai-stack"><span>Tools</span> Claude &middot; GPT &middot; Gemini &middot; prompt engineering &middot; agent orchestration &middot; n8n &middot; Python &middot; SQL &middot; BigQuery &middot; dbt &middot; Streamlit &middot; Looker Studio &middot; Git</p>
                 `,
                 education: `
                     <h1>Education</h1>
@@ -721,7 +980,16 @@
                     <h1>Experience</h1>
                     <h2>Data Intern - Franq Open Banking</h2>
                     <p><strong>Feb 2026 - Present</strong> | Florianópolis, SC</p>
-                    <p>Working with data products and internal analytics solutions using Python, SQL, Looker, n8n, Streamlit, dbt, Tag Manager, web scraping, and web analytics, with emphasis on process automation and BI generation.</p>
+                    <p>I build AI and data products end to end — from the business rule to the screen someone uses. Main deliveries:</p>
+            <ul>
+                <li><strong>Decision engines</strong> — eligibility, lead classification and personalized offers for 7 partner banks, with 408 scenarios under automated test and migration to Python and Machine Learning.</li>
+                <li><strong>AI agents</strong> — orchestration in Python that triages partner requests by category and urgency and names the missing information.</li>
+                <li><strong>AI auditing</strong> — Python + BigQuery + Gemini 2.5 Flash pipeline measuring a document-classification agent across 4,754 records.</li>
+                <li><strong>Operations automation</strong> — 16 n8n workflows with stratified sampling: 4 hours of weekly manual work down to 5 minutes.</li>
+                <li><strong>Product analytics</strong> — the company's first Streamlit dashboard, 600+ data-quality tests, latency from 24h to 30min, presented to the board.</li>
+                <li><strong>Analytics base in dbt</strong> — a 360° view of individuals and companies (CNAE, Serasa) feeding ML models.</li>
+            </ul>
+            <p><em>Stack:</em> Python, SQL, dbt, BigQuery, Streamlit, n8n, Gemini, Looker, Tag Manager, web analytics.</p>
                     <h2>Data Science Researcher | Scientific Initiation Scholar (CNPq) - UFSC</h2>
                     <p><strong>Aug 2025 - Present</strong> | Hybrid</p>
                     <p>Contributing to AgroTech research with statistical analysis, time series, optimization, and anomaly detection to improve sensor positioning and operational efficiency.</p>
@@ -833,107 +1101,71 @@
                     </div>
                 `,
                 projects: `
-                    <h1>Projects</h1>
-                    <div class="projects-carousel">
-                        <button class="carousel-btn" id="prev-project" aria-label="Previous project">❮</button>
-                        <div class="projects-track" id="projects-track">
-                            <article class="project-slide active">
-                                <div class="project-gallery">
-                                    <div class="gallery-viewport">
-                                        <button class="gallery-arrow gallery-prev" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
-                                        <div class="gallery-images">
-                                            <img src="imgs/hotel1.png" class="gallery-img active" alt="Hotel app – screen 1">
-                                            <img src="imgs/hotel2.png" class="gallery-img" alt="Hotel app – screen 2">
-                                            <img src="imgs/hotel3.png" class="gallery-img" alt="Hotel app – screen 3">
-                                            <img src="imgs/hotel4.png" class="gallery-img" alt="Hotel app – screen 4">
-                                            <img src="imgs/hotel5.png" class="gallery-img" alt="Hotel app – screen 5">
-                                        </div>
-                                        <button class="gallery-arrow gallery-next" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
-                                    </div>
-                                    <div class="gallery-dots">
-                                        <button class="dot active" aria-label="Image 1"></button>
-                                        <button class="dot" aria-label="Image 2"></button>
-                                        <button class="dot" aria-label="Image 3"></button>
-                                        <button class="dot" aria-label="Image 4"></button>
-                                        <button class="dot" aria-label="Image 5"></button>
-                                    </div>
-                                </div>
-                                <h2>Hotel Management Web Application</h2>
-                                <p>In UFSC's Web Programming course, my team and I built a complete hotel management web application with authentication, responsive UI, room selection, booking with shared guest data, and payment simulation.</p>
-                                <p>The frontend was developed with React and the backend with Node.js. More than the final product, this project strengthened our practical understanding of full-stack architecture, teamwork, and software delivery in real scenarios.</p>
-                                <p><strong>Team:</strong> João Paulo Decker Oleinik, Nicole Cristina, Vinicius Gessner Anverze, Sofia Damas.</p>
-                            </article>
-                            <article class="project-slide">
-                                <div class="project-gallery">
-                                    <div class="gallery-viewport">
-                                        <button class="gallery-arrow gallery-prev" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
-                                        <div class="gallery-images">
-                                            <img src="imgs/oscar1.png" class="gallery-img active" alt="Oscar app – screen 1">
-                                            <img src="imgs/oscar2.png" class="gallery-img" alt="Oscar app – screen 2">
-                                            <img src="imgs/oscar3.png" class="gallery-img" alt="Oscar app – screen 3">
-                                            <img src="imgs/oscar4.png" class="gallery-img" alt="Oscar app – screen 4">
-                                            <img src="imgs/oscar5.png" class="gallery-img" alt="Oscar app – screen 5">
-                                            <img src="imgs/oscar6.png" class="gallery-img" alt="Oscar app – screen 6">
-                                        </div>
-                                        <button class="gallery-arrow gallery-next" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
-                                    </div>
-                                    <div class="gallery-dots">
-                                        <button class="dot active" aria-label="Image 1"></button>
-                                        <button class="dot" aria-label="Image 2"></button>
-                                        <button class="dot" aria-label="Image 3"></button>
-                                        <button class="dot" aria-label="Image 4"></button>
-                                        <button class="dot" aria-label="Image 5"></button>
-                                        <button class="dot" aria-label="Image 6"></button>
-                                    </div>
-                                </div>
-                                <h2>Oscar Voting System (OOP Final Project)</h2>
-                                <p>For the Object-Oriented Systems Development course, I built a full Oscar voting system with my teammate João Paulo Decker Oleinik, evolving a console app into an interactive desktop application.</p>
-                                <p>The system supports registration of movies, actors, actresses, and directors, category nominations, voting flows, winner generation, and a user-friendly interface. The biggest learning came from applying MVC architecture in depth, including persistence, exception handling, and maintainable design decisions.</p>
-                                <p><strong>Key takeaway:</strong> process quality matters as much as the final result when building scalable software in team environments.</p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>IoT Heart Monitor — ESP32 + Go + Flutter</h2>
-                                <p>My favorite project so far. An end-to-end embedded system: an <strong>ESP32</strong> with a MAX30102 sensor measures heart rate (BPM) and SpO₂, classifies each reading, and sends it to a <strong>Go</strong> API that persists the data in SQLite. A <strong>Flutter</strong> app shows the history in real time and lets you adjust — live — the alert threshold the device then respects.</p>
-                                <p>Hardware, firmware, backend, and app, each in its own stack, integrated through a simple HTTP API. Includes CI and an MIT license.</p>
-                                <p><strong>Stack:</strong> Go · Flutter/Dart · C/C++ (ESP32) · SQLite · Docker</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/embedded-systems-full-project" target="_blank" rel="noopener">View on GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Local Services Platform — Plano de Serviços Florianópolis</h2>
-                                <p>For the Systems Analysis &amp; Design course, my team built a desktop application that connects clients to local service providers: authentication, search by category and location, an automatic recommendation ranking, a 1–5 star review system, and an admin panel for provider approval.</p>
-                                <p>Highlights include business rules such as hiding contact details from unauthenticated users and auto-suspending low-rated providers, all on a clean MVC structure with SQLite persistence.</p>
-                                <p><strong>Stack:</strong> Python · CustomTkinter · SQLite · MVC</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/aps-plano-servicos-floripa" target="_blank" rel="noopener">View on GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Miúdos — Daily Expense Tracker</h2>
-                                <p>A mobile-first app to jot down everyday spending in seconds. I built it offline-first: you capture an expense even with no signal and it syncs later. The goal was to replace a spreadsheet I never kept up with something I'd actually open every day.</p>
-                                <p><strong>Stack:</strong> React · Vite · JavaScript · PWA</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/gastos-app" target="_blank" rel="noopener">View on GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Sinuca Sítio Champ — Tournament App</h2>
-                                <p>A Next.js app to run and reveal an 8-player pool tournament: a live scoreboard, a single-elimination bracket (quarters → semis → third place → final), and a cinematic podium reveal with scenes, transitions, and effects built in pure CSS and SVG.</p>
-                                <p>The bracket state is saved in the browser, so it survives a refresh in the middle of the tournament.</p>
-                                <p><strong>Stack:</strong> Next.js · React · TypeScript · CSS/SVG</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/sinuca-sitio-champ" target="_blank" rel="noopener">View on GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Visual Contaminant Sensor — Computer Vision</h2>
-                                <p>For a Computer Vision course, a visual sensor that inspects waste on a Pyrolysis/HTC plant conveyor and measures how much contaminant (plastic, styrofoam, inert material) is mixed into the organic matter.</p>
-                                <p>The idea behind it: treat computer vision as a data pipeline, not magic — it turns unstructured data (an RGB pixel matrix) into structured records (JSON/SQL with coordinates and classes) that trigger automations. Frame → YOLO detection → contaminant area → rule → FastAPI (SQL + alert).</p>
-                                <p><strong>Stack:</strong> Python · YOLO · FastAPI · SQL</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/visao-computacional-residuos" target="_blank" rel="noopener">View on GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Broindex — Sensor Data Analysis (CNPq Research)</h2>
-                                <p>My CNPq/PIBIC research at UFSC, written in R. Broiler-chicken barns carry dozens of temperature and humidity sensors, but much of that data is redundant. The goal was to find the smallest set of sensors that still represents the whole environment well — cutting installation cost without losing monitoring quality.</p>
-                                <p><strong>Stack:</strong> R · Time Series · Dimensionality Reduction · Data Viz</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/broindex-data-analise" target="_blank" rel="noopener">View on GitHub →</a></p>
-                            </article>
-                        </div>
-                        <button class="carousel-btn" id="next-project" aria-label="Next project">❯</button>
+            <h1>Projects</h1>
+                    <p class="projects-lede">Seven highlights below. Each card opens its own page with the problem, what I built, the measured result and the stack.</p>
+                    <div class="pgrid">
+                      <a class="pcard" href="projetos/decision-engines.html" style="--i:0">
+                        <span class="pcard-tag">AI & business rules</span>
+                        <h2>Credit decision engines for 7 partner banks</h2>
+                        <p class="pcard-sum">Eligibility, lead classification and offer rules written as logic and put under automated test.</p>
+                        <p class="card-kpi"><b>408</b> scenarios under test</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Open project</span>
+                      </a>
+                      <a class="pcard" href="projetos/ai-audit.html" style="--i:1">
+                        <span class="pcard-tag">AI quality</span>
+                        <h2>Audit of a document-classification AI agent</h2>
+                        <p class="pcard-sum">A pipeline that re-reads 4,754 records with Gemini and turns “we think it works” into a number.</p>
+                        <p class="card-kpi"><b>4.754</b> records audited</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Open project</span>
+                      </a>
+                      <a class="pcard" href="projetos/triage-agents.html" style="--i:2">
+                        <span class="pcard-tag">AI agents · Operations</span>
+                        <h2>Partner request triage with agent orchestration</h2>
+                        <p class="pcard-sum">Two agents read free-text requests, classify urgency and name what is missing before a human opens the queue.</p>
+                        <p class="card-kpi"><b>2</b> agents in the chain</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Open project</span>
+                      </a>
+                      <a class="pcard" href="projetos/n8n-sampling-audit.html" style="--i:3">
+                        <span class="pcard-tag">Automation · Operations</span>
+                        <h2>Sampling audit automated in n8n</h2>
+                        <p class="pcard-sum">16 workflows turned 4 hours of weekly spreadsheet work into 5 minutes.</p>
+                        <p class="card-kpi"><b>20h</b> returned per month</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Open project</span>
+                      </a>
+                      <a class="pcard" href="projetos/product-dashboard.html" style="--i:4">
+                        <span class="pcard-tag">Product analytics</span>
+                        <h2>Executive product dashboard — the company’s first Streamlit</h2>
+                        <p class="pcard-sum">Three sales surfaces, live reads from the warehouse, 600+ data-quality tests, presented to the board.</p>
+                        <p class="card-kpi"><b>24h→30min</b> data latency</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Open project</span>
+                      </a>
+                      <a class="pcard" href="projetos/cardiotrack.html" style="--i:5">
+                        <span class="pcard-tag">IoT · Backend · Mobile</span>
+                        <h2>CardioTrack — IoT heart monitoring, end to end</h2>
+                        <p class="pcard-sum">Firmware on ESP32, a Go backend and a Flutter app, deployed with Kubernetes.</p>
+                        <p class="card-kpi"><b>3</b> layers built solo</p>
+                        <span class="pcard-meta"><span class="org">UFSC</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Open project</span>
+                      </a>
+                      <a class="pcard" href="projetos/parallel-automata.html" style="--i:6">
+                        <span class="pcard-tag">Parallel computing</span>
+                        <h2>Parallel cellular automata in C — 33.9× speedup</h2>
+                        <p class="pcard-sum">Pthreads with fixed row bands and barrier synchronisation, measured on the Santos Dumont supercomputer.</p>
+                        <p class="card-kpi"><b>33,9×</b> speedup</p>
+                        <span class="pcard-meta"><span class="org">UFSC · INE5645</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Open project</span>
+                      </a>
                     </div>
+                    <a class="cabinet-cta" href="projetos/index.html">
+                        <span class="cta-label">Project cabinet</span>
+                        <b>See all 14 projects</b>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
                 `,
                 awards: `
                     <h1>Honors & Awards</h1>
@@ -976,6 +1208,7 @@
                 htmlLang: 'pt-BR',
                 nav: [
                     '<i class="bi bi-house-door"></i><span class="nav-text"> Início</span>',
+                    '<i class="bi bi-robot"></i><span class="nav-text"> IA</span>',
                     '<i class="bi bi-person"></i><span class="nav-text"> Sobre</span>',
                     '<i class="bi bi-briefcase"></i><span class="nav-text"> Experiência</span>',
                     '<i class="bi bi-folder2-open"></i><span class="nav-text"> Projetos</span>',
@@ -986,22 +1219,23 @@
                     '<i class="bi bi-envelope"></i><span class="nav-text"> Contato</span>',
                 ],
                 toggleLabel: 'EN',
-                role: 'Estagiária de Dados | Estudante de Sistemas de Informação',
-                bio: 'Graduanda na UFSC, Data Intern na Franq Open Banking e pesquisadora CNPq, com foco em dados, automação e impacto real.',
+                role: 'Estagiária de IA e Dados | Sistemas de Informação na UFSC',
+                bio: 'Construo IA em produção — motores de decisão, agentes e automações que mexem em número de negócio na Franq Open Banking.',
                 home: `
                     <div class="hero-layout">
                         <div class="hero-content">
-                            <p class="hero-eyebrow">DADOS • AUTOMAÇÃO • IMPACTO</p>
-                            <h1>Transformando dados complexos em <em>decisões inteligentes</em>.</h1>
-                            <p class="hero-description">Sou Cecília Zica, estudante de Sistemas de Informação na UFSC, Data Intern na Franq Open Banking e pesquisadora CNPq com foco em analytics, automação e IA aplicada.</p>
+                            <p class="hero-eyebrow">IA • PRODUTO • OPERAÇÃO</p>
+                            <h1>Construo IA que mexe em <em>número de negócio</em>.</h1>
+                            <p class="hero-description">Sou Cecília Zica, estudante de Sistemas de Informação na UFSC e estagiária de dados na Franq Open Banking, onde coloco de pé motores de decisão, agentes de IA e automações que devolvem horas para a operação — cada um com resultado medido.</p>
                             <div class="hero-highlights">
-                                <span>Looker • n8n • Streamlit • SQL • Python</span>
-                                <span>20h/mês economizadas com automação</span>
-                                <span>300 mil+ linhas analisadas por lote em pesquisa AgroTech</span>
+                                <span>Agentes de IA • n8n • Python • BigQuery • Streamlit</span>
+                                <span>20h/mês devolvidas à operação</span>
+                                <span>4.754 registros auditados com Gemini 2.5 Flash</span>
+                                <span>Régua de decisão de 7 bancos parceiros em produção</span>
                             </div>
                             <div class="hero-actions">
-                                <a href="#section-projects" class="hero-btn primary">Ver Projetos</a>
-                                <a href="#section-experience" class="hero-btn secondary">Ver Experiência</a>
+                                <a href="#section-ai" class="hero-btn primary">Ver o que construí com IA</a>
+                                <a href="#section-projects" class="hero-btn secondary">Ver Projetos</a>
                             </div>
                         </div>
                         <div class="hero-photo-wrapper">
@@ -1014,6 +1248,100 @@
                     <p>Atualmente cursando Bacharelado em Sistemas de Informação na Universidade Federal de Santa Catarina, enquanto atuo como Data Intern na Franq Open Banking. No dia a dia exploro e implemento soluções em Python, SQL, n8n, dbt e Visualização de Dados, com foco em automação de processos e geração de inteligência de negócios. Estou em constante aprendizado, descobrindo as diversas possibilidades dentro da área de dados.</p>
                     <p>Em paralelo, sou Pesquisadora PIBIC/CNPq, utilizando R para análise estatística de dados no setor AgroTech. Minha base profissional inclui passagem como Consultora na i9 Consultoria, onde desenvolvi visão estratégica de gestão e processos de negócio.</p>
                     <p>Com experiência internacional em Berlim e Paris, trago forte capacidade de adaptação e comunicação intercultural, buscando sempre conectar o lado técnico da Ciência de Dados a soluções de impacto real.</p>
+                `,
+                ai: `
+                <h1>IA em Produção</h1>
+                <p class="ai-lede">Cinco sistemas de IA que coloquei de pé na <strong>Franq Open Banking</strong> — motores de decisão, a auditoria de um agente de classificação documental e automações que devolvem horas para a operação. Todos estão em produção e são usados por outras pessoas.</p>
+
+                <div class="kpi-facts ai-kpis">
+                    <div class="kpi-group kpi-franq">
+                        <div class="kpi-group-label"><i class="bi bi-robot"></i> IA &amp; Automação</div>
+                        <article><strong>20h/mês</strong><span>Devolvidas à operação: a auditoria amostral semanal caiu de 4 horas para 5 minutos no n8n.</span></article>
+                        <article><strong>4.754 registros</strong><span>Agente de classificação auditado ponta a ponta com pipeline Python + BigQuery + Gemini 2.5 Flash.</span></article>
+                    </div>
+                    <div class="kpi-group kpi-cnpq">
+                        <div class="kpi-group-label"><i class="bi bi-diagram-3"></i> Produto &amp; Decisão</div>
+                        <article><strong>408 cenários</strong><span>Testes automatizados cobrindo elegibilidade e classificação de leads de 7 bancos parceiros.</span></article>
+                        <article><strong>24h &rarr; 30min</strong><span>Latência do dado no dashboard executivo de produto, apresentado à diretoria.</span></article>
+                    </div>
+                </div>
+
+                <h2>O que eu construí</h2>
+                <ol class="ai-builds">
+                    <li>
+                        <h3>Triagem de solicitações de parceiros &mdash; orquestração de agentes</h3>
+                        <p class="build-tag">Operação &middot; Python &middot; orquestração de LLM</p>
+                        <p><strong>Problema:</strong> os pedidos dos parceiros chegavam em texto livre e alguém precisava ler todos para saber para onde mandar.</p>
+                        <p><strong>Construí:</strong> dois agentes em Python — o primeiro classifica categoria e urgência, o segundo identifica a informação que falta e sugere o encaminhamento.</p>
+                        <p><strong>Resultado:</strong> a fila chega ao humano já triada, com a lacuna do pedido nomeada.</p>
+                    </li>
+                    <li>
+                        <h3>Auditoria de um agente de classificação documental</h3>
+                        <p class="build-tag">Qualidade de IA &middot; BigQuery &middot; Gemini 2.5 Flash</p>
+                        <p><strong>Problema:</strong> um agente de IA lia documentos de clientes e ninguém sabia dizer com que frequência ele acertava.</p>
+                        <p><strong>Construí:</strong> um pipeline em Python ligando BigQuery e Gemini 2.5 Flash que relê 4.754 registros e compara os veredictos.</p>
+                        <p><strong>Resultado:</strong> acerto medido por tipo de documento — o "a gente acha que funciona" virou número.</p>
+                    </li>
+                    <li>
+                        <h3>Auditoria amostral automatizada no n8n</h3>
+                        <p class="build-tag">Operação &middot; n8n &middot; amostragem estratificada</p>
+                        <p><strong>Problema:</strong> a amostra semanal de qualidade era montada à mão em planilha, 4 horas toda semana.</p>
+                        <p><strong>Construí:</strong> 16 workflows no n8n ligando BigQuery, Google Sheets e Gmail, com amostragem estratificada por tipo de documento.</p>
+                        <p><strong>Resultado:</strong> 5 minutos por semana — cerca de 20 horas por mês devolvidas ao time. Quem revisa abre uma planilha já pronta.</p>
+                    </li>
+                    <li>
+                        <h3>Motores de decisão de crédito para 7 bancos parceiros</h3>
+                        <p class="build-tag">Produto &middot; regra de negócio &middot; Python &middot; ML</p>
+                        <p><strong>Problema:</strong> as regras de elegibilidade, classificação de lead e oferta viviam na cabeça das pessoas e em slides.</p>
+                        <p><strong>Construí:</strong> mapeei as regras de Itaú, Bradesco, Banco Pan, Banco BV, Banco Safra, Porto Seguro Bank e Santander, escrevi cada uma como lógica no DecisionRules e conduzi a migração para Python e Machine Learning.</p>
+                        <p><strong>Resultado:</strong> 408 cenários sob teste automatizado (292 de elegibilidade, 116 de classificação) — mudança de régua agora se prova antes de chegar no cliente.</p>
+                    </li>
+                    <li>
+                        <h3>Dashboard executivo de produto &mdash; primeiro Streamlit da empresa</h3>
+                        <p class="build-tag">Product analytics &middot; Streamlit &middot; dbt &middot; BigQuery</p>
+                        <p><strong>Problema:</strong> pergunta de produto e de venda era respondida uma query por vez, e duas pessoas chegavam a dois números diferentes.</p>
+                        <p><strong>Construí:</strong> a POC que introduziu o Streamlit na stack da empresa: três superfícies de venda, leitura ao vivo do data warehouse, mais de 600 testes automatizados de qualidade de dado e um padrão visual co-criado com o time de Design.</p>
+                        <p><strong>Resultado:</strong> latência do dado de 24 horas para 30 minutos, apresentado à diretoria e usado pelo time toda semana.</p>
+                    </li>
+                </ol>
+
+                <h2>Prova &mdash; telas em produção</h2>
+                <p class="proof-note"><i class="bi bi-eye-slash"></i> Telas reais do dashboard que construí. Os números estão borrados de propósito: o dado é da Franq.</p>
+                <div class="proof-gallery">
+                    <figure>
+                        <img src="imgs/franq-activity.png" alt="Aba Atividade do dashboard de produto: gráfico de barras de eventos por categoria de produto, com filtro de produto e de período." loading="lazy">
+                        <figcaption><b>Atividade</b>Em que produto o cliente mexeu de verdade, por volume de evento em 30 dias.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imgs/franq-funnel.png" alt="Funil de conversão com três etapas e gráfico de tendência de 26 semanas com entradas e taxa de conversão." loading="lazy">
+                        <figcaption><b>Funil</b>Entrou, avançou, enviou proposta — e a tendência de 26 semanas.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imgs/franq-product-filter.png" alt="Filtro de produto com nota explicando que 15 eventos de infraestrutura ficam ocultos do gráfico." loading="lazy">
+                        <figcaption><b>Recorte honesto</b>Quinze eventos de infra ficam fora. Disparam em toda página e não medem produto.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imgs/franq-he-funnel.png" alt="Funil de Home Equity em que o dashboard exibe um aviso no lugar do gráfico porque as etapas não estão em ordem decrescente." loading="lazy">
+                        <figcaption><b>Quando o dado está errado</b>Se a escada do funil não fecha, a tela avisa em vez de desenhar gráfico.</figcaption>
+                    </figure>
+                    <figure class="wide">
+                        <img src="imgs/franq-compare-light.png" alt="Aba Comparar no tema claro: três superfícies de venda indexadas na primeira semana na mesma escala, mais gráficos de qualidade de uso." loading="lazy">
+                        <figcaption><b>Comparar &middot; tema claro</b>Três superfícies numa escala indexada, então a inclinação é a comparação — não a altura.</figcaption>
+                    </figure>
+                    <figure class="wide">
+                        <img src="imgs/franq-compare-dark.png" alt="A mesma aba Comparar no tema escuro, mostrando que o padrão visual funciona nos dois temas." loading="lazy">
+                        <figcaption><b>A mesma tela &middot; tema escuro</b>Padrão visual co-criado com Design, conferido nos dois temas e no celular.</figcaption>
+                    </figure>
+                </div>
+
+                <h2>Como eu construo</h2>
+                <ul class="ai-principles">
+                    <li><strong>Começo pela decisão.</strong> Antes do modelo, a pergunta: o que alguém vai fazer de diferente com esse número?</li>
+                    <li><strong>Automatizo repetição, nunca julgamento.</strong> n8n e agentes preparam o trabalho; quem decide continua sendo gente.</li>
+                    <li><strong>Entrego com prova.</strong> Toda entrega leva teste, número medido e uma nota do que ela não resolve.</li>
+                </ul>
+
+                <p class="ai-stack"><span>Ferramentas</span> Claude &middot; GPT &middot; Gemini &middot; prompt engineering &middot; orquestração de agentes &middot; n8n &middot; Python &middot; SQL &middot; BigQuery &middot; dbt &middot; Streamlit &middot; Looker Studio &middot; Git</p>
                 `,
                 education: `
                     <h1>Formação</h1>
@@ -1062,7 +1390,16 @@
                     <h1>Experiência</h1>
                     <h2>Data Intern - Franq Open Banking</h2>
                     <p><strong>Fev 2026 - Presente</strong> | Florianópolis, SC</p>
-                    <p>Atuação com produtos de dados e soluções internas de analytics usando Python, SQL, Looker, n8n, Streamlit, dbt, Tag Manager, web scraping e web analytics, com ênfase em automação de processos e geração de BI.</p>
+                    <p>Construo produtos de IA e de dados de ponta a ponta — da regra de negócio até a tela que alguém usa. Principais entregas:</p>
+                    <ul>
+                        <li><strong>Motores de decisão</strong> — elegibilidade, classificação de leads e ofertas personalizadas de 7 bancos parceiros, com 408 cenários sob teste automatizado e migração para Python e Machine Learning.</li>
+                        <li><strong>Agentes de IA</strong> — orquestração em Python que tria solicitações de parceiros por categoria e urgência e nomeia a informação que falta.</li>
+                        <li><strong>Auditoria de IA</strong> — pipeline Python + BigQuery + Gemini 2.5 Flash medindo um agente de classificação documental em 4.754 registros.</li>
+                        <li><strong>Automação de operação</strong> — 16 workflows no n8n com amostragem estratificada: 4 horas de trabalho manual semanal viraram 5 minutos.</li>
+                        <li><strong>Product analytics</strong> — o primeiro dashboard em Streamlit da empresa, mais de 600 testes de qualidade de dado, latência de 24h para 30min, apresentado à diretoria.</li>
+                        <li><strong>Base analítica em dbt</strong> — visão 360° de pessoas físicas e jurídicas (CNAE, Serasa) alimentando modelos de ML.</li>
+                    </ul>
+                    <p><em>Stack:</em> Python, SQL, dbt, BigQuery, Streamlit, n8n, Gemini, Looker, Tag Manager, web analytics.</p>
                     <h2>Data Science Researcher | Bolsista de Iniciação Científica (CNPq) - UFSC</h2>
                     <p><strong>Ago 2025 - Presente</strong> | Híbrido</p>
                     <p>Contribuição em pesquisa AgroTech com análise estatística, séries temporais, otimização e detecção de anomalias para melhorar posicionamento de sensores e eficiência operacional.</p>
@@ -1175,106 +1512,70 @@
                 `,
                 projects: `
                     <h1>Projetos</h1>
-                    <div class="projects-carousel">
-                        <button class="carousel-btn" id="prev-project" aria-label="Projeto anterior">❮</button>
-                        <div class="projects-track" id="projects-track">
-                            <article class="project-slide active">
-                                <div class="project-gallery">
-                                    <div class="gallery-viewport">
-                                        <button class="gallery-arrow gallery-prev" aria-label="Imagem anterior"><i class="bi bi-chevron-left"></i></button>
-                                        <div class="gallery-images">
-                                            <img src="imgs/hotel1.png" class="gallery-img active" alt="App hoteleiro – tela 1">
-                                            <img src="imgs/hotel2.png" class="gallery-img" alt="App hoteleiro – tela 2">
-                                            <img src="imgs/hotel3.png" class="gallery-img" alt="App hoteleiro – tela 3">
-                                            <img src="imgs/hotel4.png" class="gallery-img" alt="App hoteleiro – tela 4">
-                                            <img src="imgs/hotel5.png" class="gallery-img" alt="App hoteleiro – tela 5">
-                                        </div>
-                                        <button class="gallery-arrow gallery-next" aria-label="Próxima imagem"><i class="bi bi-chevron-right"></i></button>
-                                    </div>
-                                    <div class="gallery-dots">
-                                        <button class="dot active" aria-label="Imagem 1"></button>
-                                        <button class="dot" aria-label="Imagem 2"></button>
-                                        <button class="dot" aria-label="Imagem 3"></button>
-                                        <button class="dot" aria-label="Imagem 4"></button>
-                                        <button class="dot" aria-label="Imagem 5"></button>
-                                    </div>
-                                </div>
-                                <h2>Aplicação Web de Sistema Hoteleiro</h2>
-                                <p>Na disciplina de Programação Web da UFSC, meu grupo desenvolveu uma aplicação web completa para gestão hoteleira, com autenticação, interface responsiva, escolha de quartos, reserva com compartilhamento de dados dos hóspedes e simulação de pagamento.</p>
-                                <p>O frontend foi desenvolvido em React e o backend em Node.js. Além da entrega final, o projeto fortaleceu nossa prática em arquitetura full stack, colaboração e desenvolvimento de software real em equipe.</p>
-                                <p><strong>Equipe:</strong> João Paulo Decker Oleinik, Nicole Cristina, Vinicius Gessner Anverze, Sofia Damas.</p>
-                            </article>
-                            <article class="project-slide">
-                                <div class="project-gallery">
-                                    <div class="gallery-viewport">
-                                        <button class="gallery-arrow gallery-prev" aria-label="Imagem anterior"><i class="bi bi-chevron-left"></i></button>
-                                        <div class="gallery-images">
-                                            <img src="imgs/oscar1.png" class="gallery-img active" alt="Sistema Oscar – tela 1">
-                                            <img src="imgs/oscar2.png" class="gallery-img" alt="Sistema Oscar – tela 2">
-                                            <img src="imgs/oscar3.png" class="gallery-img" alt="Sistema Oscar – tela 3">
-                                            <img src="imgs/oscar4.png" class="gallery-img" alt="Sistema Oscar – tela 4">
-                                            <img src="imgs/oscar5.png" class="gallery-img" alt="Sistema Oscar – tela 5">
-                                            <img src="imgs/oscar6.png" class="gallery-img" alt="Sistema Oscar – tela 6">
-                                        </div>
-                                        <button class="gallery-arrow gallery-next" aria-label="Próxima imagem"><i class="bi bi-chevron-right"></i></button>
-                                    </div>
-                                    <div class="gallery-dots">
-                                        <button class="dot active" aria-label="Imagem 1"></button>
-                                        <button class="dot" aria-label="Imagem 2"></button>
-                                        <button class="dot" aria-label="Imagem 3"></button>
-                                        <button class="dot" aria-label="Imagem 4"></button>
-                                        <button class="dot" aria-label="Imagem 5"></button>
-                                        <button class="dot" aria-label="Imagem 6"></button>
-                                    </div>
-                                </div>
-                                <h2>Sistema de Votação do Oscar (Projeto Final POO)</h2>
-                                <p>Na disciplina de Desenvolvimento de Sistemas Orientados a Objetos, construí com meu parceiro João Paulo Decker Oleinik um sistema completo de votação do Oscar, evoluindo uma aplicação de console para uma aplicação desktop interativa.</p>
-                                <p>O sistema permite cadastrar filmes, atores, atrizes e diretores, simular indicações por categoria, votar e gerar vencedores em interface amigável. O maior aprendizado veio da aplicação profunda da arquitetura MVC, incluindo persistência, tratamento de exceções e decisões de design para manutenção e evolução.</p>
-                                <p><strong>Aprendizado-chave:</strong> a qualidade do processo é tão importante quanto o resultado final para criar software escalável em equipe.</p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Monitor Cardíaco IoT — ESP32 + Go + Flutter</h2>
-                                <p>Meu projeto preferido até agora. Um sistema embarcado ponta a ponta: um <strong>ESP32</strong> com sensor MAX30102 mede batimentos (BPM) e SpO₂, classifica cada leitura e envia para uma API em <strong>Go</strong>, que persiste os dados em SQLite. Um app <strong>Flutter</strong> mostra o histórico em tempo real e ajusta, ao vivo, o limiar de alerta que o dispositivo passa a respeitar.</p>
-                                <p>Hardware, firmware, backend e app, cada um na sua stack, integrados por uma API HTTP simples. Com CI e licença MIT.</p>
-                                <p><strong>Stack:</strong> Go · Flutter/Dart · C/C++ (ESP32) · SQLite · Docker</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/embedded-systems-full-project" target="_blank" rel="noopener">Ver no GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Plataforma de Serviços Locais — Plano de Serviços Florianópolis</h2>
-                                <p>Na disciplina de Análise e Projeto de Sistemas, minha equipe construiu uma aplicação desktop que conecta clientes a prestadores de serviços locais: autenticação, busca por categoria e localização, ranking automático de recomendação, sistema de avaliação (1–5 estrelas) e painel administrativo para aprovação de prestadores.</p>
-                                <p>Destaques incluem regras de negócio como esconder o contato de usuários não autenticados e suspender automaticamente prestadores mal avaliados, tudo sobre uma estrutura MVC com persistência em SQLite.</p>
-                                <p><strong>Stack:</strong> Python · CustomTkinter · SQLite · MVC</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/aps-plano-servicos-floripa" target="_blank" rel="noopener">Ver no GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Miúdos — Controle de Gastos</h2>
-                                <p>Um app mobile-first para anotar os gastos do dia a dia em segundos. Fiz offline-first: dá pra registrar um gasto mesmo sem sinal e sincroniza depois. A ideia era trocar uma planilha que eu nunca mantinha por algo que eu realmente abrisse todo dia.</p>
-                                <p><strong>Stack:</strong> React · Vite · JavaScript · PWA</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/gastos-app" target="_blank" rel="noopener">Ver no GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Sinuca Sítio Champ — App de Torneio</h2>
-                                <p>Um app em Next.js para conduzir e revelar um torneio de sinuca com 8 jogadores: placar ao vivo, chaveamento eliminatório (quartas → semi → disputa de 3º → final) e uma revelação cinematográfica do pódio, com cenas, transições e efeitos construídos em CSS e SVG puro.</p>
-                                <p>O estado do chaveamento fica salvo no navegador, então ele sobrevive a um refresh no meio do torneio.</p>
-                                <p><strong>Stack:</strong> Next.js · React · TypeScript · CSS/SVG</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/sinuca-sitio-champ" target="_blank" rel="noopener">Ver no GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Sensor Visual de Contaminantes — Visão Computacional</h2>
-                                <p>Na disciplina de Visão Computacional, um sensor visual que analisa o resíduo na esteira de uma usina de Pirólise/HTC e mede a proporção de contaminantes (plástico, isopor, inertes) misturados à matéria orgânica.</p>
-                                <p>A ideia central: tratar visão computacional como um pipeline de dados, não como mágica — ela transforma um dado não-estruturado (matriz de pixels RGB) em um dado estruturado (JSON/SQL com coordenadas e classes) que aciona automações. Frame → detecção YOLO → área de contaminante → regra → FastAPI (SQL + alerta).</p>
-                                <p><strong>Stack:</strong> Python · YOLO · FastAPI · SQL</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/visao-computacional-residuos" target="_blank" rel="noopener">Ver no GitHub →</a></p>
-                            </article>
-                            <article class="project-slide">
-                                <h2>Broindex — Análise de Dados de Sensores (PIBIC)</h2>
-                                <p>Minha iniciação científica (CNPq/PIBIC) na UFSC, escrita em R. Galpões de frango de corte têm dezenas de sensores de temperatura e umidade, mas boa parte desses dados é redundante. O objetivo era achar o menor conjunto de sensores que ainda representa bem o ambiente todo — reduzindo o custo de instalação sem perder qualidade de monitoramento.</p>
-                                <p><strong>Stack:</strong> R · Séries Temporais · Redução de Dimensionalidade · Data Viz</p>
-                                <p><a class="project-link" href="https://github.com/cecilia-zica/broindex-data-analise" target="_blank" rel="noopener">Ver no GitHub →</a></p>
-                            </article>
-                        </div>
-                        <button class="carousel-btn" id="next-project" aria-label="Próximo projeto">❯</button>
+                    <p class="projects-lede">Sete destaques abaixo. Cada cartão abre a própria página, com o problema, o que eu construí, o resultado medido e a stack.</p>
+                    <div class="pgrid">
+                      <a class="pcard" href="projetos/decision-engines.html" style="--i:0">
+                        <span class="pcard-tag">IA e regra de negócio</span>
+                        <h2>Motores de decisão de crédito para 7 bancos</h2>
+                        <p class="pcard-sum">Elegibilidade, classificação de leads e ofertas viraram lógica sob teste automatizado.</p>
+                        <p class="card-kpi"><b>408</b> cenários sob teste</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Abrir projeto</span>
+                      </a>
+                      <a class="pcard" href="projetos/ai-audit.html" style="--i:1">
+                        <span class="pcard-tag">Qualidade de IA</span>
+                        <h2>Auditoria de um agente de IA de classificação documental</h2>
+                        <p class="pcard-sum">Pipeline que relê 4.754 registros com Gemini e transforma o “a gente acha que funciona” em número.</p>
+                        <p class="card-kpi"><b>4.754</b> registros auditados</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Abrir projeto</span>
+                      </a>
+                      <a class="pcard" href="projetos/triage-agents.html" style="--i:2">
+                        <span class="pcard-tag">Agentes de IA · Operação</span>
+                        <h2>Triagem de solicitações de parceiros com orquestração de agentes</h2>
+                        <p class="pcard-sum">Dois agentes leem pedidos em texto livre, classificam urgência e nomeiam o que falta antes de um humano abrir a fila.</p>
+                        <p class="card-kpi"><b>2</b> agentes na cadeia</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Abrir projeto</span>
+                      </a>
+                      <a class="pcard" href="projetos/n8n-sampling-audit.html" style="--i:3">
+                        <span class="pcard-tag">Automação · Operação</span>
+                        <h2>Auditoria amostral automatizada no n8n</h2>
+                        <p class="pcard-sum">16 workflows transformaram 4 horas semanais de planilha em 5 minutos.</p>
+                        <p class="card-kpi"><b>20h</b> devolvidas por mês</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Abrir projeto</span>
+                      </a>
+                      <a class="pcard" href="projetos/product-dashboard.html" style="--i:4">
+                        <span class="pcard-tag">Product analytics</span>
+                        <h2>Dashboard executivo de produto — o primeiro Streamlit da empresa</h2>
+                        <p class="pcard-sum">Três superfícies de venda, leitura ao vivo do warehouse, mais de 600 testes de qualidade de dado, apresentado à diretoria.</p>
+                        <p class="card-kpi"><b>24h→30min</b> latência do dado</p>
+                        <span class="pcard-meta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Abrir projeto</span>
+                      </a>
+                      <a class="pcard" href="projetos/cardiotrack.html" style="--i:5">
+                        <span class="pcard-tag">IoT · Backend · Mobile</span>
+                        <h2>CardioTrack — monitoramento cardíaco IoT, ponta a ponta</h2>
+                        <p class="pcard-sum">Firmware no ESP32, backend em Go e app em Flutter, implantados com Kubernetes.</p>
+                        <p class="card-kpi"><b>3</b> camadas construídas sozinha</p>
+                        <span class="pcard-meta"><span class="org">UFSC</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Abrir projeto</span>
+                      </a>
+                      <a class="pcard" href="projetos/parallel-automata.html" style="--i:6">
+                        <span class="pcard-tag">Computação paralela</span>
+                        <h2>Autômatos celulares paralelos em C — speedup de 33,9×</h2>
+                        <p class="pcard-sum">Pthreads com faixas fixas de linhas e sincronização por barreiras, medido no supercomputador Santos Dumont.</p>
+                        <p class="card-kpi"><b>33,9×</b> speedup</p>
+                        <span class="pcard-meta"><span class="org">UFSC · INE5645</span><span class="yr">2026</span></span>
+                        <span class="pcard-go">Abrir projeto</span>
+                      </a>
                     </div>
+                    <a class="cabinet-cta" href="projetos/index.html">
+                        <span class="cta-label">Armário de projetos</span>
+                        <b>Ver todos os 14 projetos</b>
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
                 `,
                 awards: `
                     <h1>Honras e Prêmios</h1>
@@ -1316,6 +1617,7 @@
         };
 
         function applyLanguage(language) {
+            writeStore('cz-lang', language);
             const content = contentByLanguage[language];
             if (!content) {
                 return;
@@ -1339,6 +1641,7 @@
             document.querySelector('aside .bio').textContent = content.bio;
 
             document.getElementById('section-home').innerHTML = content.home;
+            document.getElementById('section-ai').innerHTML = content.ai;
             document.getElementById('section-about').innerHTML = content.about;
             document.getElementById('section-education').innerHTML = content.education;
             document.getElementById('section-experience').innerHTML = content.experience;
@@ -1362,6 +1665,7 @@
 
         function applyTheme(theme) {
             currentTheme = theme;
+            writeStore('cz-theme', theme);
             if (theme === 'dark') {
                 document.body.classList.add('dark-mode');
             } else {
@@ -1467,6 +1771,7 @@
         (function () {
             const sections = [
                 { id: 'section-home',       labelEn: 'Home',       labelPt: 'Início' },
+                { id: 'section-ai',         labelEn: 'AI',         labelPt: 'IA' },
                 { id: 'section-about',      labelEn: 'About',      labelPt: 'Sobre' },
                 { id: 'section-experience', labelEn: 'Experience', labelPt: 'Experiência' },
                 { id: 'section-projects',   labelEn: 'Projects',   labelPt: 'Projetos' },
