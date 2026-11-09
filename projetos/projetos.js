@@ -28,7 +28,7 @@
     }
 
     var lang = readStore(LANG_KEY, 'en') === 'pt' ? 'pt' : 'en';
-    var theme = readStore(THEME_KEY, 'dark') === 'light' ? 'light' : 'dark';
+    var theme = readStore(THEME_KEY, 'light') === 'dark' ? 'dark' : 'light';
     applyLang(lang);
     applyTheme(theme);
 

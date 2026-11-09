@@ -576,3 +576,195 @@ body.proj-page .pgallery img { cursor: zoom-in !important; }
 }
 
 #lightbox .lb-close:hover { background: rgba(242, 198, 109, 0.16); }
+
+/* ==========================================================================
+   PASSE CALMO — galeria e secao de IA. Vem por ultimo: substitui as capas
+   coloridas por capa tipografica e tira preenchimento dos blocos.
+   ========================================================================== */
+
+/* ── capa: numero e categoria, sem icone ── */
+.pcover {
+    aspect-ratio: 16 / 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 18px;
+    background: color-mix(in srgb, var(--accent-color) 5%, transparent) !important;
+    border-bottom: 1px solid var(--line);
+}
+
+.pcover::after { display: none; }
+
+.pc-n {
+    font-family: var(--font-display);
+    font-size: 2.1rem;
+    line-height: 1;
+    color: var(--accent-color);
+    opacity: 0.55;
+}
+
+.pc-cat {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.55;
+}
+
+.pcover.has-img { padding: 0; display: block; }
+
+.pcover.has-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    opacity: 1;
+    filter: saturate(0.72);
+}
+
+.pcard:hover .pcover.has-img img { transform: none; }
+
+/* ── cartao: borda fina, sem sombra nem salto ── */
+.pcard {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    transition: border-color 0.2s ease;
+    animation: none;
+}
+
+.pcard:hover { transform: none; box-shadow: none; border-color: var(--accent-color); }
+.pcard h2 { font-size: 1.14rem; }
+.pcard-sum { font-size: 0.9rem; opacity: 0.78; }
+.pcard-tag, .pcard-meta { opacity: 0.55; }
+.pcard-go { display: none; }
+.card-kpi b { color: var(--accent-color); }
+
+/* ── filtros e chamada ── */
+.chip { border-color: var(--line); }
+.chip.on { background: var(--accent-color); border-color: var(--accent-color); color: #fff; }
+
+.cabinet-cta {
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 20px;
+}
+
+.cabinet-cta:hover { background: transparent; border-color: var(--accent-color); transform: none; }
+.cabinet-cta b { font-size: 1.05rem; }
+
+/* ── secao de IA: numeros em linha e lista de entregas ── */
+.kpi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0;
+    margin: 24px 0 30px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.kpi-row div { padding: 18px 20px 18px 0; border-left: 1px solid var(--line-soft); padding-left: 20px; }
+.kpi-row div:first-child { border-left: 0; padding-left: 0; }
+
+.kpi-row b {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    line-height: 1.05;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.kpi-row span {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    line-height: 1.5;
+}
+
+.build-list { list-style: none; border-top: 1px solid var(--line); margin: 0 0 34px; }
+
+.build-list li { border-bottom: 1px solid var(--line-soft); }
+
+.build-list a {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) minmax(0, 2fr) auto;
+    gap: 8px 22px;
+    align-items: baseline;
+    padding: 15px 0;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.build-list a:hover { opacity: 0.62; }
+.build-list b { font-size: 1rem; font-weight: 600; }
+.build-list span { font-size: 0.9rem; opacity: 0.72; }
+
+.build-list em {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--accent-color);
+    white-space: nowrap;
+}
+
+#section-ai h2 {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin: 34px 0 12px;
+}
+
+.ai-lede { font-size: 1rem; max-width: 60ch; margin-bottom: 0; }
+.proof-note { opacity: 0.55; margin-bottom: 14px; }
+
+.proof-gallery img, .pgallery img {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: none;
+    filter: saturate(0.85);
+}
+
+.proof-gallery img:hover, .pgallery img:hover { transform: none; border-color: var(--accent-color); }
+.proof-gallery figcaption, .pgallery figcaption { font-size: 0.82rem; opacity: 0.65; }
+.proof-gallery figcaption b { display: none; }
+
+.ai-principles { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 34px; gap: 22px; }
+
+.ai-principles li {
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.ai-principles b { display: block; color: var(--accent-color); font-weight: 600; margin-bottom: 3px; }
+
+.ai-stack { border-top: 1px solid var(--line); opacity: 0.6; font-size: 0.72rem; }
+.ai-stack span { color: var(--accent-color); }
+
+/* paginas de projeto: mesma calma */
+.pkpi { background: transparent; border-color: var(--line); border-radius: 10px; }
+.pkpi b { color: var(--accent-color); }
+.pstack li { background: transparent; border-color: var(--line); }
+.plink { border-color: var(--line); }
+.plink:hover { background: transparent; border-color: var(--accent-color); }
+.pblock h2 { opacity: 0.6; color: var(--text-color); border-color: var(--line); }
+.pblock .result { font-size: 1.18rem; }
+.pnav a { border-color: var(--line); border-radius: 10px; }
+.pnav a:hover { transform: none; border-color: var(--accent-color); }
+.proj-header { background: color-mix(in srgb, var(--light-gray) 92%, transparent); border-color: var(--line); }
+.proj-actions button { border-color: var(--line); }
+.proj-actions button:hover { background: transparent; border-color: var(--accent-color); }
+.proj-footer { border-color: var(--line); opacity: 0.65; }

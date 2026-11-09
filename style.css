@@ -1594,3 +1594,138 @@ body:not(.dark-mode) .proof-gallery img {
     .ai-builds > li::before { left: 14px; }
     .proof-gallery { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   PASSE CALMO — base natural, um acento so, menos ruido.
+   Este bloco vem por ultimo de proposito: redefine as variaveis e achata
+   fundos, sem mexer na estrutura acima.
+   ========================================================================== */
+
+:root,
+body:not(.dark-mode) {
+    --primary-color: #8a5a4b;      /* argila suave: o unico acento */
+    --secondary-color: #ffffff;
+    --accent-color: #8a5a4b;
+    --accent-secondary: #a87a68;
+    --text-color: #23211e;
+    --light-gray: #f7f5f1;         /* papel quente, nunca branco puro */
+    --card-bg: #fdfcfa;
+    --card-shadow: 0 1px 2px rgba(35, 33, 30, 0.04);
+    --line: rgba(35, 33, 30, 0.12);
+    --line-soft: rgba(35, 33, 30, 0.07);
+}
+
+body.dark-mode {
+    --primary-color: #c08a72;
+    --secondary-color: #1e1d1a;
+    --accent-color: #c08a72;
+    --accent-secondary: #d9ad99;
+    --text-color: #ece9e3;
+    --light-gray: #161513;
+    --card-bg: #1d1c19;
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --line: rgba(236, 233, 227, 0.14);
+    --line-soft: rgba(236, 233, 227, 0.08);
+}
+
+/* fundo chapado: sem gradiente radial, sem grao visivel */
+body { background: var(--light-gray) !important; color: var(--text-color); }
+body::after { display: none !important; }
+body:not(.dark-mode) .hero-section,
+body.dark-mode .hero-section { background: var(--card-bg) !important; }
+
+/* cartoes: borda fina em vez de sombra e brilho */
+.card, .hero-section {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    box-shadow: none;
+}
+
+.card:hover { box-shadow: none; transform: none; }
+
+/* tipografia mais serena */
+h1, h2, h3 { letter-spacing: -0.015em; }
+.hero-section h1 { font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.06; }
+.hero-description, .card p, .card li { color: var(--text-color); }
+
+/* pilulas do hero: tracinhos discretos, sem fundo colorido */
+.hero-highlights span,
+body:not(.dark-mode) .hero-highlights span {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--text-color);
+    opacity: 0.88;
+}
+
+.hero-highlights span::before { background: var(--accent-color) !important; }
+
+.hero-btn.primary { background: var(--accent-color); color: #fff; border-color: var(--accent-color); box-shadow: none; }
+.hero-btn.secondary { background: transparent; border-color: var(--line); color: var(--text-color); }
+
+/* blocos de apoio: tudo em linha fina, nada preenchido */
+.skill-item, .award-item, .kpi-facts article, .kpi-group,
+body:not(.dark-mode) .skill-item, body:not(.dark-mode) .award-item,
+body:not(.dark-mode) .kpi-facts article, body:not(.dark-mode) .kpi-franq,
+body:not(.dark-mode) .kpi-cnpq, .kpi-franq, .kpi-cnpq {
+    background: transparent;
+    border: 1px solid var(--line);
+    box-shadow: none;
+}
+
+.kpi-franq .kpi-group-label, .kpi-cnpq .kpi-group-label,
+body:not(.dark-mode) .kpi-cnpq .kpi-group-label { color: var(--accent-color); border-color: var(--line); }
+
+/* cursor custom desligado: ponteiro do sistema em todo o site */
+*, *::before, *::after { cursor: auto !important; }
+a, button, .chip, summary, label, select { cursor: pointer !important; }
+.pgallery img, .proof-gallery img { cursor: zoom-in !important; }
+#cursor-dot, #cursor-ring, .cursor-trail { display: none !important; }
+
+/* cabecalho, barra lateral e rodape na mesma base neutra */
+header {
+    background: color-mix(in srgb, var(--light-gray) 92%, transparent) !important;
+    border-bottom: 1px solid var(--line);
+    box-shadow: none !important;
+    backdrop-filter: blur(12px);
+}
+
+header a, header a:visited { color: var(--text-color); }
+header a:hover { color: var(--accent-color); }
+header a::after { background: var(--accent-color) !important; }
+
+#language-toggle, #theme-toggle {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+#language-toggle:hover, #theme-toggle:hover { background: transparent; border-color: var(--accent-color); transform: none; }
+
+aside { color: var(--text-color); }
+aside h1 { color: var(--text-color); }
+aside .role { color: var(--accent-color); }
+aside .bio { color: var(--text-color); opacity: 0.75; }
+
+footer {
+    background: transparent !important;
+    border-top: 1px solid var(--line);
+    box-shadow: none !important;
+    color: var(--text-color);
+}
+
+footer a { color: var(--accent-color); }
+
+/* pontinhos de navegacao lateral: discretos */
+.page-nav-dot { background: var(--line) !important; box-shadow: none !important; }
+.page-nav-dot.active { background: var(--accent-color) !important; }
+
+/* nada de barra colorida atras do menu, em nenhum tema */
+header nav ul,
+body:not(.dark-mode) header nav ul,
+body.dark-mode header nav ul { background: transparent !important; box-shadow: none !important; }
+body:not(.dark-mode) header { background: color-mix(in srgb, var(--light-gray) 92%, transparent) !important; }
+body:not(.dark-mode) footer { background: transparent !important; border-top-color: var(--line) !important; }
+body:not(.dark-mode) aside { background: transparent !important; }
+header a:hover { background-color: transparent; }
+#nav-toggle { background: transparent; border: 1px solid var(--line); }
