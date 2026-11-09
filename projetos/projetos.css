@@ -781,3 +781,33 @@ body.proj-page .pgallery img { cursor: zoom-in !important; }
 
 .pcard:hover .pcover i { transform: none; opacity: 0.75; }
 .pcover.has-img img { filter: saturate(0.72); }
+
+/* capa com preview: numero e categoria por cima, sobre um veu suave */
+.pcover { position: relative; }
+
+.pcover.has-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 18px;
+}
+
+.pcover.has-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg,
+        color-mix(in srgb, var(--card-bg) 86%, transparent) 0%,
+        color-mix(in srgb, var(--card-bg) 10%, transparent) 42%,
+        color-mix(in srgb, var(--card-bg) 10%, transparent) 62%,
+        color-mix(in srgb, var(--card-bg) 86%, transparent) 100%);
+}
+
+.pcover.has-img .pc-n,
+.pcover.has-img .pc-cat { position: relative; z-index: 2; }
+
+/* ordem dentro da capa: numero em cima, icone no meio, categoria embaixo */
+.pcover .pc-n { order: 0; }
+.pcover i { order: 1; }
+.pcover .pc-cat { order: 2; }
