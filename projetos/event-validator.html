@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Validator — a Chrome tool that maps and checks product events · Cecília Zica</title>
+<meta name="description" content="Map a flow by clicking through it, and get a report the developers can act on.">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="projetos.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Event Validator — a Chrome tool that maps and checks product events", "author": {"@type": "Person", "name": "Cecília Zica Camargo"}, "about": "Product analytics · Chrome extension", "dateCreated": "2026", "description": "Map a flow by clicking through it, and get a report the developers can act on.", "keywords": "JavaScript, Chrome Extension (MV3), dataLayer, Python, dbt, LLM agent"}</script>
+</head>
+<body class="proj-page">
+<header class="proj-header">
+  <a class="brand" href="../index.html"><i class="bi bi-arrow-left"></i> <span data-en="Cecília Zica" data-pt="Cecília Zica">Cecília Zica</span></a>
+  <nav class="proj-nav">
+    <a href="../index.html#section-ai" data-en="AI" data-pt="IA">AI</a>
+    <a href="index.html" data-en="Projects" data-pt="Projetos">Projects</a>
+    <a href="../index.html#section-experience" data-en="Experience" data-pt="Experiência">Experience</a>
+    <a href="../index.html#section-contact" data-en="Contact" data-pt="Contato">Contact</a>
+  </nav>
+  <div class="proj-actions">
+    <button id="lang" type="button" aria-label="Switch language">PT-BR</button>
+    <button id="theme" type="button" aria-label="Switch theme">☀️</button>
+  </div>
+</header>
+<main class="proj-main pdetail">
+  <nav class="crumb"><a href="index.html" data-en="Projects" data-pt="Projetos">Projects</a> <i class="bi bi-chevron-right"></i> <span class="cat"><span data-en="Product &amp; data" data-pt="Produto e dados">Product & data</span></span></nav>
+  <p class="eyebrow"><span data-en="Product analytics · Chrome extension" data-pt="Product analytics · extensão Chrome">Product analytics · Chrome extension</span></p>
+  <h1><span data-en="Event Validator — a Chrome tool that maps and checks product events" data-pt="Event Validator — a ferramenta no Chrome que mapeia e confere eventos">Event Validator — a Chrome tool that maps and checks product events</span></h1>
+  <p class="lede"><span data-en="Map a flow by clicking through it, and get a report the developers can act on." data-pt="Mapeia um fluxo clicando por ele e devolve um relatório que o dev consegue usar.">Map a flow by clicking through it, and get a report the developers can act on.</span></p>
+  <div class="pmeta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></div>
+  <div class="pkpis"><div class="pkpi"><b>9</b><span data-en="flows mapped" data-pt="fluxos mapeados">flows mapped</span></div><div class="pkpi"><b>17</b><span data-en="playbook columns checked" data-pt="colunas do playbook conferidas">playbook columns checked</span></div><div class="pkpi"><b>0</b><span data-en="sites broken while mapping" data-pt="sites quebrados no mapeamento">sites broken while mapping</span></div></div>
+  <section class="pblock"><h2 data-en="The problem" data-pt="O problema">The problem</h2><p><span data-en="Event tagging was done by hand. Each person named events their own way, the report was assembled in a spreadsheet, and a wrong field only surfaced weeks later, in the warehouse." data-pt="O tagueamento era feito à mão. Cada pessoa nomeava o evento do seu jeito, o relatório era montado em planilha, e campo errado só aparecia semanas depois, no warehouse.">Event tagging was done by hand. Each person named events their own way, the report was assembled in a spreadsheet, and a wrong field only surfaced weeks later, in the warehouse.</span></p></section>
+  <section class="pblock"><h2 data-en="What I built" data-pt="O que eu construí">What I built</h2><p><span data-en="A Chrome extension (manifest v3) that listens to the dataLayer inside the page: right-click marks an element with a numbered badge, left-click captures the event without navigating, a second right-click runs it for real. At the end it generates the HTML report that goes to the developers. Next to it, an agent reads that report and checks every event against the tagging playbook and the dbt macros, returning the corrected events as JSON to paste straight back into the extension. One rule above all: the interceptor runs inside the live page, so it can never break the site being mapped." data-pt="Uma extensão Chrome (manifest v3) que escuta o dataLayer dentro da página: clique direito marca o elemento com um badge numerado, clique esquerdo captura o evento sem navegar, o segundo clique direito executa de verdade. No fim, ela gera o relatório HTML que vai para os desenvolvedores. Ao lado, um agente lê esse relatório e confere cada evento contra o playbook de tagueamento e as macros dbt, devolvendo os eventos corrigidos em JSON para colar de volta na extensão. Uma regra acima de todas: o interceptador roda dentro da página no ar, então nunca pode quebrar o site que está sendo mapeado.">A Chrome extension (manifest v3) that listens to the dataLayer inside the page: right-click marks an element with a numbered badge, left-click captures the event without navigating, a second right-click runs it for real. At the end it generates the HTML report that goes to the developers. Next to it, an agent reads that report and checks every event against the tagging playbook and the dbt macros, returning the corrected events as JSON to paste straight back into the extension. One rule above all: the interceptor runs inside the live page, so it can never break the site being mapped.</span></p></section>
+  <section class="pblock"><h2 data-en="Result" data-pt="Resultado">Result</h2><p class="result"><span data-en="Nine product flows mapped against the same 17-column standard, and what breaks the playbook is caught before it reaches the warehouse — not weeks after." data-pt="Nove fluxos de produto mapeados contra o mesmo padrão de 17 colunas, e o que quebra o playbook é pego antes de chegar ao warehouse — não semanas depois.">Nine product flows mapped against the same 17-column standard, and what breaks the playbook is caught before it reaches the warehouse — not weeks after.</span></p></section>
+  <section class="pblock"><h2 data-en="Screens" data-pt="Telas">Screens</h2><p class="pnote"><i class="bi bi-eye-slash"></i> <span data-en="The tool on an empty state, and the report with every value blurred. The capture screens that carry customer data are left out entirely." data-pt="A ferramenta em estado vazio, e o relatório com todos os valores borrados. As telas de captura, que têm dado de cliente, ficaram inteiramente de fora.">The tool on an empty state, and the report with every value blurred. The capture screens that carry customer data are left out entirely.</span></p><div class="pgallery"><figure><img src="../imgs/event-validator.png" alt="The extension popup: capture controls and the counters for captured, valid, invalid and unmapped events." loading="lazy"><figcaption><span data-en="The extension popup: capture controls and the counters for captured, valid, invalid and unmapped events." data-pt="O popup da extensão: controles de captura e os contadores de eventos capturados, válidos, inválidos e não mapeados.">The extension popup: capture controls and the counters for captured, valid, invalid and unmapped events.</span></figcaption></figure><figure><img src="../imgs/event-report.png" alt="The generated report: the 17 playbook columns, with every captured value blurred." loading="lazy"><figcaption><span data-en="The generated report: the 17 playbook columns, with every captured value blurred." data-pt="O relatório gerado: as 17 colunas do playbook, com todo valor capturado borrado.">The generated report: the 17 playbook columns, with every captured value blurred.</span></figcaption></figure></div></section>
+  <section class="pblock"><h2 data-en="Stack" data-pt="Stack">Stack</h2><ul class="pstack"><li>JavaScript</li><li>Chrome Extension (MV3)</li><li>dataLayer</li><li>Python</li><li>dbt</li><li>LLM agent</li></ul></section>
+  <nav class="pnav">
+    <a class="prev" href="password-manager.html"><span data-en="Previous" data-pt="Anterior">Previous</span><b>MyPass — local password manager</b></a>
+    <a class="next" href="decision-engines.html"><span data-en="Next" data-pt="Próximo">Next</span><b>Credit decision engines for 7 partner banks</b></a>
+  </nav>
+  <a class="back-all" href="index.html" data-en="← Back to all projects" data-pt="← Voltar para todos os projetos">← Back to all projects</a>
+</main>
+<footer class="proj-footer">
+  <p><span data-en="Cecília Zica Camargo — Florianópolis, SC" data-pt="Cecília Zica Camargo — Florianópolis, SC">Cecília Zica Camargo — Florianópolis, SC</span>
+     · <a href="mailto:zicacamargocecilia@gmail.com">zicacamargocecilia@gmail.com</a>
+     · <a href="https://github.com/cecilia-zica" target="_blank" rel="noopener">GitHub</a>
+     · <a href="https://www.linkedin.com/in/cecília-zica-camargo" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+<div id="lightbox" hidden><button class="lb-close" aria-label="Close">&times;</button><img alt=""><p class="lb-cap"></p></div>
+<script src="lightbox.js"></script>
+<script src="projetos.js"></script>
+</body>
+</html>
