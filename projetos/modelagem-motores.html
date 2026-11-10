@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data modeling for AI — the decision engine base · Cecília Zica</title>
+<meta name="description" content="A dimensional model where a new engine enters as one row, not as a schema change.">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="projetos.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CreativeWork", "name": "Data modeling for AI — the decision engine base", "author": {"@type": "Person", "name": "Cecília Zica Camargo"}, "about": "Data modeling · dbt", "dateCreated": "2026", "description": "A dimensional model where a new engine enters as one row, not as a schema change.", "keywords": "dbt, SQL, BigQuery, Kimball modeling, draw.io"}</script>
+</head>
+<body class="proj-page">
+<header class="proj-header">
+  <a class="brand" href="../index.html"><i class="bi bi-arrow-left"></i> <span data-en="Cecília Zica" data-pt="Cecília Zica">Cecília Zica</span></a>
+  <nav class="proj-nav">
+    <a href="../index.html#section-ai" data-en="AI" data-pt="IA">AI</a>
+    <a href="index.html" data-en="Projects" data-pt="Projetos">Projects</a>
+    <a href="../index.html#section-experience" data-en="Experience" data-pt="Experiência">Experience</a>
+    <a href="../index.html#section-contact" data-en="Contact" data-pt="Contato">Contact</a>
+  </nav>
+  <div class="proj-actions">
+    <button id="lang" type="button" aria-label="Switch language">PT-BR</button>
+    <button id="theme" type="button" aria-label="Switch theme">☀️</button>
+  </div>
+</header>
+<main class="proj-main pdetail">
+  <nav class="crumb"><a href="index.html" data-en="Projects" data-pt="Projetos">Projects</a> <i class="bi bi-chevron-right"></i> <span class="cat"><span data-en="Product &amp; data" data-pt="Produto e dados">Product & data</span></span></nav>
+  <p class="eyebrow"><span data-en="Data modeling · dbt" data-pt="Modelagem de dados · dbt">Data modeling · dbt</span></p>
+  <h1><span data-en="Data modeling for AI — the decision engine base" data-pt="Modelagem de dados para IA — a base dos motores">Data modeling for AI — the decision engine base</span></h1>
+  <p class="lede"><span data-en="A dimensional model where a new engine enters as one row, not as a schema change." data-pt="Um modelo dimensional onde um motor novo entra como uma linha, não como mudança de schema.">A dimensional model where a new engine enters as one row, not as a schema change.</span></p>
+  <div class="pmeta"><span class="org">Franq Open Banking</span><span class="yr">2026</span></div>
+  <div class="pkpis"><div class="pkpi"><b>65</b><span data-en="columns untangled" data-pt="colunas destrinchadas">columns untangled</span></div><div class="pkpi"><b>1</b><span data-en="row to add an engine" data-pt="linha para entrar um motor">row to add an engine</span></div></div>
+  <section class="pblock"><h2 data-en="The problem" data-pt="O problema">The problem</h2><p><span data-en="The engine table had 65 columns and did not say which were rule inputs, which were the engine decision and which were the commercial outcome. Every question became a new query, and two people reached two different numbers for the same metric." data-pt="A tabela do motor tinha 65 colunas e não dizia quais eram input da régua, quais eram decisão do motor e quais eram resultado comercial. Cada pergunta virava uma query nova, e duas pessoas chegavam a números diferentes para a mesma métrica.">The engine table had 65 columns and did not say which were rule inputs, which were the engine decision and which were the commercial outcome. Every question became a new query, and two people reached two different numbers for the same metric.</span></p></section>
+  <section class="pblock"><h2 data-en="What I built" data-pt="O que eu construí">What I built</h2><p><span data-en="A dimensional model in dbt fixing three contracts: the grain, the role of each variable and what a missing value means. The core is engine-agnostic — facts for the decision and for the product offered, a bridge table holding inputs as rows rather than columns, and point-in-time tables for the sources that must be read as they were on the day." data-pt="Um modelo dimensional em dbt que fixa três contratos: o grão, o papel de cada variável e o que significa um valor ausente. O núcleo é agnóstico de motor — fatos para a decisão e para o produto ofertado, uma tabela ponte guardando os inputs como linhas em vez de colunas, e tabelas point-in-time para as fontes que precisam ser lidas como estavam no dia.">A dimensional model in dbt fixing three contracts: the grain, the role of each variable and what a missing value means. The core is engine-agnostic — facts for the decision and for the product offered, a bridge table holding inputs as rows rather than columns, and point-in-time tables for the sources that must be read as they were on the day.</span></p></section>
+  <section class="pblock"><h2 data-en="Result" data-pt="Resultado">Result</h2><p class="result"><span data-en="Tested against a second engine: adding it needs one row in the engine dimension and nothing else. The same base now answers analytics questions and feeds ML features." data-pt="Testado contra um segundo motor: incluí-lo exige uma linha na dimensão de motor e mais nada. A mesma base agora responde pergunta de analytics e alimenta feature de ML.">Tested against a second engine: adding it needs one row in the engine dimension and nothing else. The same base now answers analytics questions and feeds ML features.</span></p></section>
+  
+  <section class="pblock"><h2 data-en="Stack" data-pt="Stack">Stack</h2><ul class="pstack"><li>dbt</li><li>SQL</li><li>BigQuery</li><li>Kimball modeling</li><li>draw.io</li></ul></section>
+  <nav class="pnav">
+    <a class="prev" href="prompt-systems.html"><span data-en="Previous" data-pt="Anterior">Previous</span><b>Prompt systems that hold a standard</b></a>
+    <a class="next" href="decision-engines.html"><span data-en="Next" data-pt="Próximo">Next</span><b>Credit decision engines for 7 partner banks</b></a>
+  </nav>
+  <a class="back-all" href="index.html" data-en="← Back to all projects" data-pt="← Voltar para todos os projetos">← Back to all projects</a>
+</main>
+<footer class="proj-footer">
+  <p><span data-en="Cecília Zica Camargo — Florianópolis, SC" data-pt="Cecília Zica Camargo — Florianópolis, SC">Cecília Zica Camargo — Florianópolis, SC</span>
+     · <a href="mailto:zicacamargocecilia@gmail.com">zicacamargocecilia@gmail.com</a>
+     · <a href="https://github.com/cecilia-zica" target="_blank" rel="noopener">GitHub</a>
+     · <a href="https://www.linkedin.com/in/cecília-zica-camargo" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+<div id="lightbox" hidden><button class="lb-close" aria-label="Close">&times;</button><img alt=""><p class="lb-cap"></p></div>
+<script src="lightbox.js"></script>
+<script src="projetos.js"></script>
+</body>
+</html>
